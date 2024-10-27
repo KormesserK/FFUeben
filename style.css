@@ -126,7 +126,7 @@ button:active {
 }
 
 .flashcard .card-content {
-    background-color: #252121; /* Heller Hintergrund für die Karte */
+    background-color: #9e9d9d; /* Heller Hintergrund für die Karte */
     color: #333333; /* Dunkler Text für Lesbarkeit */
     padding: 20px;
     text-align: center;
@@ -143,7 +143,7 @@ button:active {
 }
 
 .flashcard.flip .card-content {
-    background-color: var(--light-gray);
+    background-color: #9e9d9d;
 }
 
 /* Responsives Design */
