@@ -1,6 +1,6 @@
 let devices = [];
 
-fetch('data.json')
+fetch('geraeteData.json')
     .then(response => response.json())
     .then(data => devices = data);
 
