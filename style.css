@@ -123,6 +123,9 @@ button:active {
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
+    overflow-y: auto;
+    max-height: 280px;
+    box-sizing: border-box;
 }
 
 .flashcard .card-content {
@@ -131,6 +134,10 @@ button:active {
     padding: 20px;
     text-align: center;
     overflow-y: auto; /* Ermöglicht Scrollen für lange Antworten */
+}
+
+.flashcard.flip {
+    transform: rotateY(180deg);
 }
 
 .flashcard .card-content p {
