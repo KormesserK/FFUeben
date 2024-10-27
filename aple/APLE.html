@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerätefinder - Ausbildungsprüfung Löscheinsatz</title>
+    <title>Stationsauswahl - Ausbildungsprüfung Löscheinsatz</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Gerätefinder</h1>
-        <p>Klicke auf die Schaltfläche, um 5 zufällige Geräte für die Prüfung zu ziehen:</p>
-        <button onclick="getRandomDevices()">Geräte ziehen</button>
-        <div id="devices"></div>
+    <div class="station-container">
+        <h1>Wähle eine Station</h1>
+        <p>Bitte wähle eine Station aus, um mit der Ausbildungsprüfung zu beginnen:</p>
+        
+        <!-- Buttons für jede Station -->
+        <button onclick="location.href='geraetefinder.html'">Gerätefinder</button>
+        <button onclick="location.href='ersteHilfe.html'">Erste Hilfe</button>
+        <button onclick="location.href='einsatzma.html'">Fragen Einsatzmaschinist</button>
+        <!-- Weitere Stationen können hinzugefügt werden -->
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
