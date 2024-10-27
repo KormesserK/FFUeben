@@ -123,7 +123,6 @@ button:active {
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
-    transform-origin: center center; /* Added this line */
 }
 
 .flashcard .card-content {
@@ -134,10 +133,6 @@ button:active {
     overflow-y: auto; /* Ermöglicht Scrollen für lange Antworten */
 }
 
-.flashcard.flip {
-    transform: rotateY(180deg);
-}
-
 .flashcard .card-content p {
     margin: 0;
     white-space: pre-line; /* Zeilenumbrüche für Antworten */
@@ -145,7 +140,6 @@ button:active {
 
 .flashcard.flip .card-content {
     background-color: #9e9d9d;
-    backface-visibility: hidden; /* Verhindert die Spiegelung */
 }
 
 /* Responsives Design */
