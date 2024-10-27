@@ -126,6 +126,7 @@ button:active {
     overflow-y: auto;
     max-height: 280px;
     box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .flashcard .card-content {
