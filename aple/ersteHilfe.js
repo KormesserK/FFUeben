@@ -10,6 +10,7 @@ fetch('ersteHilfeData.json') // Lädt die Erste-Hilfe-Fragen und Antworten
     });
 
 function flipCard() {
+    console.log("karte umgedreht");
     const cardText = document.getElementById('cardText');
     const flashcard = document.querySelector('.flashcard');
     
@@ -27,6 +28,7 @@ function flipCard() {
 }
 
 function getNextQuestion() {
+    console.log("nächste Frage");
     if (questions.length === 0) return;
 
     currentQuestionIndex = Math.floor(Math.random() * questions.length); // Zufällige Frage auswählen
