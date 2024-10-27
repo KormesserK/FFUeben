@@ -37,7 +37,7 @@
     },
     {
         "number": 10,
-        "name": "C- Mehraweckstrahlrohr"
+        "name": "C-Mehrzweckstrahlrohr"
     },
     {
         "number": 11,
@@ -57,11 +57,11 @@
     },
     {
         "number": 415,
-        "name": "D- Saugschlauch fur Zumischer"
+        "name": "D-Saugschlauch fur Zumischer"
     },
     {
         "number": 16,
-        "name": "EinreiBhaken"
+        "name": "Einreißhaken"
     },
     {
         "number": 17,
@@ -85,7 +85,7 @@
     },
     {
         "number": 22,
-        "name": "Greifaug"
+        "name": "Greifzug"
     },
     {
         "number": 23,
@@ -101,11 +101,11 @@
     },
     {
         "number": 26,
-        "name": "Handfunksprechgerat"
+        "name": "Handfunksprechgerät"
     },
     {
         "number": 27,
-        "name": "Handsage"
+        "name": "Handsäge"
     },
     {
         "number": 28,
@@ -113,11 +113,11 @@
     },
     {
         "number": 29,
-        "name": "HD - Kupplungsschlissel"
+        "name": "HD-Kupplungsschlüssel"
     },
     {
         "number": 30,
-        "name": "HD - Schlauch"
+        "name": "HD-Schlauch"
     },
     {
         "number": 31,
@@ -129,7 +129,7 @@
     },
     {
         "number": 33,
-        "name": "B- Mehrzweckstrahlrohr"
+        "name": "B-Mehrzweckstrahlrohr"
     },
     {
         "number": 34,
@@ -141,7 +141,7 @@
     },
     {
         "number": 36,
-        "name": "Kaminturschlassel"
+        "name": "Kamintürschlüssel"
     },
     {
         "number": 37,
@@ -149,7 +149,7 @@
     },
     {
         "number": 38,
-        "name": "Kohlendioxidléscher"
+        "name": "Kohlendioxidlöscher"
     },
     {
         "number": 39,
@@ -161,23 +161,23 @@
     },
     {
         "number": 41,
-        "name": "Kraftstoffkanister fur Stromerzeuger TS (20 Liter) mit Einfullstutzen"
+        "name": "Kraftstoffkanister fur Stromerzeuger TS (20 Liter) mit Einfüllstutzen"
     },
     {
         "number": 42,
-        "name": "Kabelspritze"
+        "name": "Kübelspritze"
     },
     {
         "number": 43,
-        "name": "Nassloscher"
+        "name": "Nasslöscher"
     },
     {
         "number": 44,
-        "name": "Loschrucksack"
+        "name": "Löschrucksack"
     },
     {
         "number": 45,
-        "name": "Kupplungsschlissel ABC"
+        "name": "Kupplungsschlüssel ABC"
     },
     {
         "number": 46,
@@ -189,11 +189,11 @@
     },
     {
         "number": 48,
-        "name": "Loschdecke"
+        "name": "Löschdecke"
     },
     {
         "number": 49,
-        "name": "Loscheimer"
+        "name": "Löscheimer"
     },
     {
         "number": 50,
@@ -201,15 +201,15 @@
     },
     {
         "number": 51,
-        "name": "Motorkettensage"
+        "name": "Motorkettensäge"
     },
     {
         "number": 52,
-        "name": "Not-Rettungsgerite-Set"
+        "name": "Not-Rettungsgeräte-Set"
     },
     {
         "number": 53,
-        "name": "Olwehr Grundausrustung"
+        "name": "ölwehr Grundausrustung"
     },
     {
         "number": 54,
@@ -217,7 +217,7 @@
     },
     {
         "number": 55,
-        "name": "Pulverléscher"
+        "name": "Pulverlöscher"
     },
     {
         "number": 56,
@@ -237,11 +237,11 @@
     },
     {
         "number": 60,
-        "name": "Sammelstiick 28-A"
+        "name": "Sammelstück 2B-A"
     },
     {
         "number": 61,
-        "name": "Sanitatstasche, Koffer oder Rucksack"
+        "name": "Sanitätstasche, Koffer oder Rucksack"
     },
     {
         "number": 162,
@@ -253,19 +253,19 @@
     },
     {
         "number": 64,
-        "name": "Schakel"
+        "name": "Schäkel"
     },
     {
-        "number": 165,
-        "name": "Schaumldschausrastung 2 oder 4"
+        "number": 65,
+        "name": "Schaumlöschausrüstung 2 oder 4"
     },
     {
         "number": 66,
-        "name": "Schaummittelbehalter"
+        "name": "Schaummittelbehälter"
     },
     {
         "number": 67,
-        "name": "Schiebleiter 2-tellig oder 3-teilig"
+        "name": "Schiebleiter 2-teilig oder 3-teilig"
     },
     {
         "number": 68,
@@ -273,7 +273,7 @@
     },
     {
         "number": 69,
-        "name": "Schlauchbrucke"
+        "name": "Schlauchbrücke"
     },
     {
         "number": 70,
@@ -281,19 +281,19 @@
     },
     {
         "number": 71,
-        "name": "Schlauchtrager"
+        "name": "Schlauchträger"
     },
     {
         "number": 73,
-        "name": "Schnittschutzausristung"
+        "name": "Schnittschutzausrüstung"
     },
     {
         "number": 74,
-        "name": "Schnir- und Bindeleinen"
+        "name": "Schnür- und Bindeleinen"
     },
     {
         "number": 75,
-        "name": "Schutzanzuge Schutzstufe 2"
+        "name": "Schutzanzüge Schutzstufe 2"
     },
     {
         "number": 76,
@@ -313,11 +313,11 @@
     },
     {
         "number": 80,
-        "name": "Steuerorgan far die Hebekissen"
+        "name": "Steuerorgan für die Hebekissen"
     },
     {
         "number": 81,
-        "name": "StraBenbesen"
+        "name": "Straßenbesen"
     },
     {
         "number": 82,
@@ -325,7 +325,7 @@
     },
     {
         "number": 83,
-        "name": "Stutzkrimmer B"
+        "name": "Stützkrümmer B"
     },
     {
         "number": 84,
@@ -333,15 +333,15 @@
     },
     {
         "number": 85,
-        "name": "Uberflurhydrantenschlussel"
+        "name": "Überflurhydrantenschlüssel"
     },
     {
         "number": 86,
-        "name": "Ubergangsstiick A- B"
+        "name": "Übergangsstück A-B"
     },
     {
         "number": 87,
-        "name": "Ubergangsstlick B - C"
+        "name": "Übergangsstück B-C"
     },
     {
         "number": 88,
@@ -353,11 +353,11 @@
     },
     {
         "number": 90,
-        "name": "Unterflurhydrantenschlussel"
+        "name": "Unterflurhydrantenschlüssel"
     },
     {
         "number": 91,
-        "name": "Unterlagsholzer"
+        "name": "Unterlagshölzer"
     },
     {
         "number": 92,
@@ -369,7 +369,7 @@
     },
     {
         "number": 95,
-        "name": "Verteiler B - CBC"
+        "name": "Verteiler B-CBC"
     },
     {
         "number": 96,
@@ -385,7 +385,7 @@
     },
     {
         "number": 99,
-        "name": "Warmebildkamera"
+        "name": "Wärmebildkamera"
     },
     {
         "number": 100,
@@ -393,7 +393,7 @@
     },
     {
         "number": 101,
-        "name": "Wechselstromkabeltrommel! 230V"
+        "name": "Wechselstromkabeltrommel 230V"
     },
     {
         "number": 102,
