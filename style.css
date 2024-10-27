@@ -127,11 +127,11 @@ button:active {
 }
 
 .flashcard .card-content {
-    background-color: #f5f5f5; /* Heller Hintergrund für die Karte */
-    color: #333333; /* Dunkler Text für Lesbarkeit */
+    background-color: #ffffff; /* Hellere Farbe für Textbereich */
     padding: 20px;
+    color: #333333;
     text-align: center;
-    overflow-y: auto; /* Ermöglicht Scrollen für lange Antworten */
+    overflow-y: auto; /* Scrollbar für lange Antworten */
 }
 
 .flashcard.flip {
