@@ -136,10 +136,6 @@ button:active {
     overflow-y: auto; /* Ermöglicht Scrollen für lange Antworten */
 }
 
-.flashcard.flip {
-    transform: rotateY(180deg);
-}
-
 .flashcard .card-content p {
     margin: 0;
     white-space: pre-line; /* Zeilenumbrüche für Antworten */
