@@ -1,0 +1,410 @@
+[
+    {
+        "number": 1,
+        "name": "Absperrband (Satz)"
+    },
+    {
+        "number": 2,
+        "name": "Absicherungsbeleuchtung mit Blinkfunktion"
+    },
+    {
+        "number": 3,
+        "name": "Arbeitsleine"
+    },
+    {
+        "number": 4,
+        "name": "Arbeitsmesser"
+    },
+    {
+        "number": 5,
+        "name": "Bindemittel oder Mehrzweckbinder"
+    },
+    {
+        "number": 6,
+        "name": "Bolzenschneider"
+    },
+    {
+        "number": 7,
+        "name": "Brandfluchthaube"
+    },
+    {
+        "number": 8,
+        "name": "Brechstange"
+    },
+    {
+        "number": 9,
+        "name": "C-Hydroschild"
+    },
+    {
+        "number": 10,
+        "name": "C- Mehraweckstrahlrohr"
+    },
+    {
+        "number": 11,
+        "name": "Chemieschutzhandschuhe"
+    },
+    {
+        "number": 12,
+        "name": "Druckbegrenzungsventil B"
+    },
+    {
+        "number": 13,
+        "name": "Druckschlauch B"
+    },
+    {
+        "number": 14,
+        "name": "Druckschlauch C"
+    },
+    {
+        "number": 415,
+        "name": "D- Saugschlauch fur Zumischer"
+    },
+    {
+        "number": 16,
+        "name": "EinreiBhaken"
+    },
+    {
+        "number": 17,
+        "name": "Einweghandschuh"
+    },
+    {
+        "number": 18,
+        "name": "Fass- oder Stichschaufel"
+    },
+    {
+        "number": 19,
+        "name": "Feuerwehrgurt"
+    },
+    {
+        "number": 20,
+        "name": "Feuerwehraxt"
+    },
+    {
+        "number": 21,
+        "name": "Freilandverankerung"
+    },
+    {
+        "number": 22,
+        "name": "Greifaug"
+    },
+    {
+        "number": 23,
+        "name": "Greifzugseil"
+    },
+    {
+        "number": 24,
+        "name": "Gurtschneider"
+    },
+    {
+        "number": 25,
+        "name": "Hacke"
+    },
+    {
+        "number": 26,
+        "name": "Handfunksprechgerat"
+    },
+    {
+        "number": 27,
+        "name": "Handsage"
+    },
+    {
+        "number": 28,
+        "name": "Handscheinwerfer"
+    },
+    {
+        "number": 29,
+        "name": "HD - Kupplungsschlissel"
+    },
+    {
+        "number": 30,
+        "name": "HD - Schlauch"
+    },
+    {
+        "number": 31,
+        "name": "Hebekissen"
+    },
+    {
+        "number": 32,
+        "name": "Hohlstrahlrohr B"
+    },
+    {
+        "number": 33,
+        "name": "B- Mehrzweckstrahlrohr"
+    },
+    {
+        "number": 34,
+        "name": "Hohlstrahlrohr C"
+    },
+    {
+        "number": 35,
+        "name": "Hydraulischer Rettungssatz"
+    },
+    {
+        "number": 36,
+        "name": "Kaminturschlassel"
+    },
+    {
+        "number": 37,
+        "name": "Ketten"
+    },
+    {
+        "number": 38,
+        "name": "Kohlendioxidléscher"
+    },
+    {
+        "number": 39,
+        "name": "Korbtrage"
+    },
+    {
+        "number": 40,
+        "name": "Spineboard"
+    },
+    {
+        "number": 41,
+        "name": "Kraftstoffkanister fur Stromerzeuger TS (20 Liter) mit Einfullstutzen"
+    },
+    {
+        "number": 42,
+        "name": "Kabelspritze"
+    },
+    {
+        "number": 43,
+        "name": "Nassloscher"
+    },
+    {
+        "number": 44,
+        "name": "Loschrucksack"
+    },
+    {
+        "number": 45,
+        "name": "Kupplungsschlissel ABC"
+    },
+    {
+        "number": 46,
+        "name": "Leinensatz far Saugschlauchleitung"
+    },
+    {
+        "number": 47,
+        "name": "Lichtfluter"
+    },
+    {
+        "number": 48,
+        "name": "Loschdecke"
+    },
+    {
+        "number": 49,
+        "name": "Loscheimer"
+    },
+    {
+        "number": 50,
+        "name": "Meldermappe"
+    },
+    {
+        "number": 51,
+        "name": "Motorkettensage"
+    },
+    {
+        "number": 52,
+        "name": "Not-Rettungsgerite-Set"
+    },
+    {
+        "number": 53,
+        "name": "Olwehr Grundausrustung"
+    },
+    {
+        "number": 54,
+        "name": "Pressluftatmer"
+    },
+    {
+        "number": 55,
+        "name": "Pulverléscher"
+    },
+    {
+        "number": 56,
+        "name": "Radkeil"
+    },
+    {
+        "number": 57,
+        "name": "Reserve Pressluftflaschensatz"
+    },
+    {
+        "number": 58,
+        "name": "Rettungsleine 30m mit Beutel"
+    },
+    {
+        "number": 59,
+        "name": "Rohrdichtkissen"
+    },
+    {
+        "number": 60,
+        "name": "Sammelstiick 28-A"
+    },
+    {
+        "number": 61,
+        "name": "Sanitatstasche, Koffer oder Rucksack"
+    },
+    {
+        "number": 162,
+        "name": "Saugkorb A mit Ventil"
+    },
+    {
+        "number": 63,
+        "name": "Saugschlauch A"
+    },
+    {
+        "number": 64,
+        "name": "Schakel"
+    },
+    {
+        "number": 165,
+        "name": "Schaumldschausrastung 2 oder 4"
+    },
+    {
+        "number": 66,
+        "name": "Schaummittelbehalter"
+    },
+    {
+        "number": 67,
+        "name": "Schiebleiter 2-tellig oder 3-teilig"
+    },
+    {
+        "number": 68,
+        "name": "Schlauchbindensatz mit Tasche"
+    },
+    {
+        "number": 69,
+        "name": "Schlauchbrucke"
+    },
+    {
+        "number": 70,
+        "name": "Schlauchhalter"
+    },
+    {
+        "number": 71,
+        "name": "Schlauchtrager"
+    },
+    {
+        "number": 73,
+        "name": "Schnittschutzausristung"
+    },
+    {
+        "number": 74,
+        "name": "Schnir- und Bindeleinen"
+    },
+    {
+        "number": 75,
+        "name": "Schutzanzuge Schutzstufe 2"
+    },
+    {
+        "number": 76,
+        "name": "Schutzkorb fur Saugkorb A"
+    },
+    {
+        "number": 77,
+        "name": "Standrohr"
+    },
+    {
+        "number": 78,
+        "name": "Stativ"
+    },
+    {
+        "number": 79,
+        "name": "Steckleiter 4-tellig"
+    },
+    {
+        "number": 80,
+        "name": "Steuerorgan far die Hebekissen"
+    },
+    {
+        "number": 81,
+        "name": "StraBenbesen"
+    },
+    {
+        "number": 82,
+        "name": "Stufenkeile"
+    },
+    {
+        "number": 83,
+        "name": "Stutzkrimmer B"
+    },
+    {
+        "number": 84,
+        "name": "Trennschleifer"
+    },
+    {
+        "number": 85,
+        "name": "Uberflurhydrantenschlussel"
+    },
+    {
+        "number": 86,
+        "name": "Ubergangsstiick A- B"
+    },
+    {
+        "number": 87,
+        "name": "Ubergangsstlick B - C"
+    },
+    {
+        "number": 88,
+        "name": "Umlenkrolle"
+    },
+    {
+        "number": 89,
+        "name": "Universal Brech- und Trennwerkzeug"
+    },
+    {
+        "number": 90,
+        "name": "Unterflurhydrantenschlussel"
+    },
+    {
+        "number": 91,
+        "name": "Unterlagsholzer"
+    },
+    {
+        "number": 92,
+        "name": "Unterwasserpumpe"
+    },
+    {
+        "number": 93,
+        "name": "Verkehrsleitkegel"
+    },
+    {
+        "number": 95,
+        "name": "Verteiler B - CBC"
+    },
+    {
+        "number": 96,
+        "name": "Verteilerkabeltrommel 230/400V"
+    },
+    {
+        "number": 97,
+        "name": "Vollmaske"
+    },
+    {
+        "number": 98,
+        "name": "Vorschlaghammer 5 kg"
+    },
+    {
+        "number": 99,
+        "name": "Warmebildkamera"
+    },
+    {
+        "number": 100,
+        "name": "Warnzeichen ,Feuerwehr\""
+    },
+    {
+        "number": 101,
+        "name": "Wechselstromkabeltrommel! 230V"
+    },
+    {
+        "number": 102,
+        "name": "Werkzeugsatz mit Trage"
+    },
+    {
+        "number": 103,
+        "name": "Winde 100 kN oder hydraulischer Heber"
+    },
+    {
+        "number": 104,
+        "name": "Wolldecke"
+    }
+]
