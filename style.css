@@ -134,7 +134,7 @@ button:active {
 }
 
 .flashcard.flip {
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
 }
 
 .flashcard .card-content p {
