@@ -7,6 +7,5 @@
     { "id": 6, "questionImage": "Bilder/Gasflasche.JPG", "answer": "Symbol für unter Druck stehende Gase" },
     { "id": 7, "questionImage": "Bilder/Gesundheitsgefahr.JPG", "answer": "Symbol für krebserregende oder die Atemwege sensibilisierende Stoffe und Gemische" },
     { "id": 8, "questionImage": "Bilder/Totenkopf.JPG", "answer": "Für akut toxische Stoffe und Gemische" },
-    { "id": 9, "questionImage": "Bilder/Umwelt.JPG", "answer": "Symbol für Stoffe und Gemische, die akut oder chronisch Gewässer gefährden" },
-    { "id": 9, "questionImage": "Welche Abstände musst du bei Bekämpfung von Feuer in elektrischen Anlagen Einhalten", "answer": "Alle tragbaren Feuerlöscher 1 Meter außer Nasslöscher und Wandhydranten mit Vollstrahleinsatz 3 Meter Abstand" } 
+    { "id": 9, "questionImage": "Bilder/Umwelt.JPG", "answer": "Symbol für Stoffe und Gemische, die akut oder chronisch Gewässer gefährden" }
 ]
