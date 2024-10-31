@@ -11,6 +11,7 @@ fetch('einsatzMaschinistData.json') // Verweis auf die JSON-Datei für Einsatzma
     .catch(error => console.error("Fehler beim Laden der JSON-Datei:", error));
 
 function flipCard() {
+    console.log("karte umgedreht");
     const cardText = document.getElementById('cardText');
     const flashcard = document.querySelector('.flashcard');
     
@@ -28,6 +29,7 @@ function flipCard() {
 }
 
 function getNextQuestion() {
+    console.log("nächste Frage");
     if (questions.length === 0) return;
 
     currentQuestionIndex = Math.floor(Math.random() * questions.length); // Zufällige Frage auswählen
