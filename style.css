@@ -146,6 +146,56 @@ button:active {
     background-color: #9e9d9d;
 }
 
+/* Nur Karteikarten mit Bildern anpassen */
+.flashcard-image {
+    width: auto;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #9e9d9d;
+    border: 2px solid var(--fire-red);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.flashcard-image .card-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.flashcard-image .card-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Vorderseite der Bild-Karte */
+.flashcard-image .card-content.front {
+    background-color: #f5f5f5;
+}
+
+/* Rückseite der Bild-Karte */
+.flashcard-image .card-content.back {
+    transform: rotateY(180deg);
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
 /* Responsives Design */
 @media (max-width: 500px) {
     h1 {
