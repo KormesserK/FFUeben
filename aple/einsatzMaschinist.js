@@ -2,7 +2,7 @@ let questions = [];
 let currentQuestionIndex = 0;
 let isShowingAnswer = false;
 
-fetch('einsatzMaschinistData.json') // Verweis auf die JSON-Datei für Einsatzmaschinist
+fetch('einsatzmaschinistData.json') // Verweis auf die JSON-Datei für Einsatzmaschinist
     .then(response => response.json())
     .then(data => {
         questions = data;
