@@ -1,11 +1,11 @@
 [
-    { "id": 1, "questionImage": "aple/Bilder/Aetzwirkung.JPG", "answer": "Symbol für Stoffe und Gemische, die auf Metalle korrosiv, hautätzend und/oder schwer augenschädigend wirken" },
-    { "id": 2, "questionImage": "aple/Bilder/Ausrufezeichen.JPG", "answer": "Symbol für Stoffe und Gemische, die Haut, Augen oder Atemwege reizen" },
-    { "id": 2, "questionImage": "aple/Bilder/ExplodierendeBombe.JPG", "answer": "Symbol für explodierende Stoffe/Gemische und Erzeugnisse mit Explosivstoff" },
-    { "id": 2, "questionImage": "aple/Bilder/Flamme.JPG", "answer": "Symbol für entzündbare Gase, Aerosole, Flüssigkeiten oder Feststoffe" },
-    { "id": 2, "questionImage": "aple/Bilder/FlammeUeberKreis.JPG", "answer": "Symbol für entzündend (oxidierend) wirkende Gase, Flüssigkeiten oder Feststoffe" },
-    { "id": 2, "questionImage": "aple/Bilder/Gasflasche.JPG", "answer": "Symbol für unter Druck stehende Gase" },
-    { "id": 2, "questionImage": "aple/Bilder/Gesundheitsgefahr.JPG", "answer": "Symbol für krebserregende oder die Atemwege sensibilisierende Stoffe und Gemische" },
-    { "id": 2, "questionImage": "aple/Bilder/Totenkopf.JPG", "answer": "Für akut toxische Stoffe und Gemische" },
-    { "id": 2, "questionImage": "aple/Bilder/Umwelt.JPG", "answer": "Symbol für Stoffe und Gemische, die akut oder chronisch Gewässer gefährden" }
+    { "id": 1, "questionImage": "Bilder/Aetzwirkung.JPG", "answer": "Symbol für Stoffe und Gemische, die auf Metalle korrosiv, hautätzend und/oder schwer augenschädigend wirken" },
+    { "id": 2, "questionImage": "Bilder/Ausrufezeichen.JPG", "answer": "Symbol für Stoffe und Gemische, die Haut, Augen oder Atemwege reizen" },
+    { "id": 2, "questionImage": "Bilder/ExplodierendeBombe.JPG", "answer": "Symbol für explodierende Stoffe/Gemische und Erzeugnisse mit Explosivstoff" },
+    { "id": 2, "questionImage": "Bilder/Flamme.JPG", "answer": "Symbol für entzündbare Gase, Aerosole, Flüssigkeiten oder Feststoffe" },
+    { "id": 2, "questionImage": "Bilder/FlammeUeberKreis.JPG", "answer": "Symbol für entzündend (oxidierend) wirkende Gase, Flüssigkeiten oder Feststoffe" },
+    { "id": 2, "questionImage": "Bilder/Gasflasche.JPG", "answer": "Symbol für unter Druck stehende Gase" },
+    { "id": 2, "questionImage": "Bilder/Gesundheitsgefahr.JPG", "answer": "Symbol für krebserregende oder die Atemwege sensibilisierende Stoffe und Gemische" },
+    { "id": 2, "questionImage": "Bilder/Totenkopf.JPG", "answer": "Für akut toxische Stoffe und Gemische" },
+    { "id": 2, "questionImage": "Bilder/Umwelt.JPG", "answer": "Symbol für Stoffe und Gemische, die akut oder chronisch Gewässer gefährden" }
 ]
