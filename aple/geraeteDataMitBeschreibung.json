@@ -1,0 +1,440 @@
+[
+    {
+        "number": 1,
+        "name": "Absperrband (Satz)",
+        "description": "Zum Absperren eines Gefahrenbereiches oder Einsatzstelle",
+        "Raum": "2"
+    },
+    {
+        "number": 2,
+        "name": "Absicherungsbeleuchtung mit Blinkfunktion",
+        "description": "Dient zum Absichern der Einsatzstelle",
+        "Raum": "2"
+    },
+    {
+        "number": 3,
+        "name": "Arbeitsleine",
+        "description": "Leine unterschiedlicher Länge und Art für Tätigkeiten im Feuerwehrdienst z.B. zum Festzurren und Aufziehen. Ausgeschiedene, rot gekennzeichnete Rettungsleine kann als Arbeitsleine eingesetzt werden. Nicht zur Personenrettung und zum Abseilen verwenden",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 5,
+        "name": "Bindemittel oder Mehrzweckbinder",
+        "description": "Dient zum Binden von Treibstoffen und Ölen.",
+        "Raum": "4"
+    },
+    {
+        "number": 6,
+        "name": "Bolzenschneider",
+        "description": "Zum Durchtrennen von Drähten bzw. Bügeln von Vorhangschlössern",
+        "Raum": "1"
+    },
+    {
+        "number": 7,
+        "name": "Brandfluchthaube",
+        "description": "Eine Fluchthaube ist eine Schutzhaube mit integriertem Sichtfenster und Mehrbereichsfilter, die zur Rettung von Personen aus verrauchten Bereichen verwendet wird",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 8,
+        "name": "Brechstange",
+        "description": "Hebelwerkzeug",
+        "Raum": "1"
+    },
+    {
+        "number": 10,
+        "name": "C-Mehrzweckstrahlrohr",
+        "description": "Wasserführende Armatur (absperrbar) zur Abgabe des Löschmittels in Form von Vollstrahl oder Sprühstrahl. Mannschutzbrause (Erklärung). Bedienung durch 2 Mann",
+        "Raum": "5"
+    },
+    {
+        "number": 12,
+        "name": "Druckbegrenzungsventil B",
+        "description": "Dient zur Begrenzung des Betriebsdruckes nach oben. Wenn der eingestellte Sollwert überschritten wird, fließt ein Teil des Wassers ins Freie. Z.B. bei der Löschwasserförderung über längere Strecken",
+        "Raum": "5"
+    },
+    {
+        "number": 13,
+        "name": "Druckschlauch B",
+        "description": "Dient zum Transport von Löschmittel (meist Wasser), vorwiegend als Zubringleitung. Länge 20m, Ø 75 mm",
+        "Raum": "4"
+    },
+    {
+        "number": 14,
+        "name": "Druckschlauch C",
+        "description": "Dient zum Transport von Löschmittel (meist Wasser), Verwendung als Löschleitung. Länge 15 m, Ø 52 mm (Ø 42 mm wenn vorhanden, 20 m lang)",
+        "Raum": "6"
+    },
+    {
+        "number": 15,
+        "name": "D-Saugschlauch für Zumischer",
+        "description": "Dient zum Ansaugen des Schaummittels durch den Zumischer aus dem Schaummittelbehälter",
+        "Raum": "6"
+    },
+    {
+        "number": 17,
+        "name": "Einweghandschuh",
+        "description": "Einweghandschuh, nicht steril. Schützt Einsatzkräfte und verunfallte Personen sowie Tiere vor Infektionen und Körperflüssigkeiten. Wird nach Einsatz entsorgt",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 18,
+        "name": "Fass- oder Stichschaufel",
+        "description": "Schanzwerkzeug, Grabwerkzeug",
+        "Raum": "1"
+    },
+    {
+        "number": 19,
+        "name": "Feuerwehrgurt",
+        "description": "Dient zur Selbstrettung und Sicherung der Einsatzkräfte. Pflichtausrüstung beim Vorgehen auf Leitern",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 20,
+        "name": "Feuerwehraxt",
+        "description": "Dient zum Aufbrechen von Türen oder Abschlagen bzw. Trennen von Gegenständen",
+        "Raum": "1"
+    },
+    {
+        "number": 25,
+        "name": "Hacke",
+        "description": "Werkzeug vorwiegend zur Holzbearbeitung (Trennen, Entasten, Anspitzen usw.)",
+        "Raum": "1"
+    },
+    {
+        "number": 26,
+        "name": "Handfunksprechgerät",
+        "description": "Tragbares Kommunikationsmittel",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 27,
+        "name": "Handsäge",
+        "description": "Schneidwerkzeug für Holz",
+        "Raum": "1"
+    },
+    {
+        "number": 28,
+        "name": "Handscheinwerfer",
+        "description": "Netzunabhängiges tragbares Beleuchtungsgerät",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 32,
+        "name": "Hohlstrahlrohr B",
+        "description": "Wasserführende Armatur (absperrbar) zur Abgabe des Löschmittels in Form von Vollstrahl oder unterschiedlich großem Sprühstrahl (stufenlos verstellbar). Mannschutzbrause (Erklärung). Bedienung durch 4 Mann, bei Verwendung eines Stützkrümmers 2 Mann. Durchfluss laut Herstellerangaben",
+        "Raum": "5"
+    },
+    {
+        "number": 33,
+        "name": "B-Mehrzweckstrahlrohr",
+        "description": "Wasserführende Armatur (absperrbar) zur Abgabe des Löschmittels in Form von Vollstrahl oder unterschiedlich großem Sprühstrahl (stufenlos verstellbar). Mannschutzbrause (Erklärung). Bedienung durch 4 Mann, bei Verwendung eines Stützkrümmers 2 Mann. Durchfluss laut Herstellerangaben",
+        "Raum": "5"
+    },
+    {
+        "number": 34,
+        "name": "Hohlstrahlrohr C",
+        "description": "Wasserführende Armatur (absperrbar) zur Abgabe des Löschmittels in Form von Vollstrahl oder unterschiedlich großem Sprühstrahl (stufenlos verstellbar). Mannschutzbrause (Erklärung). Bedienung durch 2 Mann. Durchfluss laut Herstellerangaben",
+        "Raum": "5"
+    },
+    {
+        "number": 35,
+        "name": "Hydraulischer Rettungssatz",
+        "description": "Dient zur Befreiung von Personen aus einer Notlage, z.B. Schneiden von Autoteilen oder Wegdrücken von Wrackteilen. Wegen seiner großen Spreizweite bei Rettungs- und Bergeeinsätzen verwendet.",
+        "Raum": "1"
+    },
+    {
+        "number": 39,
+        "name": "Korbtrage",
+        "description": "Trage zum Transport von Personen.",
+        "Raum": "1"
+    },
+    {
+        "number": 40,
+        "name": "Spineboard",
+        "description": "Trage zum Transport von Personen, besonders bei Verdacht auf Wirbelsäulenverletzungen.",
+        "Raum": "1"
+    },
+    {
+        "number": 41,
+        "name": "Kraftstoffkanister für Stromerzeuger TS (20 Liter) mit Einfüllstutzen",
+        "description": "Dient zum Transport von Treibstoff.",
+        "Raum": "2"
+    },
+    {
+        "number": 42,
+        "name": "Kübelspritze",
+        "description": "Kleinlöschgerät zur Bekämpfung von Entstehungsbränden der Brandklasse A.",
+        "Raum": "6"
+    },
+    {
+        "number": 45,
+        "name": "Kupplungsschlüssel ABC",
+        "description": "Zum Öffnen und Schließen von Kupplungen in verschiedenen Dimensionen (A/B/C).",
+        "Raum": "5"
+    },
+    {
+        "number": 47,
+        "name": "Lichtfluter",
+        "description": "Dient zum Ausleuchten von Einsatz- bzw. Arbeitsstellen.",
+        "Raum": "3"
+    },
+    {
+        "number": 50,
+        "name": "Meldermappe",
+        "description": "Beinhaltet die wichtigsten Hilfsmittel für den Melder (Formulare).",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 51,
+        "name": "Motorkettensäge",
+        "description": "Werkzeug zum Schneiden von Bäumen und Holzkonstruktionen.",
+        "Raum": "1"
+    },
+    {
+        "number": 54,
+        "name": "Pressluftatmer",
+        "description": "Umluftunabhängiges Atemschutzgerät (200 oder 300 bar). Bietet Schutz vor schadstoffhaltiger Luft und bei Sauerstoffmangel.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 55,
+        "name": "Pulverlöscher",
+        "description": "Kleinlöschgerät zur Bekämpfung von Klein- und Entstehungsbränden der Brandklassen B, C (Flammbrandpulver) oder A,B,C (Glutbrandpulver).",
+        "Raum": "6"
+    },
+    {
+        "number": 56,
+        "name": "Radkeil",
+        "description": "Dient zur Sicherung des Einsatzfahrzeuges oder eines Unfallfahrzeuges gegen Wegrollen.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 57,
+        "name": "Reserve Pressluftflaschensatz",
+        "description": "Dient zur Herstellung der Einsatzbereitschaft nach einem Atemschutzeinsatz am Einsatzort.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 58,
+        "name": "Rettungsleine 30m mit Beutel",
+        "description": "Dient zur Selbst- bzw. Personenrettung. Ø 12 mm, Länge 20 bzw. 30 Meter. Sichere Verwahrung in einem Beutel. Sichtprüfung nach jeder Verwendung.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 60,
+        "name": "Sammelstück 2 B - A",
+        "description": "Wasserführende Armatur zur Zusammenführung von zwei ankommenden Druckschläuchen in die nächst größere Dimension. Mit Ventilklappe zum Verschließen eines nicht benutzten Zugangs.",
+        "Raum": "5"
+    },
+    {
+        "number": 61,
+        "name": "Sanitätstasche, Koffer oder Rucksack",
+        "description": "Beinhaltet die wichtigsten Materialien für die Erste Hilfe.",
+        "Raum": "6"
+    },
+    {
+        "number": 64,
+        "name": "Schäkel",
+        "description": "Anschlagmittel zur Verbindung von Zug-, Hebe- und Anschlagmitteln, Last- und Hebemitteln oder Hebemitteln untereinander.",
+        "Raum": "1"
+    },
+    {
+        "number": 65,
+        "name": "Schaumlöschausrüstung 2 oder 4",
+        "description": "Besteht aus Schaumrohr und Zumischer. Zum Aufbringen von Mittelschaum/Schwerschaum. Vermischt Luft und Wasserschaummittelgemisch zu Mittelschaum/Schwerschaum.",
+        "Raum": "6"
+    },
+    {
+        "number": 66,
+        "name": "Schaummittelbehälter",
+        "description": "Dient zur Lagerung und zum Transport des Schaummittels.",
+        "Raum": "5"
+    },
+    {
+        "number": 67,
+        "name": "Schiebleiter 2-teilig oder 3-teilig",
+        "description": "Rettungs- und Angriffsgerät, zwei- oder dreiteilig (8,4 m zweiteilig, 14 m dreiteilig). Auszugshöhe mit Auszugsleine zu sichern.",
+        "Raum": "Dach"
+    },
+    {
+        "number": 68,
+        "name": "Schlauchbindensatz mit Tasche",
+        "description": "Zum provisorischen Abdichten kleiner Löcher in Druckschläuchen.",
+        "Raum": "5"
+    },
+    {
+        "number": 69,
+        "name": "Schlauchbrücke",
+        "description": "Schutz von Schlauchleitungen auf Verkehrswegen. Ermöglicht gefahrloses Überrollen von Fahrzeugen über Schlauchleitungen.",
+        "Raum": "4"
+    },
+    {
+        "number": 70,
+        "name": "Schlauchhalter",
+        "description": "Zum sicheren Befestigen von Schlauchleitungen, z.B. an Stiegengeländern oder Leitern.",
+        "Raum": "5"
+    },
+    {
+        "number": 71,
+        "name": "Schlauchträger",
+        "description": "Dient zum Tragen von gerollten Druckschläuchen.",
+        "Raum": "4 und 6"
+    },
+    {
+        "number": 73,
+        "name": "Schnittschutzausrüstung",
+        "description": "Dient als Schutzbekleidung bei Arbeiten mit der Motorkettensäge.",
+        "Raum": "1"
+    },
+    {
+        "number": 74,
+        "name": "Schnür- und Bindeleinen",
+        "description": "Kurze Leine für verschiedene Tätigkeiten im Feuerwehrdienst.",
+        "Raum": "3"
+    },
+    {
+        "number": 77,
+        "name": "Standrohr",
+        "description": "Dient zur Inbetriebnahme eines Unterflurhydranten, mit Klauenverschluss und zwei B-Druckausgängen.",
+        "Raum": "2"
+    },
+    {
+        "number": 78,
+        "name": "Stativ",
+        "description": "Dient zur Aufstellung von Lichtflutern an der Einsatzstelle.",
+        "Raum": "3"
+    },
+    {
+        "number": 79,
+        "name": "Steckleiter 4-teilig",
+        "description": "Vierteiliges Rettungs- und Angriffsgerät. Kann auch einzeln verwendet werden.",
+        "Raum": "Dach"
+    },
+    {
+        "number": 81,
+        "name": "Straßenbesen",
+        "description": "Dient zur Flächenreinigung.",
+        "Raum": "1"
+    },
+    {
+        "number": 82,
+        "name": "Stufenkeile",
+        "description": "Dient zur Stabilisierung von Unfallfahrzeugen.",
+        "Raum": "1"
+    },
+    {
+        "number": 83,
+        "name": "Stützkrümmer B",
+        "description": "Verringert die Rückstoßwirkung des Wassers durch Ableitung in einem stumpfen Winkel. Ermöglicht den Einsatz eines B-Strahlrohres mit zwei Feuerwehrmitgliedern.",
+        "Raum": "5"
+    },
+    {
+        "number": 85,
+        "name": "Überflurhydrantenschlüssel",
+        "description": "Dient zum Öffnen und Schließen von Überflurhydranten.",
+        "Raum": "5"
+    },
+    {
+        "number": 86,
+        "name": "Übergangsstück A - B",
+        "description": "Dient zur Verbindung verschieden großer Kupplungen.",
+        "Raum": "5"
+    },
+    {
+        "number": 87,
+        "name": "Übergangsstück B - C",
+        "description": "Dient zur Verbindung verschieden großer Kupplungen.",
+        "Raum": "5"
+    },
+    {
+        "number": 88,
+        "name": "Umlenkrolle",
+        "description": "Zum Umlenken oder Verdoppeln von Zugkräften.",
+        "Raum": "1"
+    },
+    {
+        "number": 89,
+        "name": "Universal Brech- und Trennwerkzeug",
+        "description": "Tragbares vielseitiges Rettungs- und Bergewerkzeug. Dient zum Aufbrechen, Aufschneiden, Abschlagen, Heben, Ziehen und Biegen.",
+        "Raum": "1"
+    },
+    {
+        "number": 90,
+        "name": "Unterflurhydrantenschlüssel",
+        "description": "Dient zum Öffnen des Deckels von Unterflurhydranten sowie zum Öffnen und Schließen des Leitungsschiebers.",
+        "Raum": "2"
+    },
+    {
+        "number": 92,
+        "name": "Unterwasserpumpe",
+        "description": "Dient zum Auspumpen oder zur Wasserförderung zur Feuerlöschpumpe.",
+        "Raum": "5"
+    },
+    {
+        "number": 93,
+        "name": "Verkehrsleitkegel",
+        "description": "Dient zum Absichern der Einsatzstelle.",
+        "Raum": "2"
+    },
+    {
+        "number": 95,
+        "name": "Verteiler B - CBC",
+        "description": "Dient zum Verteilen des Löschwassers einer ankommenden Zubringleitung (B) auf zwei weiterführende C und eine B-Löschleitung.",
+        "Raum": "5"
+    },
+    {
+        "number": 96,
+        "name": "Verteilerkabeltrommel 230/400V",
+        "description": "Dient zur elektrischen Verbindung vom Stromerzeuger zu den Verbrauchern und zum Betrieb mehrerer Elektrogeräte.",
+        "Raum": "2"
+    },
+    {
+        "number": 97,
+        "name": "Vollmaske",
+        "description": "Teil des Atemschutzgeräts, verbindet über Lungenautomat zum Pressluftatmer.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 98,
+        "name": "Vorschlaghammer 5 kg",
+        "description": "Schlag- und Brechwerkzeug.",
+        "Raum": "1"
+    },
+    {
+        "number": 100,
+        "name": "Warnzeichen 'Feuerwehr'",
+        "description": "Dient zum Absichern der Einsatzstelle.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 101,
+        "name": "Wechselstromkabeltrommel 230V",
+        "description": "Dient zur elektrischen Verbindung vom Stromerzeuger zu den Verbrauchern.",
+        "Raum": "3"
+    },
+    {
+        "number": 102,
+        "name": "Werkzeugsatz mit Trage",
+        "description": "Beinhaltet das wichtigste Kleinwerkzeug für den Feuerwehreinsatz.",
+        "Raum": "1"
+    },
+    {
+        "number": 104,
+        "name": "Wolldecke",
+        "description": "Dient zum Schutz von Personen.",
+        "Raum": "Mannschaftsraum"
+    },
+    {
+        "number": 105,
+        "name": "Verlängerungskabel",
+        "description": "Dient zur elektrischen Verbindung vom Stromerzeuger zu den Verbrauchern",
+        "Raum": "2"
+    },
+    {
+        "number": 106,
+        "name": "Schnellangriffseinrichtung",
+        "description": "Verwendung als Löschleitung. Länge und Durchmessdimensionen entsprechend Ausführung.",
+        "Raum": "7"
+    }
+]

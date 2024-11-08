@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geräte-Karteikarten</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Geräte-Karteikarten</h1>
+        <div class="flashcard" onclick="flipCard()">
+            <div class="card-content front" id="cardQuestion">
+                <p id="nameText">Gerätename wird hier angezeigt.</p>
+            </div>
+            <div class="card-content back" id="cardAnswer">
+                <p id="descriptionText">Beschreibung wird hier angezeigt.</p>
+                <p id="roomText">Raum: </p>
+            </div>
+        </div>
+        <button onclick="getNextQuestion()">Nächstes Gerät</button>
+    </div>
+    <script src="gereateDatenMitBeschreibung.js"></script>
+</body>
+</html>
