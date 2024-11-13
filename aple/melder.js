@@ -2,7 +2,7 @@ let images = [];
 let currentImageIndex = 0;
 
 // Lade die Daten aus der JSON-Datei
-fetch('melder.js')
+fetch('melder.json')
     .then(response => response.json())
     .then(data => {
         images = data.map(item => item.imageUrl); // Extrahiere nur die Bild-URLs
