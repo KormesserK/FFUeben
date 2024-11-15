@@ -7,5 +7,10 @@
     { "id": 6, "questionImage": "Bilder/Gasflasche.JPG", "answer": "Symbol für unter Druck stehende Gase" },
     { "id": 7, "questionImage": "Bilder/Gesundheitsgefahr.JPG", "answer": "Symbol für krebserregende oder die Atemwege sensibilisierende Stoffe und Gemische" },
     { "id": 8, "questionImage": "Bilder/Totenkopf.JPG", "answer": "Für akut toxische Stoffe und Gemische" },
-    { "id": 9, "questionImage": "Bilder/Umwelt.JPG", "answer": "Symbol für Stoffe und Gemische, die akut oder chronisch Gewässer gefährden" }
+    { "id": 9, "questionImage": "Bilder/3ARegel.JPG", "answer": "Abstand, Aufenthaltszeit, Abschirmung" },
+    { "id": 10, "questionImage": "Bilder/Feuerloescher.JPG", "answer": "Bilder/FeuerloescherLoesung.JPG" },
+    { "id": 11, "questionImage": "Bilder/Fluessiggas.JPG", "answer": "Flüssiggas: Schwerer als Luft, brennbar, nicht sichtbar und beinahe geruchslos, in Verbindung mit Luft bildet sich ein hochexplosives Gemisch" },
+    { "id": 12, "questionImage": "Bilder/GAMS.JPG", "answer": "Gefahr erkennen, Abstand halten, Menschen retten, Spezialkräfte anfordern" },
+    { "id": 12, "questionImage": "Bilder/Mittel.JPG", "answer": "Bilder/MittelLoesung.JPG" },
+    { "id": 12, "questionImage": "Bilder/Gross.JPG", "answer": "Bilder/GrossLoesung.JPG" }
 ]
