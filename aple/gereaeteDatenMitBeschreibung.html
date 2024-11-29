@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -18,8 +18,13 @@
                 <p id="roomText">Raum: </p>
             </div>
         </div>
-        <button onclick="getNextQuestion()">Nächstes Gerät</button>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächstes Gerät</button>
+            <button onclick="resetGame()">Neues Spiel</button> <!-- Neuer Reset-Button -->
+        </div>
     </div>
-    <script src="gereateDatenMitBeschreibung.js"></script>
+    <script src="geraeteDatenMitBeschreibung.js"></script>
 </body>
 </html>
