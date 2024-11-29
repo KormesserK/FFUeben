@@ -18,7 +18,12 @@
                 <p id="answerText" style="display:none;">Antwort wird hier angezeigt.</p>
             </div>
         </div>
-        <button onclick="getNextQuestion()">Nächste Frage</button>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Frage</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
     </div>
     <script src="gefahrenstoffe.js"></script>
 </body>
