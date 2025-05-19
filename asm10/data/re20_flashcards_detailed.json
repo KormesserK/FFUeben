@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Was ist der Stufenbau der Rechtsordnung in Österreich?",
+    "answer": "Bundesverfassung, Landesverfassungen, Bundesgesetze, Landesgesetze, Verordnungen – eine niedrigere Norm darf einer höheren nicht widersprechen."
+  },
+  {
+    "question": "Welche Aufgabe haben die Länder laut Bundesverfassung in Bezug auf die Feuerwehr?",
+    "answer": "Die Feuer- und Gefahrenpolizei ist Aufgabe der Länder. Der Landtag beschließt das Feuerwehrgesetz und überträgt die Zuständigkeit an die Gemeinden."
+  },
+  {
+    "question": "Was regelt das NÖ Feuerwehrgesetz 2015 (NÖ FG 2015)?",
+    "answer": "Es regelt Aufgaben der Feuer- und Gefahrenpolizei, Zuständigkeiten, Einsatzleitung, Hilfeleistungspflicht und rechtliche Rahmenbedingungen der Feuerwehr."
+  },
+  {
+    "question": "Was umfasst die Feuerpolizei laut § 3 NÖ FG 2015?",
+    "answer": "Brandverhütung, vorbeugender Brandschutz, Brandbekämpfung, Sicherungsmaßnahmen nach dem Brand und Mitwirkung bei der Erhebung der Brandursache."
+  },
+  {
+    "question": "Welche drei Stützen bilden den vorbeugenden Brandschutz?",
+    "answer": "Baulicher, organisatorischer und technischer Brandschutz."
+  },
+  {
+    "question": "Was umfasst die Gefahrenpolizei laut § 3 Abs. 2 NÖ FG 2015?",
+    "answer": "Rettung von Menschen und Tieren, Abwehr von Gefahren für Leben, Gesundheit und Sachwerte, sowie Notversorgung."
+  },
+  {
+    "question": "Was ist der Unterschied zwischen hoheitlichem Auftrag und privatrechtlicher Vereinbarung?",
+    "answer": "Hoheitlich: gesetzlich beauftragt mit Amtshaftung. Privatrechtlich: vertraglich vereinbart, keine Amtshaftung – Feuerwehr handelt auf eigene Verantwortung."
+  },
+  {
+    "question": "Wann haftet der Einsatzleiter persönlich?",
+    "answer": "Nur bei Vorsatz oder grober Fahrlässigkeit. Ansonsten haftet die Gemeinde im Rahmen der Amtshaftung."
+  },
+  {
+    "question": "Was ist ein örtlicher Einsatz laut NÖ FG 2015?",
+    "answer": "Ein Einsatz innerhalb eines Gemeindegebietes. Anzahl der Feuerwehren oder Schadensausmaß spielt keine Rolle."
+  },
+  {
+    "question": "Wann spricht man von überörtlicher Feuer- und Gefahrenpolizei?",
+    "answer": "Wenn sich ein Ereignis über mehrere Gemeinden erstreckt oder besondere Objekte (z. B. Autobahnen) betroffen sind."
+  },
+  {
+    "question": "Wie gliedert sich die Hilfeleistungspflicht laut § 35 NÖ FG 2015?",
+    "answer": "1. Eigenständige Hilfe im eigenen Einsatzbereich. 2. Hilfe im Gemeindegebiet auf Anforderung. 3. Hilfe außerhalb nur bei Anforderung und wenn der eigene Bereich nicht vernachlässigt wird."
+  },
+  {
+    "question": "Was ist laut § 29 NÖ FO beim Einsatz zu beachten?",
+    "answer": "Zuständige Feuerwehr arbeitet Einsatz ab, ggf. Unterstützung anfordern, Ausrückemeldung, Einsatzbekleidungspflicht, Einsatzbereitschaft nachher wiederherstellen."
+  },
+  {
+    "question": "Wer ist laut § 36 NÖ FG 2015 grundsätzlich Einsatzleiter?",
+    "answer": "Der örtlich zuständige Feuerwehrkommandant, bei Abwesenheit dessen Stellvertreter oder laut Einsatzleiterliste das ranghöchste anwesende Mitglied."
+  },
+  {
+    "question": "Was ist bei der Einsatzleitung in Betrieben mit Betriebsfeuerwehr zu beachten?",
+    "answer": "Grundsätzlich übernimmt der Betriebsfeuerwehrkommandant, kann sie aber an eine hilfeleistende Feuerwehr übergeben."
+  },
+  {
+    "question": "Welche Reihenfolge gilt bei Mehrfacheinsätzen auf Wasserstraßen?",
+    "answer": "1. Brandeinsatz, 2. Technischer Einsatz, 3. Schadstoffeinsatz."
+  },
+  {
+    "question": "Welche Einsatzarten haben bei Autobahnen laut Landesfeuerwehrrat Priorität?",
+    "answer": "1. Schadstoffeinsatz, 2. Schwere Bergung, 3. Menschenrettung, 4. Sonstige Bergung bis 3,5 t."
+  },
+  {
+    "question": "Welche Aufgaben der Feuerwehr nennt § 34 NÖ FG 2015?",
+    "answer": "Ausbildung, Übungen, Gerätewartung, Mittelbeschaffung, Gemeinschaftspflege, Information der Öffentlichkeit, technische & persönliche Hilfeleistung."
+  },
+  {
+    "question": "Was regelt § 27 NÖ FG 2015 zur Duldungspflicht?",
+    "answer": "Personen müssen helfen, Grundstücke/Zufahrten bereitstellen, Löschwasser zur Verfügung stellen – sofern der Einsatzerfolg davon abhängt."
+  },
+  {
+    "question": "Wann darf die Gemeinde laut § 29 NÖ FG 2015 Zutritt verbieten oder räumen lassen?",
+    "answer": "Bei 'Gefahr im Verzug', zum Schutz von Menschen und Tieren."
+  },
+  {
+    "question": "Was regelt § 31 NÖ FG 2015 zu Sofortmaßnahmen?",
+    "answer": "Einsatzleiter darf Maßnahmen sofort treffen wie Gemeinde, muss aber die Gemeinde sofort informieren – gilt rechtlich wie ein Gemeindebescheid."
+  },
+  {
+    "question": "Was regelt § 28 NÖ FG 2015 in Bezug auf Sicherheitsbehörden?",
+    "answer": "Die Feuerwehr kann Personen zum Verlassen der Einsatzstelle auffordern, Zwangsmaßnahmen darf aber nur die Sicherheitsbehörde setzen."
+  },
+  {
+    "question": "Wann dürfen Unbeteiligte laut SPG von der Einsatzstelle weggewiesen werden?",
+    "answer": "Wenn sie den Einsatz behindern, die Privatsphäre von Betroffenen stören oder sich selbst gefährden."
+  },
+  {
+    "question": "Was regelt das Wasserrechtsgesetz (WRG 1959) im Einsatzfall?",
+    "answer": "Wenn Wasserqualität oder Selbstreinigung gefährdet ist, ist die Wasserrechtsbehörde zuständig. Feuerwehr-EL muss mit der Behörde kooperieren."
+  },
+  {
+    "question": "Wer ist bei einem Wasserrechts-Einsatz Einsatzleiter?",
+    "answer": "Die Wasserrechtsbehörde (Bezirkshauptmann oder Bürgermeister mit Statut), bei Gefahr im Verzug der Bürgermeister."
+  },
+  {
+    "question": "Was passiert bei radiologischen Notfällen laut Strahlenschutzgesetz?",
+    "answer": "Bund evaluiert, Land führt Maßnahmen durch. Feuerwehr unterstützt im Rahmen ihrer Aufgaben."
+  },
+  {
+    "question": "Was gilt beim Waldbrand laut NÖ Forstausführungsgesetz 2017?",
+    "answer": "Das Forstorgan ist Berater. Für Brandbekämpfungskosten kann die Gemeinde Kostenersatz beantragen."
+  },
+  {
+    "question": "Wer ist bei einem Eisenbahneinsatz bis zum Eintreffen des Bahn-Einsatzleiters verantwortlich?",
+    "answer": "Der leitende Beamte des nächstgelegenen Bahnhofs."
+  },
+  {
+    "question": "Welche Prioritäten gelten bei Überschneidung von Einsatzarten auf Hochleistungsstrecken?",
+    "answer": "Überörtlicher Einsatz. Zuständigkeit laut Alarmplan. Kontaktaufnahme mit ÖBB-Notfallkoordinator ist Pflicht."
+  },
+  {
+    "question": "Wann wird der Bezirkseinsatzleiter Rettungsdienst (BEL RD) automatisch alarmiert?",
+    "answer": "Bei Brandeinsätzen, Sucheinsätzen, mehr als drei Verletzten, Tunnel- oder Gleiseinsätzen, bezirksübergreifenden Einsätzen."
+  },
+  {
+    "question": "Was sind Aufgaben des Kommandanten vor Ort (KvO) der Polizei?",
+    "answer": "Führen der Polizeikräfte, Kommunikation mit anderen Einsatzleitern, Aufbau polizeilicher Einsatzabschnitte."
+  }
+]
