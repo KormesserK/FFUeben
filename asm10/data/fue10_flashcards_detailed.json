@@ -1,0 +1,310 @@
+[
+  {
+    "question": "Was sind die vier Tätigkeitsphasen eines Einheitskommandanten im Einsatz?",
+    "answer": "1. Von der Alarmierung bis zum Eintreffen am Einsatzort, 2. Tätigkeiten am Einsatzort, 3. Nach dem Beseitigen der Gefahr bis Einsatzende, 4. Nachbereitung und Dokumentation."
+  },
+  {
+    "question": "Welche Informationen muss der Einheitskommandant aus dem Alarmierungstext entnehmen?",
+    "answer": "Einsatzort, Einsatzgrund, Einsatzart und Alarmstufe."
+  },
+  {
+    "question": "Welche Aufgaben hat der Einheitskommandant vor der Ausfahrt?",
+    "answer": "Kontrolle der Einsatzbekleidung, Auswahl von Fahrzeug/Gerät, Einsatzfahrer und Mannschaft, Festlegen des Ausfahrtszeitpunkts."
+  },
+  {
+    "question": "Welche Aufgaben hat der Einheitskommandant während der Einsatzfahrt?",
+    "answer": "Absetzen der Ausrückemeldung, Weitergabe von Informationen an Fahrer und Mannschaft, Funktionseinteilung der Mannschaft nach Ausbildungsstand."
+  },
+  {
+    "question": "Welche Informationen müssen beim Eintreffen an der Einsatzstelle an die Einsatzleitung gemeldet werden?",
+    "answer": "Feuerwehr, Fahrzeugtyp, Mannschaftsstärke, Anzahl der Atemschutzgeräteträger, Sondergeräte."
+  },
+  {
+    "question": "Was beinhaltet die Atemschutzüberwachung?",
+    "answer": "Taktische Bezeichnung des Trupps, Einsatzziel und -ort, Uhrzeit beim Anschließen des Lungenautomaten, Verbindung zum Trupp."
+  },
+  {
+    "question": "Was sind die Aufgaben des Zugskommandanten/Einsatzabschnittskommandanten?",
+    "answer": "Anwendung des Führungsverfahrens, Führen der Einheiten, Verbindung zur Einsatzleitung, Aufbau einer Führungsunterstützung."
+  },
+  {
+    "question": "Welche Aufgaben hat die Führungsunterstützung?",
+    "answer": "Beratung der Führungskraft, Unterstützung beim Führungsverfahren, Vorbereitung von Entscheidungen, Dokumentation, Versorgung der Einheiten."
+  },
+  {
+    "question": "Was sind die Aufgaben des Kommandanten einer Brandsicherheitswache?",
+    "answer": "Überwachung der Veranstaltungsstätte, Kontrolle von Alarmierung, Zufahrt, Fluchtwegen, Brandbekämpfungseinrichtungen, Einleitung von Maßnahmen, Dokumentation."
+  },
+  {
+    "question": "Welche Inhalte muss ein Protokoll einer Brandsicherheitswache enthalten?",
+    "answer": "Feuerwehr, Veranstaltungsart und Ort, Genehmigungsbehörde, Kommandant und Mitglieder, Beginn und Ende, festgestellte Mängel, Unterschriften."
+  },
+  {
+    "question": "Welche drei Voraussetzungen sind für eine Verbrennung notwendig (Verbrennungsdreieck)?",
+    "answer": "Wärme, brennbarer Stoff, Sauerstoff – im richtigen Mengenverhältnis."
+  },
+  {
+    "question": "Was ist der Unterschied zwischen Zündtemperatur und Flammpunkt?",
+    "answer": "Zündtemperatur: Temperatur, bei der sich ein Stoff selbst entzündet. Flammpunkt: niedrigste Temperatur, bei der sich brennbare Dämpfe bilden, die bei Zündung brennen können."
+  },
+  {
+    "question": "Was versteht man unter Explosion im Kontext der Brandbekämpfung?",
+    "answer": "Eine Explosion ist eine sehr schnelle Verbrennung. Sie entsteht, wenn das Mengenverhältnis von brennbarem Gas und Sauerstoff im explosionsfähigen Bereich liegt."
+  },
+  {
+    "question": "Wofür ist Wasser als Löschmittel geeignet und wann nicht?",
+    "answer": "Hauptsächlich zum Kühlen geeignet. Nicht bei Metallbränden, Rauchfangbränden oder bei Stoffen, die mit Wasser gefährlich reagieren."
+  },
+  {
+    "question": "Was ist der Hauptlöscheffekt von Schaum?",
+    "answer": "Ersticken – durch Trennung der brennbaren Dämpfe von der Umgebungsluft."
+  },
+  {
+    "question": "Was bedeutet Verschäumungszahl?",
+    "answer": "Verhältnis zwischen Schaummittel-Wassergemisch und erzeugtem Löschschaum (z. B. VZ75 = 1000 Liter Gemisch ergeben 75.000 Liter Schaum)."
+  },
+  {
+    "question": "Wann ist der Einsatz von Schaum nicht geeignet?",
+    "answer": "Bei elektrischen Anlagen, Metallbränden oder Stoffen, die mit Wasser reagieren."
+  },
+  {
+    "question": "Wie wirkt Löschpulver?",
+    "answer": "Es stört den Verbrennungsvorgang (Störeffekt), hat kaum Kühl- oder Erstickeigenschaften. Rückzündungsgefahr ist hoch."
+  },
+  {
+    "question": "Welche taktischen Überlegungen gelten für die Wahl des Angriffswegs?",
+    "answer": "Angriffsweg muss nicht gleich Rettungsweg sein; optimale Schlauchleitung abhängig von Länge, Lage und Hindernissen."
+  },
+  {
+    "question": "Was ist beim Einsatz mehrerer Strahlrohre zu beachten?",
+    "answer": "Der Maschinist muss die Druckverhältnisse kennen. Unterschiedliche Strahlrohrtypen brauchen angepassten Pumpendruck."
+  },
+  {
+    "question": "Was ist Netzmittel und wozu dient es?",
+    "answer": "Netzmittel (Schaummittel in geringen Mengen) reduziert Oberflächenspannung des Wassers, um tiefer in Glutbrände einzudringen."
+  },
+  {
+    "question": "Was sind taktische Maßnahmen, um einen Innenangriff zu ermöglichen?",
+    "answer": "Brandlast brechen (z. B. durch kurzen Außenangriff), Entrauchen, alternative Angriffswege schaffen."
+  },
+  {
+    "question": "Was bedeutet 'Taktik ohne Technik ist hilflos, Technik ohne Taktik ist sinnlos'?",
+    "answer": "Führungskräfte müssen technische Möglichkeiten kennen, aber Technik alleine reicht nicht – taktische Entscheidungen sind essenziell."
+  },
+  {
+    "question": "Warum ist Baukunde für den Einheitskommandanten wichtig?",
+    "answer": "Weil Entscheidungen über Innenangriff, Löschmittelwahl und Sicherheitsmaßnahmen vom Brandverhalten der Baustoffe und Bauteile abhängen."
+  },
+  {
+    "question": "Was ist der Unterschied zwischen Baustoffen und Bauteilen?",
+    "answer": "Baustoffe sind Materialien wie Beton, Holz oder Stahl. Aus ihnen werden Bauteile wie Wände, Decken oder Träger gefertigt."
+  },
+  {
+    "question": "Was ist ein Brandabschnitt?",
+    "answer": "Ein Gebäudeabschnitt, der durch spezielle Bauteile mit entsprechender Brandwiderstandsdauer vom übrigen Gebäude getrennt ist."
+  },
+  {
+    "question": "Was ist eine Brandmauer bzw. Brandwand?",
+    "answer": "Brandmauern sind öffnungslose Wände, Brandwände können Öffnungen mit definiertem Feuerwiderstand besitzen."
+  },
+  {
+    "question": "Welche Bauarten werden unterschieden?",
+    "answer": "Nach Baustoff: Mauerwerksbau, Betonbau, Stahlbau, Holzbau; Nach Konstruktion: Massivbau, Tafelbau, Skelettbau, Fachwerksbau."
+  },
+  {
+    "question": "Wie verhält sich Holz im Brandfall?",
+    "answer": "Bildet eine Holzkohleschicht, die den Abbrand verzögert. Abbrandrate ca. 1 mm/min. Der Holzkern bleibt oft tragfähig."
+  },
+  {
+    "question": "Was passiert mit Stahl bei Brandeinwirkung?",
+    "answer": "Stahl verliert ab 500 °C rund 50 % Tragfähigkeit. Ab 700 °C trägt er nur noch sein Eigengewicht – Einsturzgefahr!"
+  },
+  {
+    "question": "Was sind die Gefahren bei Kunststoffen im Brandfall?",
+    "answer": "Giftige Gase, dichter schwarzer Rauch, Tropfverhalten – auch brennend."
+  },
+  {
+    "question": "Wie werden Feuerwiderstandsklassen angegeben?",
+    "answer": "Nach Zeitdauer: 30 Min = brandhemmend, 60 Min = hochbrandhemmend, 90 Min = brandbeständig, 180 Min = hochbrandbeständig."
+  },
+  {
+    "question": "Was ist beim Einsatz in der Nähe freistehender Wände oder Rauchfänge zu beachten?",
+    "answer": "Erhöhte Einsturzgefahr – der Einheitskommandant muss einen Gefahrenbereich definieren (Trümmerschatten)."
+  },
+  {
+    "question": "Wie wirken sich Brände auf Stahlbetonbauteile aus?",
+    "answer": "Wasser verdampft, Beton platzt ab, Stahl wird freigelegt und verliert schnell seine Tragfähigkeit."
+  },
+  {
+    "question": "Welche Gefahr besteht bei Faserzementplatten?",
+    "answer": "Durch Hitze zersplittert das Material – es besteht hohe Verletzungsgefahr durch Trümmerflug."
+  },
+  {
+    "question": "Was sind die Probleme bei Blechdeckungen im Brandfall?",
+    "answer": "Blech verformt sich durch Hitze, erschwert Brandbekämpfung, da Brandherd schwer erreichbar ist."
+  },
+  {
+    "question": "Welche Gefahr geht von Wärmedämmungen aus Polystyrol aus?",
+    "answer": "Sie können durch Hitze auf der Putzoberfläche entzündet werden, insbesondere bei schlechter Verarbeitung."
+  },
+  {
+    "question": "Welche Rolle spielen Feuerschutzabschlüsse wie Brandschutztüren?",
+    "answer": "Sie sind taktisch relevant, da sie das Ausbreiten von Feuer und Rauch verhindern können, haben aber meist geringere Feuerwiderstandswerte als Brandwände."
+  },
+  {
+    "question": "Wofür steht die AUTO-Merkregel im technischen Einsatz?",
+    "answer": "Austritt von Stoffen, Unterboden/Kofferraum/Motorraum prüfen, Tankdeckel/Ort/Ausführung checken, Oberfläche kontrollieren."
+  },
+  {
+    "question": "Was sind die vier Schritte des Rettungsablaufs im technischen Einsatz?",
+    "answer": "Sichern, Zugang schaffen, Befreien, Retten."
+  },
+  {
+    "question": "Was bedeutet 'Sichern' im technischen Rettungseinsatz?",
+    "answer": "Absichern der Einsatzstelle, Eigenschutz der Kräfte, Brandschutz sicherstellen, Verunfallte betreuen, Lasten stabilisieren."
+  },
+  {
+    "question": "Was ist beim Zugang zur verunfallten Person zu beachten?",
+    "answer": "Zugang so schaffen, dass Erstversorgung möglich ist, Kontakt zur Person halten, Rettungsdienst koordinieren, Gefahrenbereiche beachten."
+  },
+  {
+    "question": "Was ist der Unterschied zwischen 'Befreien' und 'Retten' im technischen Einsatz?",
+    "answer": "'Befreien' bedeutet Entfernen störender Objekte, 'Retten' ist der Transport der Person aus dem Gefahrenbereich in Sicherheit."
+  },
+  {
+    "question": "Was ist eine 'schonende Rettung'?",
+    "answer": "Rettung mit möglichst geringer Belastung für die Person, um Folgeverletzungen zu vermeiden."
+  },
+  {
+    "question": "Was ist eine 'schnelle Rettung'?",
+    "answer": "Rettung unter Inkaufnahme von Verletzungen, wenn eine lebensbedrohliche Gefahrenlage besteht (zeitkritisch)."
+  },
+  {
+    "question": "Was ist eine 'Crash-Rettung'?",
+    "answer": "Rettung unter Inkaufnahme oder sogar Verursachung von Verletzungen, um das Leben der Person zu retten – wird oft mit 'schneller Rettung' verwechselt."
+  },
+  {
+    "question": "Was ist bei der Zusammenarbeit mit dem Rettungsdienst im technischen Einsatz zu beachten?",
+    "answer": "Abstimmung des Rettungswegs und Vorgehensweise, Feuerwehr unterstützt beim Transport und der Versorgung der Verletzten."
+  },
+  {
+    "question": "Wie wird der technische Einsatzwert eines Einsatzfahrzeugs beurteilt?",
+    "answer": "Anhand der Ausstattung (z. B. hydraulische Rettungsgeräte), Mannschaftsstärke und Fachwissen der Führungskraft vor Ort."
+  },
+  {
+    "question": "Wofür steht die GAMS-Regel im Schadstoffeinsatz?",
+    "answer": "Gefahr erkennen – Absperren – Menschenrettung – Spezialkräfte anfordern."
+  },
+  {
+    "question": "Was beinhaltet 'Gefahr erkennen' in der GAMS-Regel?",
+    "answer": "Sichtbare Zeichen (Dämpfe, Flüssigkeiten), Kennzeichnungen, UN-Nummern, Hinweise von Zeugen."
+  },
+  {
+    "question": "Was bedeutet 'Absperren' im Schadstoffeinsatz?",
+    "answer": "Absichern der Gefahrenstelle durch Absperrungen, Abstand halten, Zugang kontrollieren."
+  },
+  {
+    "question": "Was ist bei der Menschenrettung im Schadstoffeinsatz zu beachten?",
+    "answer": "Rettung nur mit geeigneter Schutzausrüstung und unter Berücksichtigung der Eigengefährdung."
+  },
+  {
+    "question": "Warum müssen Spezialkräfte im Schadstoffeinsatz angefordert werden?",
+    "answer": "Weil spezielle Ausrüstung, Schutzanzüge, Messgeräte oder Fachkenntnisse erforderlich sind."
+  },
+  {
+    "question": "Welche Hilfsmittel unterstützen die Einsatzleitung im Schadstoffeinsatz?",
+    "answer": "Gefahrstoff-Blattler, ERI-Cards, Gefahrgutdatenbanken, Schaummittelbedarfsrechner."
+  },
+  {
+    "question": "Was ist die Rolle des Einheitskommandanten im Schadstoffeinsatz?",
+    "answer": "Erste Maßnahmen nach GAMS-Regel setzen, Lage erkunden, Gefahren einschätzen und auf Unterstützung warten."
+  },
+  {
+    "question": "Welche taktische Grundregel gilt beim Schadstoffeinsatz für die Feuerwehr?",
+    "answer": "Nur Maßnahmen ergreifen, die mit den vorhandenen Mitteln sicher möglich sind – Selbstschutz hat oberste Priorität."
+  },
+  {
+    "question": "Was bedeutet 'Gefahrstoff erkennen' bei Nacht oder schlechter Sicht?",
+    "answer": "Einsatz von WBK, Beleuchtung, sichere Annäherung, Sichtung von Piktogrammen oder Transportkennzeichen."
+  },
+  {
+    "question": "Welche vier Phasen umfasst das Führungsverfahren?",
+    "answer": "Lagefeststellung, Planung, Befehlsgebung, Kontrolle."
+  },
+  {
+    "question": "Was ist das Ziel der Lagefeststellung?",
+    "answer": "Erkennen der Gefahren, Feststellen der Lage, Sammeln von Informationen, um fundierte Entscheidungen treffen zu können."
+  },
+  {
+    "question": "Welche Mittel stehen zur Lagefeststellung zur Verfügung?",
+    "answer": "Eigene Beobachtung, Rückmeldungen der Trupps, technische Hilfsmittel (z. B. Wärmebildkamera), Auskünfte von Betroffenen."
+  },
+  {
+    "question": "Was umfasst die Phase der Planung im Führungsverfahren?",
+    "answer": "Erfassen des Auftrags, Beurteilung der Lage, Abwägen der Möglichkeiten, Bildung eines Entschlusses und Plan der Durchführung."
+  },
+  {
+    "question": "Was ist ein Entschluss im Sinne des Führungsverfahrens?",
+    "answer": "Die klare Entscheidung über das taktische Vorgehen, basierend auf Lagebeurteilung und möglichen Alternativen."
+  },
+  {
+    "question": "Wie erfolgt die Befehlsgebung im Einsatz?",
+    "answer": "Durch kurze, klare und strukturierte Anweisungen an die Mannschaft oder an unterstellte Führungskräfte."
+  },
+  {
+    "question": "Was sind wesentliche Bestandteile eines Befehls?",
+    "answer": "Was ist passiert? Was wird getan? Wer tut es? Womit? Wann? Wo? Welche Rückmeldung?"
+  },
+  {
+    "question": "Was ist das Ziel der Kontrollphase?",
+    "answer": "Überprüfung, ob die gesetzten Maßnahmen wie geplant umgesetzt wurden und ob neue Maßnahmen erforderlich sind."
+  },
+  {
+    "question": "Warum ist die Kontrolle ein dauerhafter Bestandteil des Führungsverfahrens?",
+    "answer": "Weil sich die Lage jederzeit ändern kann und Maßnahmen regelmäßig angepasst oder korrigiert werden müssen."
+  },
+  {
+    "question": "Wie unterstützt die Führungsunterstützung das Führungsverfahren?",
+    "answer": "Durch Beratung, Dokumentation, Vorbereitung von Entscheidungen und Kommunikation innerhalb der Einsatzleitung."
+  },
+  {
+    "question": "Wie ist der Aufbau eines einfachen Einsatzbefehls nach dem Führungsverfahren?",
+    "answer": "Lage – Entschluss – Durchführung (mit: Ziel, Weg, Mittel)."
+  },
+  {
+    "question": "Wie ist der vollständige Aufbau eines Einsatzbefehls im erweiterten Führungsverfahren an andere Führungskräfte?",
+    "answer": "Lage – Entschluss – Durchführung – Verbindung – Versorgung."
+  },
+  {
+    "question": "Was gehört zur 'Lage' im Befehlsaufbau?",
+    "answer": "Was ist passiert? Was ist erkennbar? Was sind die Gefahren? Was haben vorgehende Einheiten gemeldet?"
+  },
+  {
+    "question": "Was beinhaltet der 'Entschluss' im Befehlsaufbau?",
+    "answer": "Was wird durch wen wie erreicht? Der Entschluss ist die Entscheidung der Führungskraft zur Zielerreichung."
+  },
+  {
+    "question": "Welche drei Elemente enthält die 'Durchführung' im Befehl?",
+    "answer": "Ziel – Weg – Mittel."
+  },
+  {
+    "question": "Was bedeutet 'Ziel' in der Durchführung?",
+    "answer": "Das Ergebnis, das erreicht werden soll (z. B. Menschenrettung, Brandbekämpfung, Absicherung)."
+  },
+  {
+    "question": "Was bedeutet 'Weg' in der Durchführung?",
+    "answer": "Der taktische Weg, z. B. welcher Angriffsweg, wie der Zugang erfolgt, wo sich die Einheit positioniert."
+  },
+  {
+    "question": "Was bedeutet 'Mittel' in der Durchführung?",
+    "answer": "Welche Ressourcen verwendet werden: Geräte, Fahrzeuge, Personal, Löschmittel usw."
+  },
+  {
+    "question": "Was bedeutet 'Verbindung' im erweiterten Befehl?",
+    "answer": "Wie erfolgt die Kommunikation? (z. B. Funkkanal, Melder, Sichtverbindung)."
+  },
+  {
+    "question": "Was bedeutet 'Versorgung' im erweiterten Befehl?",
+    "answer": "Sicherstellung von Nachschub, Personal, Atemschutzüberwachung, Sanitätsbetreuung usw."
+  }
+]
