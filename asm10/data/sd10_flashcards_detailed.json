@@ -1,0 +1,142 @@
+[
+  {
+    "question": "Was ist das Ziel der Einsatzhygiene bei Feuerwehreinsätzen?",
+    "answer": "Schutz vor Kontamination und Inkorporation sowie Vermeidung der Verschleppung von Schadstoffen in Feuerwehrhäuser und Privatbereiche."
+  },
+  {
+    "question": "Was ist die Definition von Einsatzhygiene?",
+    "answer": "Schutzmaßnahmen, die bei jedem Einsatz selbstständig von jedem Mitglied zur Verhinderung und Beseitigung von Kontamination durchgeführt werden müssen."
+  },
+  {
+    "question": "Welche Maßnahmen sind vor und während der Anfahrt umzusetzen?",
+    "answer": "Ablegen von Tabakmitteln, Nahrungsmitteln und persönlichen Gegenständen."
+  },
+  {
+    "question": "Welche Hygienemaßnahmen gelten an der Einsatzstelle?",
+    "answer": "Kontakt mit Schadstoffen vermeiden, Schutzausrüstung korrekt anlegen, kontaminierte Kleidung verpacken, Hautreinigung durchführen."
+  },
+  {
+    "question": "Welche Maßnahmen sind nach dem Einsatz zu setzen?",
+    "answer": "Kontaminierte Kleidung ablegen und reinigen, ggf. entsorgen, Körper gründlich reinigen, ärztliche Untersuchung erwägen."
+  },
+  {
+    "question": "Was bedeutet Dekontamination im Feuerwehrkontext?",
+    "answer": "Entfernung oder Reduktion von Schadstoffen auf Kleidung, Ausrüstung oder Körperoberflächen."
+  },
+  {
+    "question": "Welche speziellen Maßnahmen gelten bei Kontakt mit biologischen Stoffen?",
+    "answer": "Durchführung einer Desinfektion der betroffenen Körperstellen."
+  },
+  {
+    "question": "Welche internationalen Vorschriften regeln den Transport gefährlicher Güter?",
+    "answer": "ADR (Straße), RID (Eisenbahn), ADN (Binnenschifffahrt), IMDG (Seeverkehr), IATA-DGR (Luftfahrt)."
+  },
+  {
+    "question": "Was ist das GGBG und welche Funktion hat es?",
+    "answer": "Gefahrgutbeförderungsgesetz – es wandelt internationale Übereinkommen in nationales Recht um."
+  },
+  {
+    "question": "Wie werden gefährliche Güter für den Endverbraucher gekennzeichnet?",
+    "answer": "Durch Gefahrensymbole (früher) oder Gefahrenpiktogramme nach dem Global Harmonisierten System (GHS)."
+  },
+  {
+    "question": "Wie sind GHS-Piktogramme gestaltet?",
+    "answer": "Quadrat auf Spitze, weißer Hintergrund, roter Rand, schwarzes Symbol."
+  },
+  {
+    "question": "Welche Farben und Formen haben Warn-, Gebots- und Verbotszeichen?",
+    "answer": "Warnzeichen: gelb mit schwarzem Symbol; Gebotszeichen: blau; Verbotszeichen: weiß mit rotem Rand und schwarzem Symbol."
+  },
+  {
+    "question": "Welche Gefahren sind mit Gasen verbunden?",
+    "answer": "Explosionsgefahr, Erstickungsgefahr durch Luftverdrängung, Erfrierung, Vergiftung/Verätzung."
+  },
+  {
+    "question": "Welche Farbkennzeichnung gilt für Gasflaschen und Rohrleitungen?",
+    "answer": "Rohrleitungen und Gasflaschen werden je nach Inhalt unterschiedlich farblich gekennzeichnet (z. B. gelb für brennbar)."
+  },
+  {
+    "question": "Was ist Zündtemperatur?",
+    "answer": "Die Temperatur, bei der sich ein brennbarer Stoff in Luft ohne Zündquelle selbst entzündet."
+  },
+  {
+    "question": "Was ist der Flammpunkt?",
+    "answer": "Die niedrigste Temperatur, bei der eine brennbare Flüssigkeit entzündbare Dämpfe bildet, die bei kurzzeitiger Zündquelle entflammen."
+  },
+  {
+    "question": "Welche Gefahr besteht bei brandfördernden Stoffen?",
+    "answer": "Sie geben Sauerstoff ab, können Brände auslösen oder selbst zersetzt werden, insbesondere bei Hitze oder Reaktion mit Fetten."
+  },
+  {
+    "question": "Was ist das Ziel von Sofort-Informationen im Gefahrstoffeinsatz?",
+    "answer": "Identifikation von Gefahren innerhalb der ersten Minuten nach Eintreffen an der Einsatzstelle."
+  },
+  {
+    "question": "Welche Beispiele zählen zu Sofort-Informationen?",
+    "answer": "Gefahrzettel, Kennzeichnungsnummer, Gefahrensymbole, GHS-Piktogramme, ÖBFV Blattler."
+  },
+  {
+    "question": "Was ist der Zweck von Kurz-Informationen?",
+    "answer": "Festlegung der ersten Einsatzmaßnahmen in den folgenden 20–30 Minuten."
+  },
+  {
+    "question": "Welche Unterlagen zählen zu den Kurz-Informationen?",
+    "answer": "Schriftliche Weisungen, Beförderungspapier, ERI-Cards, Gefahrgut-Ersteinsatz, Kleiner Gefahrgut-Helfer."
+  },
+  {
+    "question": "Was muss laut ADR im Führerhaus vorhanden sein?",
+    "answer": "Schriftliche Weisungen – an leicht zugänglicher Stelle, mit konkreten Handlungsanweisungen für die Fahrzeugbesatzung."
+  },
+  {
+    "question": "Was enthält das Beförderungspapier?",
+    "answer": "UN-Nummer, Stoffbezeichnung, Versandstücke, Menge, Name/Adresse von Absender und Empfänger."
+  },
+  {
+    "question": "Was sind Beispiele für Detail-Informationen?",
+    "answer": "Hommel-Handbuch, EDV-Datenbanken in Alarmzentralen."
+  },
+  {
+    "question": "Welche Quellen zählen zu Experten-Informationen?",
+    "answer": "Schadstoffberatungsdienst des NÖ LFV, Landeschemiker, Strahlenschutz-Sachverständiger, chemische Industrie (TUIS)."
+  },
+  {
+    "question": "Welche drei Voraussetzungen braucht eine Explosion?",
+    "answer": "Brennbarer Stoff, Sauerstoff und eine Zündquelle im richtigen Verhältnis."
+  },
+  {
+    "question": "Was sind typische Zündquellen im Einsatz?",
+    "answer": "Flammen, heiße Oberflächen, Funken, elektrische Betriebsmittel, statische Elektrizität."
+  },
+  {
+    "question": "Was sind Beispiele für brennbare Stoffe, die Explosionen verursachen können?",
+    "answer": "Gase (z. B. Methan), Flüssigkeiten mit Dampfentwicklung (z. B. Benzin), Stäube (z. B. Mehl, Aluminiumstaub)."
+  },
+  {
+    "question": "Welche Gerätegruppe gilt für Geräte in explosionsgefährdeten Industriebereichen?",
+    "answer": "Gerätegruppe II."
+  },
+  {
+    "question": "Was bedeutet die Zonenklassifizierung Zone 0?",
+    "answer": "Bereich, in dem explosionsfähige Atmosphäre ständig, häufig oder über lange Zeiträume vorhanden ist."
+  },
+  {
+    "question": "Was bedeutet die Zone 2 bei brennbaren Gasen?",
+    "answer": "Explosionsfähige Atmosphäre tritt normalerweise nicht oder nur kurzzeitig auf."
+  },
+  {
+    "question": "Was beschreibt die Temperaturklasse T3?",
+    "answer": "Betriebsmittel dürfen eine maximale Oberflächentemperatur von 200 °C haben. Für Stoffe mit Zündtemperaturen >200 °C."
+  },
+  {
+    "question": "Wie kann man sich vor statischer Elektrizität im Einsatz schützen?",
+    "answer": "Durch Erdung, leitfähige Schutzkleidung, feuchte Umgebung (Sprühnebel), Vermeidung hoher Füllgeschwindigkeiten."
+  },
+  {
+    "question": "Welche Materialien dürfen im explosionsgefährdeten Bereich verwendet werden?",
+    "answer": "Nur funkenarmes Werkzeug und antistatische Spezialschläuche."
+  },
+  {
+    "question": "Warum sind Gummisohlen bei Einsätzen in Ex-Zonen problematisch?",
+    "answer": "Sie können zu elektrostatischer Aufladung führen, wodurch zündfähige Funken entstehen können."
+  }
+]
