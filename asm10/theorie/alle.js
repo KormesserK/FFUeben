@@ -160,9 +160,6 @@ function markCorrect() {
 // Funktion zum Markieren als "Falsch"
 function markIncorrect() {
     if (groupModeEnabled) {
-        if (currentGroup.length === 0) return;
-        const card = currentGroup.splice(currentQuestionIndex, 1)[0];
-        currentGroup.push(card);
         getNextQuestion();
     } else {
         getNextQuestion();
