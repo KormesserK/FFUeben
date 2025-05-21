@@ -257,3 +257,13 @@ button:active {
 .button-container {
     margin-top: 20px;
 }
+
+.progress-text {
+    color: var(--light-gray);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--fire-red);
+    border-radius: 5px;
+    text-align: center;
+}

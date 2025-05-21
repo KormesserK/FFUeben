@@ -2,6 +2,8 @@ let allQuestions = []; // Originales Array für den Reset
 let questions = []; // Arbeits-Array für die aktuelle Spielsitzung
 let currentQuestionIndex = 0;
 let isShowingAnswer = false;
+let currentGroup = []; // Aktuelle Gruppe von 5 Karten
+let remainingQuestions = []; // Übrige Fragen für die nächsten Gruppen
 
 // Array mit allen JSON-Dateien
 const jsonFiles = [
@@ -24,10 +26,32 @@ Promise.all(jsonFiles.map(file =>
 .then(results => {
     // Alle Fragen zusammenführen
     allQuestions = results.flat();
-    questions = [...allQuestions]; // Kopiert die Liste für die aktuelle Spielsitzung
-    getNextQuestion(); // Starte mit der ersten Frage
+    remainingQuestions = [...allQuestions]; // Kopiert die Liste für die nächsten Gruppen
+    startNewGroup(); // Starte mit der ersten Gruppe
 })
 .catch(error => console.error("Fehler beim Laden der JSON-Dateien:", error));
+
+// Funktion zum Starten einer neuen Gruppe
+function startNewGroup() {
+    if (remainingQuestions.length === 0) {
+        alert("Glückwunsch! Sie haben alle Fragen erfolgreich gelernt!");
+        return;
+    }
+
+    // Wähle die nächsten 5 Karten (oder weniger, wenn nicht genug übrig sind)
+    currentGroup = remainingQuestions.splice(0, Math.min(5, remainingQuestions.length));
+    currentQuestionIndex = 0;
+    getNextQuestion();
+    updateGroupProgress();
+}
+
+// Funktion zum Aktualisieren des Gruppenfortschritts
+function updateGroupProgress() {
+    const progressText = document.getElementById('groupProgress');
+    if (progressText) {
+        progressText.textContent = `Gruppe: ${currentGroup.length} Karten übrig`;
+    }
+}
 
 // Funktion zum Umdrehen der Karte
 function flipCard() {
@@ -36,12 +60,10 @@ function flipCard() {
     const flashcard = document.querySelector('.flashcard');
 
     if (isShowingAnswer) {
-        // Zeigt die Frage (Vorderseite)
         questionText.style.display = "block";
         answerText.style.display = "none";
         isShowingAnswer = false;
     } else {
-        // Zeigt die Antwort (Rückseite)
         questionText.style.display = "none";
         answerText.style.display = "block";
         isShowingAnswer = true;
@@ -52,21 +74,18 @@ function flipCard() {
 
 // Funktion zum Abrufen der nächsten Frage
 function getNextQuestion() {
-    if (questions.length === 0) {
-        alert("Alle Fragen wurden durchgearbeitet!");
+    if (currentGroup.length === 0) {
+        startNewGroup();
         return;
     }
 
-    currentQuestionIndex = Math.floor(Math.random() * questions.length); // Zufällige Frage auswählen
     const questionText = document.getElementById('questionText');
     const answerText = document.getElementById('answerText');
 
-    // Setzt die Frage und Antwort
-    questionText.textContent = questions[currentQuestionIndex].question;
-    answerText.textContent = questions[currentQuestionIndex].answer;
+    questionText.textContent = currentGroup[currentQuestionIndex].question;
+    answerText.textContent = currentGroup[currentQuestionIndex].answer;
     isShowingAnswer = false;
 
-    // Zurücksetzen auf die Vorderseite
     questionText.style.display = "block";
     answerText.style.display = "none";
     document.querySelector('.flashcard').classList.remove('flip');
@@ -74,20 +93,37 @@ function getNextQuestion() {
 
 // Funktion zum Markieren als "Richtig"
 function markCorrect() {
-    if (questions.length === 0) return;
-    questions.splice(currentQuestionIndex, 1); // Entfernt die aktuelle Karte aus dem Pool
-    getNextQuestion(); // Zeigt die nächste Karte
+    if (currentGroup.length === 0) return;
+    
+    // Entferne die aktuelle Karte aus der Gruppe
+    currentGroup.splice(currentQuestionIndex, 1);
+    
+    if (currentGroup.length === 0) {
+        // Wenn die Gruppe leer ist, starte eine neue
+        startNewGroup();
+    } else {
+        // Sonst zeige die nächste Karte der aktuellen Gruppe
+        currentQuestionIndex = Math.min(currentQuestionIndex, currentGroup.length - 1);
+        getNextQuestion();
+    }
+    updateGroupProgress();
 }
 
 // Funktion zum Markieren als "Falsch"
 function markIncorrect() {
-    // Karte bleibt im Pool, keine Aktion notwendig
-    getNextQuestion(); // Zeigt die nächste Karte
+    // Verschiebe die aktuelle Karte ans Ende der Gruppe
+    const currentCard = currentGroup.splice(currentQuestionIndex, 1)[0];
+    currentGroup.push(currentCard);
+    
+    // Zeige die nächste Karte
+    currentQuestionIndex = Math.min(currentQuestionIndex, currentGroup.length - 1);
+    getNextQuestion();
+    updateGroupProgress();
 }
 
 // Funktion zum Zurücksetzen des Spiels
 function resetGame() {
-    questions = [...allQuestions]; // Kopiert die originale Liste erneut
-    getNextQuestion(); // Startet das Spiel von vorne
+    remainingQuestions = [...allQuestions];
+    startNewGroup();
     alert("Das Spiel wurde zurückgesetzt!");
 } 
