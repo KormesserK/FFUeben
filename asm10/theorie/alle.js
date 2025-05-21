@@ -7,11 +7,11 @@ let isShowingAnswer = false;
 
 // Array mit allen JSON-Dateien
 const jsonFiles = [
-    'data/fue10_flashcards_detailed.json',
-    'data/re20_flashcards_detailed.json',
-    'data/sd10_flashcards_detailed.json',
-    'data/au11_flashcards_detailed.json',
-    'data/au12_flashcards_detailed.json'
+    '../data/fue10_flashcards_detailed.json',
+    '../data/re20_flashcards_detailed.json',
+    '../data/sd10_flashcards_detailed.json',
+    '../data/au11_flashcards_detailed.json',
+    '../data/au12_flashcards_detailed.json'
 ];
 
 // Debug-Funktion
@@ -196,11 +196,20 @@ function initializeApp() {
             .then(response => {
                 debugLog(`Antwort von ${file}: ${response.status}`);
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP error! status: ${response.status} für Datei ${file}`);
                 }
-                return response.json();
+                return response.text().then(text => {
+                    try {
+                        return JSON.parse(text);
+                    } catch (e) {
+                        throw new Error(`JSON Parse Fehler in ${file}: ${e.message}`);
+                    }
+                });
             })
             .then(data => {
+                if (!Array.isArray(data)) {
+                    throw new Error(`Daten in ${file} sind kein Array`);
+                }
                 debugLog(`Erfolgreich geladen: ${file} mit ${data.length} Fragen`);
                 return data;
             })
@@ -212,12 +221,15 @@ function initializeApp() {
     .then(results => {
         allQuestions = results.flat();
         debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
+        if (allQuestions.length === 0) {
+            throw new Error('Keine Fragen konnten geladen werden');
+        }
         remainingQuestions = [...allQuestions];
         startNewGroup();
     })
     .catch(error => {
         console.error("Fehler beim Laden der JSON-Dateien:", error);
-        alert("Fehler beim Laden der Fragen. Bitte Seite neu laden.");
+        alert("Fehler beim Laden der Fragen: " + error.message);
     });
 }
 
