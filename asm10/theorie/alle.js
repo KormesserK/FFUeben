@@ -19,8 +19,20 @@ function debugLog(message) {
     console.log(message);
 }
 
+// Event-Listener einrichten
+function setupEventListeners() {
+    document.getElementById('correctBtn').addEventListener('click', markCorrect);
+    document.getElementById('incorrectBtn').addEventListener('click', markIncorrect);
+    document.getElementById('nextBtn').addEventListener('click', getNextQuestion);
+    document.getElementById('resetBtn').addEventListener('click', resetGame);
+    debugLog('Event-Listener eingerichtet');
+}
+
 // Lade alle JSON-Dateien
 function initializeApp() {
+    debugLog('Initialisiere App...');
+    setupEventListeners();
+    
     Promise.all(jsonFiles.map(file => 
         fetch(file)
             .then(response => response.json())
