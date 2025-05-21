@@ -1,5 +1,5 @@
 // Globale Variablen
-let allQuestions = []; // Originales Array für den Reset
+let allQuestions = []; // Alle Fragen aus allen JSON-Dateien
 let currentGroup = []; // Aktuelle Gruppe von 5 Karten
 let remainingQuestions = []; // Übrige Fragen für die nächsten Gruppen
 let currentQuestionIndex = 0;
@@ -21,41 +21,24 @@ function debugLog(message) {
 
 // Event-Listener einrichten
 function setupEventListeners() {
-    document.getElementById('correctBtn').addEventListener('click', markCorrect);
-    document.getElementById('incorrectBtn').addEventListener('click', markIncorrect);
-    document.getElementById('nextBtn').addEventListener('click', getNextQuestion);
-    document.getElementById('resetBtn').addEventListener('click', resetGame);
-    debugLog('Event-Listener eingerichtet');
-}
+    const correctBtn = document.getElementById('correctBtn');
+    const incorrectBtn = document.getElementById('incorrectBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const resetBtn = document.getElementById('resetBtn');
 
-// Lade alle JSON-Dateien
-function initializeApp() {
-    debugLog('Initialisiere App...');
-    setupEventListeners();
-    
-    Promise.all(jsonFiles.map(file => 
-        fetch(file)
-            .then(response => response.json())
-            .catch(error => {
-                console.error(`Fehler beim Laden von ${file}:`, error);
-                return []; // Leeres Array bei Fehler
-            })
-    ))
-    .then(results => {
-        // Alle Fragen zusammenführen
-        allQuestions = results.flat();
-        debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
-        remainingQuestions = [...allQuestions]; // Kopiert die Liste für die nächsten Gruppen
-        startNewGroup(); // Starte mit der ersten Gruppe
-    })
-    .catch(error => console.error("Fehler beim Laden der JSON-Dateien:", error));
+    if (correctBtn) correctBtn.addEventListener('click', markCorrect);
+    if (incorrectBtn) incorrectBtn.addEventListener('click', markIncorrect);
+    if (nextBtn) nextBtn.addEventListener('click', getNextQuestion);
+    if (resetBtn) resetBtn.addEventListener('click', resetGame);
+
+    debugLog('Event-Listener eingerichtet');
 }
 
 // Funktion zum Starten einer neuen Gruppe
 function startNewGroup() {
-    debugLog("Starte neue Gruppe");
+    debugLog('Starte neue Gruppe');
     debugLog(`Verbleibende Fragen: ${remainingQuestions.length}`);
-    
+
     if (remainingQuestions.length === 0) {
         alert("Glückwunsch! Sie haben alle Fragen erfolgreich gelernt!");
         return;
@@ -64,12 +47,24 @@ function startNewGroup() {
     // Wähle die nächsten 5 Karten (oder weniger, wenn nicht genug übrig sind)
     currentGroup = remainingQuestions.splice(0, Math.min(5, remainingQuestions.length));
     currentQuestionIndex = 0;
-    
+
     debugLog(`Neue Gruppe erstellt mit ${currentGroup.length} Karten`);
     debugLog(`Verbleibende Fragen nach Gruppenbildung: ${remainingQuestions.length}`);
+
+    // Mische die Karten in der aktuellen Gruppe
+    currentGroup = shuffleArray(currentGroup);
     
     getNextQuestion();
     updateGroupProgress();
+}
+
+// Funktion zum Mischen eines Arrays
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 // Funktion zum Aktualisieren des Gruppenfortschritts
@@ -89,6 +84,11 @@ function flipCard() {
     const answerText = document.getElementById('answerText');
     const flashcard = document.querySelector('.flashcard');
 
+    if (!questionText || !answerText || !flashcard) {
+        debugLog("Fehler: DOM-Elemente nicht gefunden");
+        return;
+    }
+
     if (isShowingAnswer) {
         questionText.style.display = "block";
         answerText.style.display = "none";
@@ -98,14 +98,14 @@ function flipCard() {
         answerText.style.display = "block";
         isShowingAnswer = true;
     }
-    
+
     flashcard.classList.toggle('flip');
 }
 
 // Funktion zum Abrufen der nächsten Frage
 function getNextQuestion() {
     debugLog(`getNextQuestion aufgerufen. Aktuelle Gruppe: ${currentGroup.length} Karten`);
-    
+
     if (currentGroup.length === 0) {
         debugLog("Aktuelle Gruppe ist leer, starte neue Gruppe");
         startNewGroup();
@@ -127,23 +127,23 @@ function getNextQuestion() {
     questionText.style.display = "block";
     answerText.style.display = "none";
     document.querySelector('.flashcard').classList.remove('flip');
-    
+
     debugLog(`Nächste Frage angezeigt. Index: ${currentQuestionIndex}`);
 }
 
 // Funktion zum Markieren als "Richtig"
 function markCorrect() {
     debugLog("Karte als richtig markiert");
-    
+
     if (currentGroup.length === 0) {
         debugLog("Keine Karten in der aktuellen Gruppe");
         return;
     }
-    
+
     // Entferne die aktuelle Karte aus der Gruppe
     currentGroup.splice(currentQuestionIndex, 1);
     debugLog(`Karte entfernt. Verbleibende Karten in Gruppe: ${currentGroup.length}`);
-    
+
     if (currentGroup.length === 0) {
         debugLog("Gruppe ist leer, starte neue Gruppe");
         startNewGroup();
@@ -157,18 +157,18 @@ function markCorrect() {
 // Funktion zum Markieren als "Falsch"
 function markIncorrect() {
     debugLog("Karte als falsch markiert");
-    
+
     if (currentGroup.length === 0) {
         debugLog("Keine Karten in der aktuellen Gruppe");
         return;
     }
-    
+
     // Verschiebe die aktuelle Karte ans Ende der Gruppe
     const currentCard = currentGroup.splice(currentQuestionIndex, 1)[0];
     currentGroup.push(currentCard);
-    
+
     debugLog(`Karte ans Ende verschoben. Gruppenlänge: ${currentGroup.length}`);
-    
+
     // Zeige die nächste Karte
     currentQuestionIndex = Math.min(currentQuestionIndex, currentGroup.length - 1);
     getNextQuestion();
@@ -181,6 +181,36 @@ function resetGame() {
     remainingQuestions = [...allQuestions];
     startNewGroup();
     alert("Das Spiel wurde zurückgesetzt!");
+}
+
+// Lade alle JSON-Dateien
+function initializeApp() {
+    debugLog('Initialisiere App...');
+    setupEventListeners();
+
+    Promise.all(jsonFiles.map(file =>
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error(`Fehler beim Laden von ${file}:`, error);
+                return [];
+            })
+    ))
+    .then(results => {
+        allQuestions = results.flat();
+        debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
+        remainingQuestions = [...allQuestions];
+        startNewGroup();
+    })
+    .catch(error => {
+        console.error("Fehler beim Laden der JSON-Dateien:", error);
+        alert("Fehler beim Laden der Fragen. Bitte Seite neu laden.");
+    });
 }
 
 // Initialisiere die App wenn das Dokument geladen ist
