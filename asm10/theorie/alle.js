@@ -5,6 +5,8 @@ let currentGroup = []; // Aktuelle Gruppe von 5 Karten
 let remainingQuestions = []; // Übrige Fragen für die nächsten Gruppen
 let currentQuestionIndex = 0;
 let isShowingAnswer = false;
+let groupModeEnabled = true;
+let groupSize = 5;
 
 // Liste aller JSON-Dateien (absolute Pfade für GitHub Pages!)
 const jsonFiles = [
@@ -26,12 +28,19 @@ function setupEventListeners() {
     const incorrectBtn = document.getElementById('incorrectBtn');
     const nextBtn = document.getElementById('nextBtn');
     const resetBtn = document.getElementById('resetBtn');
+    const groupModeCheckbox = document.getElementById('groupModeCheckbox');
 
     if (correctBtn) correctBtn.addEventListener('click', markCorrect);
     if (incorrectBtn) incorrectBtn.addEventListener('click', markIncorrect);
     if (nextBtn) nextBtn.addEventListener('click', getNextQuestion);
     if (resetBtn) resetBtn.addEventListener('click', resetGame);
-
+    if (groupModeCheckbox) {
+        groupModeEnabled = groupModeCheckbox.checked;
+        groupModeCheckbox.addEventListener('change', () => {
+            groupModeEnabled = groupModeCheckbox.checked;
+            resetGame();
+        });
+    }
     debugLog('Event-Listener eingerichtet');
 }
 
@@ -46,7 +55,7 @@ function startNewGroup() {
     }
 
     // Wähle die nächsten 5 Karten (oder weniger, wenn nicht genug übrig sind)
-    currentGroup = remainingQuestions.splice(0, Math.min(5, remainingQuestions.length));
+    currentGroup = remainingQuestions.splice(0, Math.min(groupSize, remainingQuestions.length));
     currentQuestionIndex = 0;
 
     debugLog(`Neue Gruppe erstellt mit ${currentGroup.length} Karten`);
@@ -72,8 +81,12 @@ function shuffleArray(array) {
 function updateGroupProgress() {
     const progressText = document.getElementById('groupProgress');
     if (progressText) {
-        progressText.textContent = `Gruppe: ${currentGroup.length} Karten übrig`;
-        debugLog(`Fortschritt aktualisiert: ${currentGroup.length} Karten übrig`);
+        if (groupModeEnabled) {
+            progressText.textContent = `Gruppe: ${currentGroup.length} Karten übrig`;
+        } else {
+            progressText.textContent = `Karten übrig: ${questions.length}`;
+        }
+        debugLog(`Fortschritt aktualisiert`);
     } else {
         debugLog("Fehler: progressText Element nicht gefunden");
     }
@@ -99,40 +112,72 @@ function flipCard() {
 
 // Funktion zum Abrufen der nächsten Frage
 function getNextQuestion() {
-    if (questions.length === 0) {
-        alert("Alle Fragen wurden durchgearbeitet!");
-        return;
+    if (groupModeEnabled) {
+        if (currentGroup.length === 0) {
+            startNewGroup();
+            return;
+        }
+        currentQuestionIndex = Math.floor(Math.random() * currentGroup.length);
+        const questionText = document.getElementById('questionText');
+        const answerText = document.getElementById('answerText');
+        questionText.textContent = currentGroup[currentQuestionIndex].question;
+        answerText.textContent = currentGroup[currentQuestionIndex].answer;
+        isShowingAnswer = false;
+        questionText.style.display = "block";
+        answerText.style.display = "none";
+        document.querySelector('.flashcard').classList.remove('flip');
+    } else {
+        if (questions.length === 0) {
+            alert("Alle Fragen wurden durchgearbeitet!");
+            return;
+        }
+        currentQuestionIndex = Math.floor(Math.random() * questions.length);
+        const questionText = document.getElementById('questionText');
+        const answerText = document.getElementById('answerText');
+        questionText.textContent = questions[currentQuestionIndex].question;
+        answerText.textContent = questions[currentQuestionIndex].answer;
+        isShowingAnswer = false;
+        questionText.style.display = "block";
+        answerText.style.display = "none";
+        document.querySelector('.flashcard').classList.remove('flip');
     }
-
-    currentQuestionIndex = Math.floor(Math.random() * questions.length); // Zufällige Frage auswählen
-    const questionText = document.getElementById('questionText');
-    const answerText = document.getElementById('answerText');
-
-    questionText.textContent = questions[currentQuestionIndex].question;
-    answerText.textContent = questions[currentQuestionIndex].answer;
-    isShowingAnswer = false;
-
-    questionText.style.display = "block";
-    answerText.style.display = "none";
-    document.querySelector('.flashcard').classList.remove('flip');
+    updateGroupProgress();
 }
 
 // Funktion zum Markieren als "Richtig"
 function markCorrect() {
-    if (questions.length === 0) return;
-    questions.splice(currentQuestionIndex, 1); // Entfernt die aktuelle Karte aus dem Pool
-    getNextQuestion();
+    if (groupModeEnabled) {
+        if (currentGroup.length === 0) return;
+        currentGroup.splice(currentQuestionIndex, 1);
+        getNextQuestion();
+    } else {
+        if (questions.length === 0) return;
+        questions.splice(currentQuestionIndex, 1);
+        getNextQuestion();
+    }
 }
 
 // Funktion zum Markieren als "Falsch"
 function markIncorrect() {
-    getNextQuestion(); // Karte bleibt im Pool
+    if (groupModeEnabled) {
+        if (currentGroup.length === 0) return;
+        const card = currentGroup.splice(currentQuestionIndex, 1)[0];
+        currentGroup.push(card);
+        getNextQuestion();
+    } else {
+        getNextQuestion();
+    }
 }
 
 // Funktion zum Zurücksetzen des Spiels
 function resetGame() {
     questions = [...allQuestions];
-    getNextQuestion();
+    remainingQuestions = [...allQuestions];
+    if (groupModeEnabled) {
+        startNewGroup();
+    } else {
+        getNextQuestion();
+    }
     alert("Das Spiel wurde zurückgesetzt!");
 }
 
@@ -150,7 +195,11 @@ function initializeApp() {
             allQuestions = results.flat(); // Alle Fragen in ein Array
             questions = [...allQuestions];
             remainingQuestions = [...allQuestions];
-            startNewGroup();
+            if (groupModeEnabled) {
+                startNewGroup();
+            } else {
+                getNextQuestion();
+            }
         })
         .catch(error => {
             console.error("Fehler beim Laden der JSON-Dateien:", error);
