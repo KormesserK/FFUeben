@@ -82,9 +82,10 @@ function updateGroupProgress() {
     const progressText = document.getElementById('groupProgress');
     if (progressText) {
         if (groupModeEnabled) {
+            progressText.style.display = "block";
             progressText.textContent = `Gruppe: ${currentGroup.length} Karten übrig`;
         } else {
-            progressText.textContent = `Karten übrig: ${questions.length}`;
+            progressText.style.display = "none";
         }
         debugLog(`Fortschritt aktualisiert`);
     } else {
@@ -114,9 +115,15 @@ function flipCard() {
 function getNextQuestion() {
     if (groupModeEnabled) {
         if (currentGroup.length === 0) {
+            if (remainingQuestions.length === 0) {
+                alert("Glückwunsch! Sie haben alle Fragen erfolgreich gelernt!");
+                updateGroupProgress();
+                return;
+            }
             startNewGroup();
             return;
         }
+        // Zufällige Karte aus dem aktuellen Block
         currentQuestionIndex = Math.floor(Math.random() * currentGroup.length);
         const questionText = document.getElementById('questionText');
         const answerText = document.getElementById('answerText');
@@ -126,9 +133,11 @@ function getNextQuestion() {
         questionText.style.display = "block";
         answerText.style.display = "none";
         document.querySelector('.flashcard').classList.remove('flip');
+        updateGroupProgress();
     } else {
         if (questions.length === 0) {
             alert("Alle Fragen wurden durchgearbeitet!");
+            updateGroupProgress();
             return;
         }
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
@@ -140,8 +149,8 @@ function getNextQuestion() {
         questionText.style.display = "block";
         answerText.style.display = "none";
         document.querySelector('.flashcard').classList.remove('flip');
+        updateGroupProgress();
     }
-    updateGroupProgress();
 }
 
 // Funktion zum Markieren als "Richtig"
