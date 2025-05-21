@@ -7,11 +7,11 @@ let isShowingAnswer = false;
 
 // Array mit allen JSON-Dateien
 const jsonFiles = [
-    '/FFUeben/asm10/data/fue10_flashcards_detailed.json',
-    '/FFUeben/asm10/data/re20_flashcards_detailed.json',
-    '/FFUeben/asm10/data/sd10_flashcards_detailed.json',
-    '/FFUeben/asm10/data/au11_flashcards_detailed.json',
-    '/FFUeben/asm10/data/au12_flashcards_detailed.json'
+    '../data/fue10_flashcards_detailed.json',
+    '../data/re20_flashcards_detailed.json',
+    '../data/sd10_flashcards_detailed.json',
+    '../data/au11_flashcards_detailed.json',
+    '../data/au12_flashcards_detailed.json'
 ];
 
 // Debug-Funktion
