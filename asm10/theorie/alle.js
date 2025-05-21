@@ -1,3 +1,4 @@
+// Globale Variablen
 let allQuestions = []; // Originales Array für den Reset
 let currentGroup = []; // Aktuelle Gruppe von 5 Karten
 let remainingQuestions = []; // Übrige Fragen für die nächsten Gruppen
@@ -19,22 +20,24 @@ function debugLog(message) {
 }
 
 // Lade alle JSON-Dateien
-Promise.all(jsonFiles.map(file => 
-    fetch(file)
-        .then(response => response.json())
-        .catch(error => {
-            console.error(`Fehler beim Laden von ${file}:`, error);
-            return []; // Leeres Array bei Fehler
-        })
-))
-.then(results => {
-    // Alle Fragen zusammenführen
-    allQuestions = results.flat();
-    debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
-    remainingQuestions = [...allQuestions]; // Kopiert die Liste für die nächsten Gruppen
-    startNewGroup(); // Starte mit der ersten Gruppe
-})
-.catch(error => console.error("Fehler beim Laden der JSON-Dateien:", error));
+function initializeApp() {
+    Promise.all(jsonFiles.map(file => 
+        fetch(file)
+            .then(response => response.json())
+            .catch(error => {
+                console.error(`Fehler beim Laden von ${file}:`, error);
+                return []; // Leeres Array bei Fehler
+            })
+    ))
+    .then(results => {
+        // Alle Fragen zusammenführen
+        allQuestions = results.flat();
+        debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
+        remainingQuestions = [...allQuestions]; // Kopiert die Liste für die nächsten Gruppen
+        startNewGroup(); // Starte mit der ersten Gruppe
+    })
+    .catch(error => console.error("Fehler beim Laden der JSON-Dateien:", error));
+}
 
 // Funktion zum Starten einer neuen Gruppe
 function startNewGroup() {
@@ -166,4 +169,7 @@ function resetGame() {
     remainingQuestions = [...allQuestions];
     startNewGroup();
     alert("Das Spiel wurde zurückgesetzt!");
-} 
+}
+
+// Initialisiere die App wenn das Dokument geladen ist
+document.addEventListener('DOMContentLoaded', initializeApp); 
