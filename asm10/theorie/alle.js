@@ -7,11 +7,11 @@ let isShowingAnswer = false;
 
 // Array mit allen JSON-Dateien
 const jsonFiles = [
-    '../data/fue10_flashcards_detailed.json',
-    '../data/re20_flashcards_detailed.json',
-    '../data/sd10_flashcards_detailed.json',
-    '../data/au11_flashcards_detailed.json',
-    '../data/au12_flashcards_detailed.json'
+    'data/fue10_flashcards_detailed.json',
+    'data/re20_flashcards_detailed.json',
+    'data/sd10_flashcards_detailed.json',
+    'data/au11_flashcards_detailed.json',
+    'data/au12_flashcards_detailed.json'
 ];
 
 // Debug-Funktion
@@ -188,13 +188,21 @@ function initializeApp() {
     debugLog('Initialisiere App...');
     setupEventListeners();
 
+    debugLog('Versuche JSON-Dateien zu laden...');
+    jsonFiles.forEach(file => debugLog(`Lade Datei: ${file}`));
+
     Promise.all(jsonFiles.map(file =>
         fetch(file)
             .then(response => {
+                debugLog(`Antwort von ${file}: ${response.status}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
+            })
+            .then(data => {
+                debugLog(`Erfolgreich geladen: ${file} mit ${data.length} Fragen`);
+                return data;
             })
             .catch(error => {
                 console.error(`Fehler beim Laden von ${file}:`, error);
