@@ -1,9 +1,8 @@
 let allQuestions = []; // Originales Array für den Reset
-let questions = []; // Arbeits-Array für die aktuelle Spielsitzung
-let currentQuestionIndex = 0;
-let isShowingAnswer = false;
 let currentGroup = []; // Aktuelle Gruppe von 5 Karten
 let remainingQuestions = []; // Übrige Fragen für die nächsten Gruppen
+let currentQuestionIndex = 0;
+let isShowingAnswer = false;
 
 // Array mit allen JSON-Dateien
 const jsonFiles = [
@@ -13,6 +12,11 @@ const jsonFiles = [
     '../data/au11_flashcards_detailed.json',
     '../data/au12_flashcards_detailed.json'
 ];
+
+// Debug-Funktion
+function debugLog(message) {
+    console.log(message);
+}
 
 // Lade alle JSON-Dateien
 Promise.all(jsonFiles.map(file => 
@@ -26,6 +30,7 @@ Promise.all(jsonFiles.map(file =>
 .then(results => {
     // Alle Fragen zusammenführen
     allQuestions = results.flat();
+    debugLog(`Geladene Fragen gesamt: ${allQuestions.length}`);
     remainingQuestions = [...allQuestions]; // Kopiert die Liste für die nächsten Gruppen
     startNewGroup(); // Starte mit der ersten Gruppe
 })
@@ -33,6 +38,9 @@ Promise.all(jsonFiles.map(file =>
 
 // Funktion zum Starten einer neuen Gruppe
 function startNewGroup() {
+    debugLog("Starte neue Gruppe");
+    debugLog(`Verbleibende Fragen: ${remainingQuestions.length}`);
+    
     if (remainingQuestions.length === 0) {
         alert("Glückwunsch! Sie haben alle Fragen erfolgreich gelernt!");
         return;
@@ -41,6 +49,10 @@ function startNewGroup() {
     // Wähle die nächsten 5 Karten (oder weniger, wenn nicht genug übrig sind)
     currentGroup = remainingQuestions.splice(0, Math.min(5, remainingQuestions.length));
     currentQuestionIndex = 0;
+    
+    debugLog(`Neue Gruppe erstellt mit ${currentGroup.length} Karten`);
+    debugLog(`Verbleibende Fragen nach Gruppenbildung: ${remainingQuestions.length}`);
+    
     getNextQuestion();
     updateGroupProgress();
 }
@@ -50,6 +62,9 @@ function updateGroupProgress() {
     const progressText = document.getElementById('groupProgress');
     if (progressText) {
         progressText.textContent = `Gruppe: ${currentGroup.length} Karten übrig`;
+        debugLog(`Fortschritt aktualisiert: ${currentGroup.length} Karten übrig`);
+    } else {
+        debugLog("Fehler: progressText Element nicht gefunden");
     }
 }
 
@@ -74,13 +89,21 @@ function flipCard() {
 
 // Funktion zum Abrufen der nächsten Frage
 function getNextQuestion() {
+    debugLog(`getNextQuestion aufgerufen. Aktuelle Gruppe: ${currentGroup.length} Karten`);
+    
     if (currentGroup.length === 0) {
+        debugLog("Aktuelle Gruppe ist leer, starte neue Gruppe");
         startNewGroup();
         return;
     }
 
     const questionText = document.getElementById('questionText');
     const answerText = document.getElementById('answerText');
+
+    if (!questionText || !answerText) {
+        debugLog("Fehler: Frage- oder Antwort-Element nicht gefunden");
+        return;
+    }
 
     questionText.textContent = currentGroup[currentQuestionIndex].question;
     answerText.textContent = currentGroup[currentQuestionIndex].answer;
@@ -89,20 +112,27 @@ function getNextQuestion() {
     questionText.style.display = "block";
     answerText.style.display = "none";
     document.querySelector('.flashcard').classList.remove('flip');
+    
+    debugLog(`Nächste Frage angezeigt. Index: ${currentQuestionIndex}`);
 }
 
 // Funktion zum Markieren als "Richtig"
 function markCorrect() {
-    if (currentGroup.length === 0) return;
+    debugLog("Karte als richtig markiert");
+    
+    if (currentGroup.length === 0) {
+        debugLog("Keine Karten in der aktuellen Gruppe");
+        return;
+    }
     
     // Entferne die aktuelle Karte aus der Gruppe
     currentGroup.splice(currentQuestionIndex, 1);
+    debugLog(`Karte entfernt. Verbleibende Karten in Gruppe: ${currentGroup.length}`);
     
     if (currentGroup.length === 0) {
-        // Wenn die Gruppe leer ist, starte eine neue
+        debugLog("Gruppe ist leer, starte neue Gruppe");
         startNewGroup();
     } else {
-        // Sonst zeige die nächste Karte der aktuellen Gruppe
         currentQuestionIndex = Math.min(currentQuestionIndex, currentGroup.length - 1);
         getNextQuestion();
     }
@@ -111,9 +141,18 @@ function markCorrect() {
 
 // Funktion zum Markieren als "Falsch"
 function markIncorrect() {
+    debugLog("Karte als falsch markiert");
+    
+    if (currentGroup.length === 0) {
+        debugLog("Keine Karten in der aktuellen Gruppe");
+        return;
+    }
+    
     // Verschiebe die aktuelle Karte ans Ende der Gruppe
     const currentCard = currentGroup.splice(currentQuestionIndex, 1)[0];
     currentGroup.push(currentCard);
+    
+    debugLog(`Karte ans Ende verschoben. Gruppenlänge: ${currentGroup.length}`);
     
     // Zeige die nächste Karte
     currentQuestionIndex = Math.min(currentQuestionIndex, currentGroup.length - 1);
@@ -123,6 +162,7 @@ function markIncorrect() {
 
 // Funktion zum Zurücksetzen des Spiels
 function resetGame() {
+    debugLog("Spiel wird zurückgesetzt");
     remainingQuestions = [...allQuestions];
     startNewGroup();
     alert("Das Spiel wurde zurückgesetzt!");
