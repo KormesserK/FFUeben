@@ -7,6 +7,7 @@ let currentQuestionIndex = 0;
 let isShowingAnswer = false;
 let groupModeEnabled = true;
 let groupSize = 5;
+let lastGroupQuestionIndex = -1;
 
 // Liste aller JSON-Dateien (absolute Pfade für GitHub Pages!)
 const jsonFiles = [
@@ -120,11 +121,21 @@ function getNextQuestion() {
                 updateGroupProgress();
                 return;
             }
+            lastGroupQuestionIndex = -1;
             startNewGroup();
             return;
         }
-        // Zufällige Karte aus dem aktuellen Block
-        currentQuestionIndex = Math.floor(Math.random() * currentGroup.length);
+        // Zufällige Karte aus dem aktuellen Block, aber nicht die gleiche wie zuletzt
+        let nextIndex;
+        if (currentGroup.length === 1) {
+            nextIndex = 0;
+        } else {
+            do {
+                nextIndex = Math.floor(Math.random() * currentGroup.length);
+            } while (nextIndex === lastGroupQuestionIndex);
+        }
+        currentQuestionIndex = nextIndex;
+        lastGroupQuestionIndex = currentQuestionIndex;
         const questionText = document.getElementById('questionText');
         const answerText = document.getElementById('answerText');
         questionText.textContent = currentGroup[currentQuestionIndex].question;
