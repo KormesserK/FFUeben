@@ -1,0 +1,152 @@
+[
+  {
+    "id": "brand1",
+    "bild": "Brand1.jpg",
+    "situation": "Bei der Erkundung wurde festgestellt: Brand in einem Mehrfamilienhaus, Flammen und starke Rauchentwicklung aus einer Wohnung im ersten Obergeschoss. Mehrere Personen im Gebäude, mindestens eine Person am Fenster der Brandwohnung sichtbar.",
+    "befehl_trupp": {
+      "lage": "Wohnungsbrand im 1. OG mit starker Rauchentwicklung. Eine Person am Fenster sichtbar.",
+      "entschluss": "Sofortige Menschenrettung über Leiter und außenangriff weiters paralleler Innenangriff zur Brandbekämpfung.",
+      "durchfuehrung": {
+        "ziel": "Rettung der Person am Fenster und Brandbekämpfung in der Wohnung",
+        "weg": "Außenangriff und Menschenrettung",
+        "mittel": "Steckleiter, Atemschutz, B-Rohr, Wärmebildkamera"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Wohnungsbrand im 1. OG eines Mehrfamilienhauses. Eine Person am Fenster, weitere Personen im Gebäude. Starke Rauchentwicklung.",
+      "entschluss": "Parallele Menschenrettung über Leiter und Treppenhaus mit sofortiger Brandbekämpfung.",
+      "durchfuehrung": {
+        "ziel": "Rettung aller gefährdeten Personen und Brandbekämpfung",
+        "weg": "Anleiterung Brandwohnung, Kontrolle Treppenhaus, Innenangriff",
+        "mittel": "2 Trupps unter Atemschutz, Steckleiter, 2 HD-Rohre"
+      },
+      "verbindung": "Funk auf Kanal Auswiche 2, Atemschutzüberwachung einrichten",
+      "versorgung": "Wasserversorgung über Hydrant, "
+    }
+  },
+  {
+    "id": "brand2",
+    "bild": "Brand2.jpg",
+    "situation": "Kellerbrand in einem Wohnhaus. Starke Rauchentwicklung aus den Kellerfenstern. Rauch zieht bereits ins Treppenhaus. Bewohner haben sich selbst in Sicherheit gebracht, Vollzähligkeit noch unklar.",
+    "befehl_trupp": {
+      "lage": "Kellerbrand mit starker Verrauchung im Treppenhaus. Personen möglicherweise noch im Gebäude.",
+      "entschluss": "Kontrolle des Treppenhauses auf Personen mit gleichzeitiger Brandbekämpfung im Keller.",
+      "durchfuehrung": {
+        "ziel": "Personensuche und Brandbekämpfung",
+        "weg": "Vorgehen über Kellereingang, Belüftung Treppenhaus",
+        "mittel": "Atemschutz, HD-Rohr, Wärmebildkamera, Belüftungsgerät"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Kellerbrand mit Rauchausbreitung ins Treppenhaus. Vollzähligkeit der Bewohner unklar.",
+      "entschluss": "Personensuche und Brandbekämpfung mit Belüftungsmaßnahmen.",
+      "durchfuehrung": {
+        "ziel": "Kontrolle aller Wohnungen, Brandbekämpfung und Entrauchen",
+        "weg": "Zwei Trupps parallel: Brandbekämpfung Keller und Kontrolle Wohnungen",
+        "mittel": "3 Trupps Atemschutz, 2 HD-Rohre, Überdruckbelüftung"
+      },
+      "verbindung": "Funk Kanal 3, regelmäßige Lagemeldungen",
+      "versorgung": "Wasserversorgung sicherstellen, Atemschutzreserve bereithalten"
+    }
+  },
+  {
+    "id": "brand3",
+    "bild": "Brand3.jpg",
+    "situation": "Großbrand in einer Lagerhalle. Offene Flammen schlagen durch das Dach. Keine Personen in Gefahr, aber Übergriffsgefahr auf Nachbargebäude. Gefahrstoffe laut Beschilderung vorhanden.",
+    "befehl_trupp": {
+      "lage": "Vollbrand Lagerhalle mit Durchzündung durchs Dach. Gefahrstoffe gelagert.",
+      "entschluss": "Riegelstellung zum Schutz der Nachbargebäude, kein Innenangriff wegen Einsturzgefahr.",
+      "durchfuehrung": {
+        "ziel": "Verhinderung der Brandausbreitung",
+        "weg": "Außenangriff von zwei Seiten",
+        "mittel": "B-Rohre, Wasserwerfer, Schaummittel"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Lagerhallenbrand mit Gefahrstofflagerung. Durchzündung durchs Dach, akute Übergriffsgefahr.",
+      "entschluss": "Defensiver Außenangriff mit massiver Riegelstellung.",
+      "durchfuehrung": {
+        "ziel": "Eindämmung des Brandes, Schutz der Nachbargebäude",
+        "weg": "Aufbau mehrerer Riegelstellungen, Löschangriff von außen",
+        "mittel": "Mehrere B-Rohre, Wasserwerfer, Schaumangiff"
+      },
+      "verbindung": "Führungskanal 1, Abschnittsbildung",
+      "versorgung": "Wasserversorgung über Unterflurhydranten und Zubringer, Schaummittelvorrat"
+    }
+  },
+  {
+    "id": "brand4",
+    "bild": "Brand4.jpg",
+    "situation": "Zimmerbrand im 2. OG eines Altenheims. Rauch dringt aus den Fenstern. Mehrere nicht mobile Personen noch in ihren Zimmern. Pflegepersonal vor Ort.",
+    "befehl_trupp": {
+      "lage": "Zimmerbrand 2. OG Altenheim, nicht mobile Personen in Gefahr.",
+      "entschluss": "Sofortige Menschenrettung mit paralleler Brandbekämpfung.",
+      "durchfuehrung": {
+        "ziel": "Rettung der gefährdeten Personen und Brandbekämpfung",
+        "weg": "Vorgehen über Treppenhaus, erst Menschenrettung dann Brand",
+        "mittel": "Atemschutz, HD-Rohr, Fluchthaube, Tragetuch"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Zimmerbrand im Altenheim 2. OG. Mehrere nicht mobile Personen in Gefahr. Pflegepersonal unterstützt.",
+      "entschluss": "Koordinierte Rettung mit mehreren Trupps und Brandbekämpfung.",
+      "durchfuehrung": {
+        "ziel": "Evakuierung der gefährdeten Personen und Brandbekämpfung",
+        "weg": "Mehrere Trupps zur Menschenrettung, ein Trupp Brandbekämpfung",
+        "mittel": "4 Trupps Atemschutz, Fluchthauben, Tragetücher, HD-Rohr"
+      },
+      "verbindung": "Funk Kanal 2, enge Abstimmung mit Pflegepersonal",
+      "versorgung": "Bereitstellung Rettungsmittel, Sammelstelle einrichten, mehrere RTW nachfordern"
+    }
+  },
+  {
+    "id": "unfall2",
+    "bild": "Unfall2.jpg",
+    "situation": "Verkehrsunfall zwischen PKW und LKW. PKW liegt auf der Seite, eine Person eingeklemmt. Keine akute Brandgefahr, aber auslaufende Betriebsmittel. LKW-Fahrer unverletzt.",
+    "befehl_trupp": {
+      "lage": "PKW seitlich nach Kollision mit LKW. Eine Person eingeklemmt, Betriebsmittel laufen aus.",
+      "entschluss": "Sofortige technische Rettung der eingeklemmten Person.",
+      "durchfuehrung": {
+        "ziel": "Patientengerechte Rettung der eingeklemmten Person",
+        "weg": "Stabilisierung PKW, dann Dach entfernen",
+        "mittel": "Hydraulisches Rettungsgerät, Stabilisierungsmaterial, Bindemittel"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Verkehrsunfall PKW/LKW. PKW seitlich, Person eingeklemmt. Betriebsmittelaustritt.",
+      "entschluss": "Technische Rettung mit paralleler Absicherung der Einsatzstelle.",
+      "durchfuehrung": {
+        "ziel": "Rettung der eingeklemmten Person und Sicherung der Unfallstelle",
+        "weg": "Absicherung, Stabilisierung, Dachentfernung, Auffangen Betriebsmittel",
+        "mittel": "Hydraulisches Rettungsgerät, Beleuchtung, Bindemittel, Auffangwanne"
+      },
+      "verbindung": "Direkter Kontakt mit Rettungsdienst, Funk Kanal 1",
+      "versorgung": "Brandschutz sicherstellen, Bindemittel nachführen"
+    }
+  },
+  {
+    "id": "unfall3",
+    "bild": "Unfall3.jpg",
+    "situation": "Frontalzusammenstoß zweier PKW. In jedem Fahrzeug eine Person eingeklemmt. Beide Fahrzeuge stark deformiert. Rettungsdienst bereits vor Ort, meldet zwei kritische Patienten.",
+    "befehl_trupp": {
+      "lage": "Frontalzusammenstoß, zwei eingeklemmte Personen in kritischem Zustand.",
+      "entschluss": "Parallele technische Rettung beider Personen.",
+      "durchfuehrung": {
+        "ziel": "Schnellstmögliche patientengerechte Rettung beider Personen",
+        "weg": "Großflächige Öffnung beider Fahrzeuge",
+        "mittel": "Hydraulische Rettungssätze, Stabilisierungsmaterial"
+      }
+    },
+    "befehl_fuehrungskraft": {
+      "lage": "Frontalzusammenstoß zweier PKW. Zwei kritisch Verletzte eingeklemmt. Rettungsdienst vor Ort.",
+      "entschluss": "Parallele technische Rettung mit zwei Rüstzügen.",
+      "durchfuehrung": {
+        "ziel": "Zeitgleiche Rettung beider Patienten",
+        "weg": "Je ein Rüstzug pro Fahrzeug, großflächige Öffnung",
+        "mittel": "2 hydraulische Rettungssätze, Beleuchtung, Stabilisierungsmaterial"
+      },
+      "verbindung": "Enge Abstimmung mit Rettungsdienst, Funk Kanal 3",
+      "versorgung": "Zwei Rettungshubschrauber nachfordern, Brandschutz sicherstellen"
+    }
+  }
+] 

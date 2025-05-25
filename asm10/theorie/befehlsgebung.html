@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Befehlsgebung</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .flashcard {
+            max-width: 800px;
+            height: auto;
+            min-height: 400px;
+        }
+        .card-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .befehl-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .befehl-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .durchfuehrung-details {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Befehlsgebung</h1>
+        <div class="flashcard" onclick="flipCard()">
+            <div class="card-content front" id="cardQuestion">
+                <img id="situationImage" class="card-image" src="" alt="Einsatzsituation">
+                <h3>Situation:</h3>
+                <p id="situationText"></p>
+            </div>
+            <div class="card-content back" id="cardAnswer">
+                <div class="befehl-section">
+                    <h3>Befehl an den Trupp:</h3>
+                    <p><strong>Lage:</strong> <span id="truppLage"></span></p>
+                    <p><strong>Entschluss:</strong> <span id="truppEntschluss"></span></p>
+                    <p><strong>Durchführung:</strong></p>
+                    <div class="durchfuehrung-details">
+                        <p><strong>Ziel:</strong> <span id="truppZiel"></span></p>
+                        <p><strong>Weg:</strong> <span id="truppWeg"></span></p>
+                        <p><strong>Mittel:</strong> <span id="truppMittel"></span></p>
+                    </div>
+                </div>
+                <div class="befehl-section">
+                    <h3>Befehl an Führungskraft:</h3>
+                    <p><strong>Lage:</strong> <span id="fuehrungLage"></span></p>
+                    <p><strong>Entschluss:</strong> <span id="fuehrungEntschluss"></span></p>
+                    <p><strong>Durchführung:</strong></p>
+                    <div class="durchfuehrung-details">
+                        <p><strong>Ziel:</strong> <span id="fuehrungZiel"></span></p>
+                        <p><strong>Weg:</strong> <span id="fuehrungWeg"></span></p>
+                        <p><strong>Mittel:</strong> <span id="fuehrungMittel"></span></p>
+                    </div>
+                    <p><strong>Verbindung:</strong> <span id="fuehrungVerbindung"></span></p>
+                    <p><strong>Versorgung:</strong> <span id="fuehrungVersorgung"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Frage</button>
+            <button onclick="resetGame()">Neues Spiel</button>
+        </div>
+    </div>
+    <script src="befehlsgebung.js"></script>
+</body>
+</html> 
