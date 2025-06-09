@@ -5,7 +5,7 @@
     "situation": "Bei der Erkundung wurde festgestellt: Brand in einem Mehrfamilienhaus, Flammen und starke Rauchentwicklung aus einer Wohnung im ersten Obergeschoss. Mehrere Personen im Gebäude, mindestens eine Person am Fenster der Brandwohnung sichtbar.",
     "befehl_trupp": {
       "lage": "Wohnungsbrand im 1. OG mit starker Rauchentwicklung. Eine Person am Fenster sichtbar.",
-      "entschluss": "Sofortige Menschenrettung über Leiter und außenangriff weiters paralleler Innenangriff zur Brandbekämpfung.",
+      "entschluss": "Sofortige Menschenrettung und außenangriff weiters paralleler Innenangriff zur Brandbekämpfung.",
       "durchfuehrung": {
         "ziel": "Rettung der Person am Fenster und Brandbekämpfung in der Wohnung",
         "weg": "Außenangriff und Menschenrettung",
