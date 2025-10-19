@@ -1,0 +1,184 @@
+{
+    "fragen": [
+      {
+        "id": 1,
+        "question": "Welche Arten von Atemschutzgeräten stehen für den Feuerwehreinsatz zur Verfügung?",
+        "answer": "Umluftabhängige Atemschutzgeräte – Atemmasken und Atemfilter; Umluftunabhängige Atemschutzgeräte – Behältergeräte mit Druckluft (Pressluftatmer) und Regenerationsgeräte (Sauerstoffgeräte, Kreislaufgeräte)."
+      },
+      {
+        "id": 2,
+        "question": "Welche Arten von umluftabhängigen Atemschutzgeräten gibt es?",
+        "answer": "Es gibt Partikelfilter, Gasfilter und Kombinationsfilter."
+      },
+      {
+        "id": 3,
+        "question": "Welches Gas entsteht im Körper durch die Atmung und wird anschließend ausgeatmet?",
+        "answer": "Es entsteht Kohlenstoffdioxid."
+      },
+      {
+        "id": 4,
+        "question": "Wovor schützt eine Schutzhaube?",
+        "answer": "Die Schutzhaube schützt vor Wärme und Flammen."
+      },
+      {
+        "id": 5,
+        "question": "Was ist eine Brandfluchthaube und wie wird sie verwendet?",
+        "answer": "Sie ist ein Fluchtgerät und dient dazu, Personen durch einen verrauchten Bereich zu bringen."
+      },
+      {
+        "id": 6,
+        "question": "Aus welchen Bestandteilen setzt sich atmosphärische Luft zusammen?",
+        "answer": "21 Vol% Sauerstoff, 78 Vol% Stickstoff, 1 Vol% Edelgase."
+      },
+      {
+        "id": 7,
+        "question": "Wie hoch ist der Luftverbrauch eines durchschnittlich gebauten gesunden Menschen?",
+        "answer": "Leichte Arbeit: ca. 30 L/min; mittelschwere Arbeit: ca. 50 L/min; Schwerstarbeit: ca. 100 L/min."
+      },
+      {
+        "id": 8,
+        "question": "Wodurch kann eine Atemkrise entstehen?",
+        "answer": "Durch falsches, flaches und hastiges Atmen und durch Sauerstoffmangel."
+      },
+      {
+        "id": 9,
+        "question": "Was ist ein Flash Over?",
+        "answer": "Schlagartiges Übergreifen (Durchzünden) eines Brandes auf die Oberfläche aller brennbaren Stoffe eines Brandraumes."
+      },
+      {
+        "id": 10,
+        "question": "Ab welchem Alter darf ein Atemschutzgeräteträger als Atemschutztruppführer eingesetzt werden?",
+        "answer": "Ab dem vollendeten 18. Lebensjahr."
+      },
+      {
+        "id": 11,
+        "question": "Welche Technik eignet sich am besten, um bei Sichtbehinderung einen typischen Wohnraum abzusuchen?",
+        "answer": "Die Wandtechnik eignet sich am besten."
+      },
+      {
+        "id": 12,
+        "question": "Wie geht der Atemschutztrupp in Gebäuden und bei schlechten Sichtverhältnissen vor?",
+        "answer": "Mit Beleuchtungsgerät, in gebückter Haltung, gesichert durch eine gefüllte Löschleitung oder durch Leinen."
+      },
+      {
+        "id": 13,
+        "question": "Wann ist eine Atemschutzüberwachung (Einsatzzeitkontrolle) durchzuführen?",
+        "answer": "Generell bei allen Atemschutzeinsätzen."
+      },
+      {
+        "id": 14,
+        "question": "Wann muss eine Kurzprüfung durchgeführt werden?",
+        "answer": "Vor jedem Gebrauch eines Pressluftatmers."
+      },
+      {
+        "id": 15,
+        "question": "Welche Luftmenge muss dem Atemschutzgeräteträger für den gesicherten Rückzug zur Verfügung stehen?",
+        "answer": "Mindestens die doppelte Luftmenge des Einmarschweges."
+      },
+      {
+        "id": 16,
+        "question": "Wovon hängt der Atemluftbedarf des Menschen ab?",
+        "answer": "Von körperlicher Beschaffenheit, Fitness, Alter und Energieaufwand bei der Tätigkeit."
+      },
+      {
+        "id": 17,
+        "question": "Welche Luftmenge steht bei einem 300 bar Pressluftatmer mit 6 Liter Stahlflasche zur Verfügung?",
+        "answer": "Etwa 1620 Liter."
+      },
+      {
+        "id": 18,
+        "question": "Welche Aufgabe hat ein Atemschutzsammelplatz?",
+        "answer": "Registrierung der Trupps, Bevorratung und Befüllung der Atemluftflaschen, Bereitstellung von Atemschutztrupps."
+      },
+      {
+        "id": 19,
+        "question": "Wie ist der Rettungstrupp in Bereitschaft ausgerüstet?",
+        "answer": "Vollständig zur Menschenrettung, der Lungenautomat ist noch nicht mit der Vollmaske verbunden."
+      },
+      {
+        "id": 20,
+        "question": "Welcher Gewinde-Anschluss wird bei einem Überdruckgerät verwendet?",
+        "answer": "Spitzgewinde (M45x3)."
+      },
+      {
+        "id": 21,
+        "question": "Durch wen wird der Befehl an den Atemschutztrupp erteilt?",
+        "answer": "Durch den zuständigen Gruppenkommandanten."
+      },
+      {
+        "id": 22,
+        "question": "Welcher Mindestflaschendruck ist für den Atemschutzeinsatz mit 200 bar Pressluftatmern erforderlich?",
+        "answer": "Mindestens 180 bar."
+      },
+      {
+        "id": 23,
+        "question": "Warum ist die Einsatzbekleidung nach jedem Einsatz sofort zu reinigen?",
+        "answer": "Um Schadstoffe zu entfernen, die sich während des Einsatzes festgesetzt haben."
+      },
+      {
+        "id": 24,
+        "question": "Welcher Sauerstoffgehalt muss in der Umgebungsluft vorhanden sein, um umluftabhängige Atemschutzgeräte einsetzen zu können?",
+        "answer": "Mindestens 17 Vol% Sauerstoff."
+      },
+      {
+        "id": 25,
+        "question": "Wie wird eine Kontrolle der Dichtheit der Atemschutzmaske durchgeführt?",
+        "answer": "Einatemventil mit Handballen verschließen und einatmen – kein Luftzug darf spürbar sein."
+      },
+      {
+        "id": 26,
+        "question": "Wie ist vorzugehen, wenn ein Truppmitglied verunfallt?",
+        "answer": "Rückmeldung an den Gruppenkommandanten (Standort, Lage), Verunfallten ins Freie bringen, ggf. Rettungstrupp anfordern."
+      },
+      {
+        "id": 27,
+        "question": "Wann spricht die akustische Warneinrichtung beim Pressluftatmer an?",
+        "answer": "Bei 55 ±5 bar Fülldruck."
+      },
+      {
+        "id": 28,
+        "question": "Warum dürfen Atemluftflaschen nicht vollständig entleert werden?",
+        "answer": "Damit keine Feuchtigkeit, Schmutz oder Schadstoffe in die Flasche gelangen."
+      },
+      {
+        "id": 29,
+        "question": "Wodurch unterscheiden sich Normaldruckvollmasken von Überdruckvollmasken?",
+        "answer": "Normaldruckmasken: nicht federbelastetes Ausatemventil; Überdruckmasken: federbelastetes Ausatemventil."
+      },
+      {
+        "id": 30,
+        "question": "Wie ist mit dem Pressluftatmer und der Vollmaske nach Einsatz umzugehen?",
+        "answer": "Der Sachbearbeiter Atemschutz sorgt für Befüllung, Reinigung, Desinfektion und Überprüfung der Geräte."
+      },
+      {
+        "id": 31,
+        "question": "Wie wird die Ausatemventilfunktion einer Maske geprüft?",
+        "answer": "Einatemventil mit Handballen verschließen und ausatmen – Luft muss entweichen können."
+      },
+      {
+        "id": 32,
+        "question": "Wie ist eine Kurzprüfung bei einem Pressluftatmer vor dem Einsatz durchzuführen?",
+        "answer": "Flaschenventile öffnen (≥180/270 bar), Warneinrichtung prüfen, Lungenautomat testen, zwei Atemzüge durchführen – kein Widerstand spürbar."
+      },
+      {
+        "id": 33,
+        "question": "Nennen Sie fünf Bestandteile der Vollmaske.",
+        "answer": "Maskenkörper, Sichtscheibe, Sprechmembran, Trageband, Kopfbänderung, Maskendichtrahmen, Steuerventile, Innenmaske, Anschlussstück mit Einatemventil, Ausatemventil mit Vorkammer."
+      },
+      {
+        "id": 34,
+        "question": "Aus welchen Teilen besteht ein Pressluftatmer?",
+        "answer": "Atemluftflasche(n), Flaschenventil(e), Druckminderer, Lungenautomat, Manometer, Warneinrichtung, Tragevorrichtung."
+      },
+      {
+        "id": 35,
+        "question": "Wie ist eine Kurzprüfung bei einem Pressluftatmer nach dem Einsatz durchzuführen?",
+        "answer": "Flaschenhalterung öffnen, Flaschen tauschen, Ventile prüfen, Warneinrichtung bei 55 ±5 bar, Hochdruckdichtprüfung durchführen."
+      },
+      {
+        "id": 36,
+        "question": "Wann ist beim Atemschutzeinsatz der Feuerwehrgurt zu tragen und die Rettungsleine mitzuführen?",
+        "answer": "Bei Bedarf auf Anordnung des Gruppenkommandanten."
+      }
+    ]
+  }
