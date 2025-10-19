@@ -7,9 +7,9 @@ let isShowingAnswer = false;
 fetch('fragen.json')
     .then(response => response.json())
     .then(data => {
-        allQuestions = data.fragen; // Speichert die vollständige Liste der Fragen
+        allQuestions = data; // Speichert die vollständige Liste
         questions = [...allQuestions]; // Kopiert die Liste für die aktuelle Spielsitzung
-        getNextQuestion(); // Starte mit der ersten Frage
+        getNextQuestion(); // Startet mit der ersten Frage
     })
     .catch(error => console.error("Fehler beim Laden der JSON-Datei:", error));
 
