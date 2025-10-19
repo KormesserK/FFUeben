@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gefahrenstoffe - Ausbildungsprüfung Atemschutz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Gefahrenstoffe</h1>
+        <div class="flashcard" onclick="flipCard()">
+            <div class="card-content front" id="cardQuestion">
+                <img id="questionImage" src="" alt="Fragebild" style="max-width:100%; height:auto;">
+            </div>
+            <div class="card-content back" id="cardAnswer">
+                <img id="answerImage" src="" alt="Antwortbild" style="max-width:100%; height:auto; display:none;">
+                <p id="answerText" style="display:none;">Antwort wird hier angezeigt.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Frage</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+    <script src="gefahrenstoffe.js"></script>
+</body>
+</html>

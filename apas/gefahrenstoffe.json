@@ -1,0 +1,11 @@
+[
+    { "id": 1, "questionImage": "Bilder/verschiedeneGefaehrlicheStoffe.JPG", "answer": "Verschiedene gefährliche Stoffe und Gegenstände" },
+    { "id": 2, "questionImage": "Bilder/stoffebeiberuehrungmitWasser.JPG", "answer": "Stoffe bei Berührung mit Wasser entzündbare Gase entwickeln" },
+    { "id": 3, "questionImage": "Bilder/aetzendeStoffe.JPG", "answer": "Ätzende Stoffe" },
+    { "id": 4, "questionImage": "Bilder/giftigeStoffe.JPG", "answer": "Giftige Stoffe" },
+    { "id": 5, "questionImage": "Bilder/selbstentzuendlicheStoffe.JPG", "answer": "Selbstentzündliche Stoffe" },
+    { "id": 6, "questionImage": "Bilder/entzündbarefestestoffe.JPG", "answer": "entzündbare feste Stoffe, selbstzersetzliche Stoffe und desensibilisierte explosive Stoffe" },
+    { "id": 7, "questionImage": "Bilder/organischePeroxide.JPG", "answer": "Organische Peroxide" },
+    { "id": 8, "questionImage": "Bilder/oxidierendwirkendestoffe.JPG", "answer": "Oxidierend wirkende Stoffe" },
+    { "id": 9, "questionImage": "Bilder/EntzuendbareFluessigeStoffe.JPG", "answer": "Entzündbare flüssige Stoffe" }
+]
