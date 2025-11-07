@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Befehlsgebung Gruppenkommandant Karteikarten</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Befehlsgebung Gruppenkommandant Karteikarten</h1>
+        <div class="flashcard" onclick="flipCard()">
+            <div class="card-content front" id="cardQuestion">
+                <p id="questionText">Frage wird hier angezeigt.</p>
+            </div>
+            <div class="card-content back" id="cardAnswer">
+                <p id="answerText">Antwort wird hier angezeigt.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Frage</button>
+            <button onclick="resetGame()">Neues Spiel</button>
+        </div>
+    </div>
+    <script src="befehlsgebung.js"></script>
+</body>
+</html>
+

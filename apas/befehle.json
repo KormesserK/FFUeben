@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "Wie lautet der Befehl des Gruppenkommandanten vor dem Ausrüßten der Atemschutzgeräteträger bei der ersten Station?",
+    "answer": "Atemschutztrupp ……… zur Absolvierung der Ausbildungsprüfung laut Bestimmungen ausrüsten"
+  },
+  {
+    "id": 2,
+    "question": "Wie lautet der Befehl des Gruppenkommandanten vor dem Einmarsch bei der Station Personensuche?",
+    "answer": "Person wird vermisst - Personensuche unter Verwendung von Atemschutz - Atemschutztrupp zur Personensuche - durch die Tür in das Übungsobjekt - mit Tragetuch und Feuerwehraxt"
+  },
+  {
+    "id": 3,
+    "question": "Wie lautet der Befehl des Gruppenkommandanten vor dem Einmarsch bei der Station Löschangriff über Hindernisstrecke?",
+    "answer": "Brand - Brandbekämpfung unter Verwendung von Atemschutz - Atemschutztrupp zur Brandbekämpfung über die Hindernisbahn - mit Hohlstrahlrohr"
+  }
+]
