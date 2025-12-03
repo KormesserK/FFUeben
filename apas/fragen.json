@@ -142,7 +142,7 @@
   {
     "id": 29,
     "question": "Wodurch unterscheiden sich Normaldruckvollmasken von Überdruckvollmasken?",
-    "answer": "Normaldruckmasken: nicht federbelastetes Ausatemventil; Überdruckmasken: federbelastetes Ausatemventil."
+    "answer": "Durch die Form des Anschlussstückes und: Normaldruckmasken: nicht federbelastetes Ausatemventil; Überdruckmasken: federbelastetes Ausatemventil."
   },
   {
     "id": 30,
@@ -172,7 +172,7 @@
   {
     "id": 35,
     "question": "Wie ist eine Kurzprüfung bei einem Pressluftatmer nach dem Einsatz durchzuführen?",
-    "answer": "Flaschenhalterung öffnen, Flaschen tauschen, Ventile prüfen, Warneinrichtung bei 55 ±5 bar, Hochdruckdichtprüfung durchführen."
+    "answer": "Flaschenhalterung öffnen, Rüttelsicherung und Verschraubung lösen, Atemluftflaschen tauschen (Flaschen gegen Rollen absichern), Einbau der neuen Flasche, Flaschenventil öffnen (mindestens 180 bzw. 270 bar Druck), Flaschendruck ablassen Warneinrichtung muss bei 55 ±5 bar ansprechen. Bei zweiflaschigen Geräten müssen beide Flaschen geprüft werden. Flaschenventil schließen und Hochdruckdichtprüfung durchführen"
   },
   {
     "id": 36,
