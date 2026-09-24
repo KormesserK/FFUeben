@@ -1,359 +1,684 @@
-/* Allgemeine Stile */
-body {
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    margin: 0;
-    background-color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+/*
+ * Lernapp FF Lengenfeld - gemeinsames Stylesheet
+ *
+ * Ein einziges Stylesheet fuer alle Seiten: Hauptmenue, Stationsauswahl,
+ * Karteikarten und Werkzeugseiten. Reines CSS ohne Build-Schritt und ohne
+ * externe Schriften, damit es auf GitHub Pages unveraendert laeuft.
+ *
+ * Aufbau:
+ *   1. Design-Tokens
+ *   2. Grundgeruest und Seitenhintergrund
+ *   3. Container und Typografie
+ *   4. Navigations-Buttons (Hauptmenue, Stationsauswahl)
+ *   5. Karteikarte
+ *   6. Inhalte auf der Karte
+ *   7. Aktions-Buttons
+ *   8. Fortschritt, Status, Gruppenmodus
+ *   9. Geraetefinder und Zitat
+ *  10. Breakpoints und Barrierefreiheit
+ */
 
-/* Feuerwehr-Rot und Grau */
+/* ------------------------------------------------------------------
+ * 1. Design-Tokens
+ * ------------------------------------------------------------------ */
+
 :root {
-    --fire-red: #d32f2f;
-    --dark-gray: #424242;
-    --light-gray: #f5f5f5;
+    /* Feuerwehr-Rot als Leitfarbe, Glut-Orange und Signalgelb als Akzente */
+    --ff-red: #e11d2e;
+    --ff-red-dark: #ab1322;
+    --ff-ember: #ff7a1a;
+    --ff-amber: #ffc31a;
+
+    /* Flaechen von dunkel nach hell gestuft */
+    --bg: #0b0e13;
+    --surface-1: #141922;
+    --surface-2: #1b212c;
+    --surface-3: #232b38;
+    --line: #2c3542;
+    --line-soft: rgba(255, 255, 255, 0.07);
+
+    --text: #eaeef5;
+    --text-dim: #9aa6b8;
+    --text-mute: #6f7c8f;
+
+    --ok: #35a65a;
+    --warn: #e08a1e;
+
+    /* Abstaende und Radien */
+    --pad-container: clamp(18px, 4.5vw, 34px);
+    --gap: clamp(12px, 2.5vw, 18px);
+    --radius: 16px;
+    --radius-sm: 10px;
+
+    --shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+    /* Der wiederkehrende Farbverlauf des Projekts */
+    --stripe: linear-gradient(90deg, var(--ff-red) 0%, var(--ff-ember) 58%, var(--ff-amber) 100%);
+
+    color-scheme: dark;
 }
 
-/* Menü- und App-Container */
-.menu-container, .app-container {
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    background-color: var(--dark-gray);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--fire-red);
+/* ------------------------------------------------------------------
+ * 2. Grundgeruest und Seitenhintergrund
+ * ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-/* Überschriften */
-h1 {
-    color: var(--fire-red);
-    font-size: 2rem;
-    margin-bottom: 20px;
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
-/* Beschreibungstext */
-p {
-    color: var(--light-gray);
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: clamp(16px, 4vw, 44px) clamp(12px, 4vw, 28px);
+    padding-top: calc(clamp(16px, 4vw, 44px) + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(clamp(16px, 4vw, 44px) + env(safe-area-inset-bottom, 0px));
+    padding-left: calc(clamp(12px, 4vw, 28px) + env(safe-area-inset-left, 0px));
+    padding-right: calc(clamp(12px, 4vw, 28px) + env(safe-area-inset-right, 0px));
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(15px, 0.9rem + 0.25vw, 17px);
+    line-height: 1.55;
+    color: var(--text);
+    background-color: var(--bg);
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Button-Design */
-button {
-    font-size: 1rem;
-    padding: 12px 24px;
-    background-color: var(--fire-red);
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+/* Hintergrund als fixierte Ebene - kein background-attachment, das auf
+   iOS ruckelt, und kein Mitwachsen bei langen Seiten. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(1100px 560px at 50% -12%, rgba(225, 29, 46, 0.20), transparent 62%),
+        radial-gradient(760px 420px at 94% 8%, rgba(255, 122, 26, 0.10), transparent 60%),
+        linear-gradient(180deg, #11151d 0%, var(--bg) 58%);
 }
 
-button:hover {
-    background-color: #b71c1c;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-button:active {
-    transform: scale(0.98);
-}
+/* ------------------------------------------------------------------
+ * 3. Container und Typografie
+ * ------------------------------------------------------------------ */
 
-/* Geräteanzeige */
-#devices div {
-    font-size: 1rem;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: var(--light-gray);
-    color: #333333;
-    border-radius: 5px;
-    border-left: 5px solid var(--fire-red);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Stationsauswahl-Container */
-.station-container {
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    background-color: var(--dark-gray);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--fire-red);
-}
-
-/* Station Buttons */
-.station-container button {
-    display: block;
+.menu-container,
+.station-container,
+.app-container {
+    position: relative;
     width: 100%;
-    font-size: 1.1rem;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: var(--fire-red);
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
+    /* Zentriert die Box vertikal, wenn Platz da ist, ohne sie bei langen
+       Inhalten oben abzuschneiden. */
+    margin-block: auto;
+
+    padding: var(--pad-container);
+    padding-top: calc(var(--pad-container) + 6px);
+
+    background: linear-gradient(180deg, var(--surface-1) 0%, #10141c 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Der Signalstreifen am oberen Rand - das wiederkehrende Erkennungsmerkmal */
+.menu-container::before,
+.station-container::before,
+.app-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--stripe);
+}
+
+.menu-container { max-width: 560px; }
+.station-container { max-width: 660px; }
+.app-container { max-width: 620px; }
+.app-container.app-container-breit { max-width: 900px; }
+
+h1 {
+    margin: 0 0 6px;
+    font-size: clamp(1.35rem, 1.05rem + 1.5vw, 2.05rem);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-wrap: balance;
+}
+
+/* Kurzer roter Strich unter der Hauptueberschrift */
+h1::after {
+    content: "";
+    display: block;
+    width: 54px;
+    height: 3px;
+    margin-top: 12px;
+    border-radius: 2px;
+    background: var(--stripe);
+}
+
+h2 {
+    margin: 26px 0 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+p {
+    margin: 0 0 16px;
+    color: var(--text-dim);
+}
+
+/* ------------------------------------------------------------------
+ * 4. Navigations-Buttons
+ * ------------------------------------------------------------------ */
+
+button {
+    font: inherit;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 12px 18px;
+    min-height: 46px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+                transform 0.08s ease, box-shadow 0.18s ease;
+}
+
+button:hover { background: #2b3444; }
+button:active { transform: translateY(1px); }
+
+button:disabled,
+button:disabled:hover {
+    background: var(--surface-2);
+    border-color: var(--line);
+    color: var(--text-mute);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Listen-Buttons der Stationsauswahl: dunkel mit rotem Anschlag */
+.station-container button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px 16px;
+    text-align: left;
+    background: var(--surface-2);
+    border-left: 3px solid var(--ff-red);
+    border-radius: var(--radius-sm);
+    min-height: 54px;
+}
+
+.station-container button::after {
+    content: "›";
+    margin-left: auto;
+    font-size: 1.5em;
+    line-height: 1;
+    color: var(--text-mute);
+    transition: transform 0.18s ease, color 0.18s ease;
 }
 
 .station-container button:hover {
-    background-color: #b71c1c;
+    background: var(--surface-3);
+    border-left-color: var(--ff-amber);
 }
 
-/* Flashcard Design */
-.flashcard {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    margin: 20px auto;
-    background-color: #9e9d9d;
-    border: 2px solid var(--fire-red);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
-    max-height: 280px;
-    box-sizing: border-box;
-    align-items: flex-start;
+.station-container button:hover::after {
+    transform: translateX(3px);
+    color: var(--ff-amber);
 }
 
-.flashcard .card-content {
-    background-color: #9e9d9d; /* Heller Hintergrund für die Karte */
-    color: #333333; /* Dunkler Text für Lesbarkeit */
-    padding: 20px;
-    text-align: center;
-    overflow-y: auto; /* Ermöglicht Scrollen für lange Antworten */
-}
-
-.flashcard .card-content p {
-    margin: 0;
-    white-space: pre-line; /* Zeilenumbrüche für Antworten */
-}
-
-.flashcard.flip .card-content {
-    background-color: #9e9d9d;
-}
-
-/* Nur Karteikarten mit Bildern anpassen */
-.flashcard-image {
-    width: auto;
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: #9e9d9d;
-    border: 2px solid var(--fire-red);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
-}
-
-.flashcard-image .card-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    backface-visibility: hidden;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-.flashcard-image .card-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 8px;
-}
-
-/* Vorderseite der Bild-Karte */
-.flashcard-image .card-content.front {
-    background-color: #f5f5f5;
-}
-
-/* Rückseite der Bild-Karte */
-.flashcard-image .card-content.back {
-    transform: rotateY(180deg);
-    background-color: #e0e0e0;
-    color: #333333;
-}
-
-/* Responsives Design */
-@media (max-width: 500px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-.menu-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+/* Hauptmenue: die vier Abzeichen als kraeftige Primaerflaechen */
+.menu-container .button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
 }
 
 .menu-container button {
-    display: block;
     width: 100%;
-    margin: 10px 0;
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 17px 20px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ff-red) 0%, var(--ff-red-dark) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: var(--shadow-sm);
+    min-height: 58px;
 }
 
 .menu-container button:hover {
-    background-color: #ff3333;
+    background: linear-gradient(135deg, #f02537 0%, #c0152a 100%);
+    box-shadow: 0 10px 26px rgba(225, 29, 46, 0.30);
 }
 
-.quote-container {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: rgba(255, 77, 77, 0.1);
-    border-left: 4px solid var(--fire-red);
-    border-right: 4px solid var(--fire-red);
+/* Einzelner Button direkt im App-Container (Gerätefinder, Melder) */
+.app-container > button {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin: 4px auto 0;
 }
 
-.quote {
-    font-style: italic;
-    color: var(--light-gray);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+/* ------------------------------------------------------------------
+ * 5. Karteikarte
+ * ------------------------------------------------------------------ */
+
+.flashcard {
+    position: relative;
+    margin: 18px 0;
+    padding: 0;
+
+    /* Scroll-Schatten: die beiden "local"-Ebenen decken den Schatten ab,
+       solange oben bzw. unten nichts mehr kommt. Dadurch erscheint der
+       Hinweis nur dann, wenn die Karte wirklich scrollbaren Inhalt hat. */
+    background:
+        linear-gradient(var(--surface-2) 30%, rgba(27, 33, 44, 0)) top / 100% 28px no-repeat local,
+        linear-gradient(rgba(22, 28, 37, 0), #161c25 72%) bottom / 100% 28px no-repeat local,
+        radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) top / 100% 12px no-repeat scroll,
+        radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) bottom / 100% 12px no-repeat scroll,
+        linear-gradient(180deg, var(--surface-2) 0%, #161c25 100%);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--ff-red);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+
+    min-height: clamp(200px, 34vh, 280px);
+    max-height: 58vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--ff-red-dark) transparent;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.button-container {
-    margin-top: 20px;
-}
-
-.progress-text {
-    color: var(--light-gray);
-    font-size: 1.2rem;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: var(--fire-red);
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Statusmeldungen: Laden, Erfolg und Fehler sichtbar in der Seite */
-.status-message {
-    margin: 10px 0;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    line-height: 1.4;
-    text-align: center;
-    color: #ffffff;
-    background-color: #37474f;
-    border-left: 5px solid var(--fire-red);
-}
-
-.status-message.status-error {
-    background-color: #7f1d1d;
-    border-left-color: #ff8a80;
-}
-
-.status-message.status-success {
-    background-color: #1b5e20;
-    border-left-color: #81c784;
-}
-
-/* Umschalter fuer den Gruppen-Lernmodus */
-.group-mode-toggle {
-    margin: 10px 0;
-    text-align: center;
-}
-
-.group-mode-toggle label {
-    color: var(--light-gray);
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.group-mode-toggle input {
-    margin-right: 6px;
-    vertical-align: middle;
-}
-
-/* Deaktivierte Buttons, z. B. solange Daten noch laden */
-button:disabled {
-    background-color: #8d8d8d;
-    cursor: not-allowed;
-}
-
-button:disabled:hover {
-    background-color: #8d8d8d;
-}
-
-/* Breiter Container fuer Stationen mit viel Text (z. B. Ablaeufe, Positionen) */
-.app-container.app-container-breit {
-    max-width: 760px;
-}
-
-/* Karte, die mit ihrem Inhalt waechst statt auf 280 px zu scrollen */
+/* Karten mit viel Text (Ablaeufe, Positionen) duerfen hoeher werden */
 .flashcard.flashcard-lang {
-    height: auto;
-    min-height: 260px;
+    min-height: clamp(220px, 36vh, 300px);
     max-height: 68vh;
 }
 
-.flashcard.flashcard-lang .card-content {
-    width: 100%;
+/* Umgedrehte Karte wechselt den Akzent von Rot auf Gelb */
+.flashcard.flip {
+    border-top-color: var(--ff-amber);
+    box-shadow: 0 8px 24px rgba(255, 195, 26, 0.10);
+}
+
+.flashcard[onclick] { cursor: pointer; }
+.flashcard[onclick]:hover { border-color: #3a4556; }
+
+.flashcard::-webkit-scrollbar { width: 9px; }
+.flashcard::-webkit-scrollbar-track { background: transparent; }
+.flashcard::-webkit-scrollbar-thumb {
+    background: #39424f;
+    border-radius: 99px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.flashcard::-webkit-scrollbar-thumb:hover { background-clip: content-box; background-color: var(--ff-red-dark); }
+
+/* ------------------------------------------------------------------
+ * 6. Inhalte auf der Karte
+ * ------------------------------------------------------------------ */
+
+/* display wird vom Renderer auf '' zurueckgesetzt - der Wert muss also
+   hier definiert sein, damit Vorder- und Rueckseite sauber umschalten. */
+.card-content {
+    display: block;
+    padding: clamp(18px, 3.5vw, 26px);
     text-align: left;
-    box-sizing: border-box;
+    color: var(--text);
+    animation: ff-card-in 0.26s ease-out both;
 }
 
-/* Zwischenueberschriften auf der Kartenrueckseite */
+@keyframes ff-card-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+}
+
+.card-content p {
+    margin: 0 0 12px;
+    color: var(--text);
+    /* Zeilenumbrueche aus den JSON-Daten erhalten */
+    white-space: pre-line;
+}
+
+.card-content p:last-child { margin-bottom: 0; }
+
+/* Bilder immer mittig, unabhaengig von der Textausrichtung */
+.card-content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    /* Begrenzt Einsatzfotos, damit der Text daneben sichtbar bleibt */
+    max-height: 38vh;
+    margin: 6px auto 16px;
+    border-radius: var(--radius-sm);
+}
+
+/* Zwischenueberschriften auf der Rueckseite */
 .card-content h3 {
-    margin: 14px 0 4px;
-    font-size: 1rem;
-    color: #7f1d1d;
+    margin: 20px 0 8px;
+    padding-bottom: 6px;
+    font-size: 0.76rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.11em;
+    color: var(--ff-amber);
+    border-bottom: 1px solid var(--line-soft);
 }
 
-.card-content h3:first-child {
-    margin-top: 0;
-}
+.card-content h3:first-child { margin-top: 0; }
 
-/* Kleine Kopfzeile auf der Kartenvorderseite, z. B. Sachgebiet */
+/* Kleine Kopfzeile auf der Vorderseite, z. B. Sachgebiet oder Position */
 .card-label {
-    font-size: 0.85rem;
+    margin: 0 0 10px !important;
+    font-size: 0.74rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #5f5f5f;
-    margin: 0 0 10px;
+    letter-spacing: 0.1em;
+    color: var(--ff-ember);
+    white-space: normal !important;
+}
+
+/* Befehlsgebung ASM10: Abschnitte auf der Kartenrueckseite */
+.card-image {
+    max-height: 32vh;
+    margin-bottom: 16px;
+}
+
+.befehl-section {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ff-red);
+    border-radius: var(--radius-sm);
+}
+
+.befehl-section:first-child { margin-top: 0; }
+
+.befehl-section h3 {
+    margin-top: 0;
+    color: var(--ff-amber);
+}
+
+.befehl-section p { margin: 0 0 8px; }
+.befehl-section p:last-child { margin-bottom: 0; }
+.befehl-section strong { color: var(--text-dim); font-weight: 600; }
+
+.durchfuehrung-details {
+    margin-left: 14px;
+    padding-left: 12px;
+    border-left: 1px solid var(--line);
+}
+
+/* ------------------------------------------------------------------
+ * 7. Aktions-Buttons
+ * ------------------------------------------------------------------ */
+
+.app-container .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.app-container .button-container button {
+    width: 100%;
+    padding: 12px 10px;
+    min-height: 50px;
+}
+
+/* Richtig - die Hauptaktion */
+.btn-yes {
+    color: #fff;
+    background: linear-gradient(135deg, #3bb865 0%, #248a44 100%);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.btn-yes:hover { background: linear-gradient(135deg, #46c973 0%, #2a9a4d 100%); }
+
+/* Falsch - Karte bleibt im Pool */
+.btn-no {
+    color: #ffd79a;
+    background: rgba(224, 138, 30, 0.14);
+    border-color: rgba(224, 138, 30, 0.45);
+}
+.btn-no:hover { background: rgba(224, 138, 30, 0.24); }
+
+/* Naechste Karte */
+.btn-next {
+    color: #fff;
+    background: linear-gradient(135deg, var(--ff-red) 0%, var(--ff-red-dark) 100%);
+    border-color: rgba(255, 255, 255, 0.10);
+}
+.btn-next:hover { background: linear-gradient(135deg, #f02537 0%, #c0152a 100%); }
+
+/* Neues Spiel - zurueckhaltend */
+.btn-reset {
+    color: var(--text-dim);
+    background: transparent;
+    border-color: var(--line);
+}
+.btn-reset:hover { background: var(--surface-3); color: var(--text); }
+
+/* ------------------------------------------------------------------
+ * 8. Fortschritt, Status, Gruppenmodus
+ * ------------------------------------------------------------------ */
+
+.progress-text {
+    margin: 0 0 12px;
+    padding: 9px 14px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-align: center;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ff-red);
+    border-radius: var(--radius-sm);
+}
+
+.status-message {
+    margin: 0 0 12px;
+    padding: 12px 15px;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    text-align: left;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--text-mute);
+    border-radius: var(--radius-sm);
+}
+
+.status-message.status-info {
+    border-left-color: var(--ff-ember);
+}
+
+.status-message.status-error {
+    color: #ffd9dd;
+    background: rgba(225, 29, 46, 0.12);
+    border-color: rgba(225, 29, 46, 0.35);
+    border-left-color: var(--ff-red);
+}
+
+.status-message.status-success {
+    color: #d6f5e0;
+    background: rgba(53, 166, 90, 0.12);
+    border-color: rgba(53, 166, 90, 0.35);
+    border-left-color: var(--ok);
+}
+
+.group-mode-toggle {
+    margin: 0 0 12px;
+}
+
+.group-mode-toggle label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.group-mode-toggle label:hover {
+    color: var(--text);
+    border-color: #3a4556;
+}
+
+.group-mode-toggle input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--ff-red);
+    cursor: pointer;
+    flex: none;
+}
+
+/* ------------------------------------------------------------------
+ * 9. Geraetefinder und Zitat
+ * ------------------------------------------------------------------ */
+
+#devices {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#devices div {
+    padding: 13px 16px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ff-red);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.quote-container {
+    position: relative;
+    margin: 26px 0 8px;
+    padding: 20px 22px;
+    background: rgba(225, 29, 46, 0.07);
+    border: 1px solid rgba(225, 29, 46, 0.22);
+    border-left: 3px solid var(--ff-red);
+    border-radius: var(--radius-sm);
+}
+
+.quote {
+    margin: 0;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.12rem);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* ------------------------------------------------------------------
+ * 10. Breakpoints und Barrierefreiheit
+ * ------------------------------------------------------------------ */
+
+/* Ab Tablet passen die vier Aktions-Buttons in eine Reihe */
+@media (min-width: 620px) {
+    .app-container .button-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Handy: Karte kuerzer halten, damit Richtig/Falsch ohne Scrollen erreichbar sind */
+@media (max-width: 480px) {
+    .flashcard,
+    .flashcard.flashcard-lang {
+        max-height: 50vh;
+    }
+
+    .card-content img { max-height: 32vh; }
+    .card-image { max-height: 28vh; }
+}
+
+/* Sehr schmale Geraete: Abstaende und Schrift zuruecknehmen */
+@media (max-width: 380px) {
+    .station-container button {
+        padding: 13px 13px;
+        min-height: 50px;
+    }
+
+    .app-container .button-container button {
+        padding: 11px 6px;
+        font-size: 0.92rem;
+    }
+}
+
+/* Niedrige Fenster im Querformat: Karte nicht die ganze Hoehe fuellen */
+@media (max-height: 560px) {
+    .flashcard,
+    .flashcard.flashcard-lang {
+        min-height: 150px;
+        max-height: 52vh;
+    }
+}
+
+/* Sichtbarer Fokus fuer Tastatur- und Screenreader-Bedienung */
+:focus-visible {
+    outline: 3px solid var(--ff-amber);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

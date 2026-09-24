@@ -205,6 +205,15 @@
                 groupTotal = group.length;
             }
 
+            /* Die Karte bleibt verborgen, solange nichts darauf steht -
+               sonst zeigt sie die Platzhalter von Vorder- und Rueckseite zugleich. */
+            function setCardVisible(sichtbar) {
+                var card = document.querySelector(".flashcard");
+                if (card) {
+                    card.style.display = sichtbar ? "" : "none";
+                }
+            }
+
             function setFlipped(flipped) {
                 var card = document.querySelector('.flashcard');
                 if (card) {
@@ -326,6 +335,7 @@
             FF.watchImages('Ein Kartenbild konnte nicht geladen werden');
             FF.showStatus(subject + ' werden geladen …', 'info');
             controls.progress.style.display = 'none';
+            setCardVisible(false);
 
             FF.loadDeck(config.source)
                 .then(function (cards) {
@@ -340,6 +350,7 @@
                         return;
                     }
                     allCards = usable;
+                    setCardVisible(true);
                     remaining = FF.shuffle(allCards);
                     if (groupMode) {
                         startNextGroup();

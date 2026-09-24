@@ -5,36 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Befehlsgebung</title>
     <link rel="stylesheet" href="../../style.css">
-    <style>
-        .flashcard {
-            max-width: 800px;
-            height: auto;
-            min-height: 400px;
-        }
-        .card-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .befehl-section {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .befehl-section h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .durchfuehrung-details {
-            margin-left: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="app-container">
+    <div class="app-container app-container-breit">
         <h1>Befehlsgebung</h1>
-        <div class="flashcard" onclick="flipCard()">
+        <div class="flashcard flashcard-lang" onclick="flipCard()">
             <div class="card-content front" id="cardQuestion">
                 <img id="situationImage" class="card-image" src="" alt="Einsatzsituation">
                 <h3>Situation:</h3>
@@ -68,10 +43,10 @@
             </div>
         </div>
         <div class="button-container">
-            <button onclick="markCorrect()">Richtig</button>
-            <button onclick="markIncorrect()">Falsch</button>
-            <button onclick="getNextQuestion()">Nächste Frage</button>
-            <button onclick="resetGame()">Neues Spiel</button>
+            <button class="btn-yes" onclick="markCorrect()">Richtig</button>
+            <button class="btn-no" onclick="markIncorrect()">Falsch</button>
+            <button class="btn-next" onclick="getNextQuestion()">Nächste Frage</button>
+            <button class="btn-reset" onclick="resetGame()">Neues Spiel</button>
         </div>
     </div>
     <script src="../../shared/ff-core.js"></script>
