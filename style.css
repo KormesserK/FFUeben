@@ -613,6 +613,11 @@ button:disabled:hover {
     border-radius: var(--radius-sm);
 }
 
+/* Anfuehrungszeichen kommen aus dem Stylesheet - die Texte in
+   sprueche.json bleiben dadurch sauberer Fliesstext. */
+.quote::before { content: "\201E"; }
+.quote::after { content: "\201C"; }
+
 .quote {
     margin: 0;
     font-size: clamp(1rem, 0.95rem + 0.3vw, 1.12rem);

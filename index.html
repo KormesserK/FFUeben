@@ -11,7 +11,9 @@
         <h1>Lernapp FF Lengenfeld</h1>
         <p>Willkommen bei der Lernapp der Freiwilligen Feuerwehr Lengenfeld! Hier kannst du dich optimal auf deine Ausbildungen und Prüfungen vorbereiten. Wähle einfach einen der folgenden Bereiche aus, um mit dem Lernen zu beginnen.</p>
         <div class="quote-container">
-            <p class="quote">"Das Wissen, das wir heute erwerben, ist die Rettung, die wir morgen bringen."</p>
+            <!-- Wird beim Laden durch einen zufälligen Spruch aus sprueche.json
+                 ersetzt. Bleibt stehen, falls das nicht klappt. -->
+            <p class="quote">Das Wissen, das wir heute erwerben, ist die Rettung, die wir morgen bringen.</p>
         </div>
         <div class="button-container">
             <button onclick="location.href='aple/APLE.html'">Ausbildungsprüfung Löscheinsatz</button>
@@ -20,6 +22,54 @@
             <button onclick="location.href='asm10/ASM10.html'">ASM 10</button>
         </div>
     </div>
+    <script src="shared/ff-core.js"></script>
+    <script>
+        (function () {
+            var el = document.querySelector('.quote');
+            var SPEICHER = 'ffLetzterSpruch';
+
+            if (!el) {
+                return;
+            }
+
+            /* localStorage kann im privaten Modus werfen - daher abgesichert. */
+            function zuletztGezeigt() {
+                try { return window.localStorage.getItem(SPEICHER); } catch (e) { return null; }
+            }
+
+            function merken(text) {
+                try { window.localStorage.setItem(SPEICHER, text); } catch (e) { /* nicht schlimm */ }
+            }
+
+            FF.loadJson('sprueche.json')
+                .then(function (daten) {
+                    var auswahl = (Array.isArray(daten) ? daten : []).filter(function (s) {
+                        return typeof s === 'string' && s.trim() !== '';
+                    });
+                    if (auswahl.length === 0) {
+                        return;
+                    }
+
+                    /* Nicht zweimal hintereinander denselben Spruch zeigen */
+                    var vorher = zuletztGezeigt();
+                    if (vorher && auswahl.length > 1) {
+                        var ohneLetzten = auswahl.filter(function (s) { return s !== vorher; });
+                        if (ohneLetzten.length > 0) {
+                            auswahl = ohneLetzten;
+                        }
+                    }
+
+                    var spruch = auswahl[Math.floor(Math.random() * auswahl.length)];
+                    el.textContent = spruch;
+                    merken(spruch);
+                })
+                .catch(function (error) {
+                    /* Der Spruch ist Zierde: schlaegt das Laden fehl, bleibt der
+                       im HTML hinterlegte stehen - ohne Fehlermeldung fuer den Nutzer. */
+                    console.error('Sprüche konnten nicht geladen werden:', error);
+                });
+        }());
+    </script>
 </body>
 </html>
 
