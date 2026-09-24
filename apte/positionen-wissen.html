@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positionen bei den Wissensüberprüfungen - Ausbildungsprüfung Technischer Einsatz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-container app-container-breit">
+        <h1>Positionen bei den Wissensüberprüfungen</h1>
+        <div class="flashcard flashcard-lang" onclick="flipCard()">
+            <div class="card-content front" id="cardQuestion">
+                <p class="card-label" id="kontextText"></p>
+                <p id="positionText">Position wird hier angezeigt.</p>
+            </div>
+            <div class="card-content back" id="cardAnswer">
+                <p id="aufgabeText"></p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Position</button>
+            <button onclick="resetGame()">Neues Spiel</button>
+        </div>
+    </div>
+    <script src="../shared/ff-core.js"></script>
+    <script src="../shared/ff-flashcards.js"></script>
+    <script>
+        FF.flashcards.start({
+            source: 'daten/positionen_wissen.json',
+            subject: 'Die Positionen',
+            renderer: FF.renderers.fields({
+                front: {
+                    kontextText: function (p) { return p.kontext; },
+                    positionText: function (p) { return p.position; }
+                },
+                back: {
+                    aufgabeText: function (p) { return p.aufgabe; }
+                }
+            })
+        });
+    </script>
+</body>
+</html>

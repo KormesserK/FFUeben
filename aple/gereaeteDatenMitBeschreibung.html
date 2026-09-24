@@ -25,6 +25,22 @@
             <button onclick="resetGame()">Neues Spiel</button> <!-- Neuer Reset-Button -->
         </div>
     </div>
-    <script src="gereateDatenMitBeschreibung.js"></script>
+    <script src="../shared/ff-core.js"></script>
+    <script src="../shared/ff-flashcards.js"></script>
+    <script>
+        FF.flashcards.start({
+            source: 'geraeteDataMitBeschreibung.json',
+            subject: 'Die Geräte',
+            renderer: FF.renderers.fields({
+                front: {
+                    nameText: function (device) { return device.name; }
+                },
+                back: {
+                    descriptionText: function (device) { return 'Beschreibung: ' + device.description; },
+                    roomText: function (device) { return 'Raum: ' + device.Raum; }
+                }
+            })
+        });
+    </script>
 </body>
 </html>

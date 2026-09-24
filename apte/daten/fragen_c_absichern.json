@@ -1,0 +1,6 @@
+[
+  { "nummer": 1, "sachgebiet": "C – Absichern der Einsatzstelle", "question": "Was ist zuerst beim Eintreffen am Verkehrsunfallort zu machen?", "answer": "Unfallstelle absichern (Warnzeichen, Verkehrsleitkegel usw.)" },
+  { "nummer": 2, "sachgebiet": "C – Absichern der Einsatzstelle", "question": "Wie groß soll der Abstand zwischen Warnzeichen und Unfallstelle mindestens sein?", "answer": "Im Ortsgebiet 50 m\nAuf Landes- und Bundesstraßen 150 – 250 m\nAuf Autobahnen ca. 250 – 400 m" },
+  { "nummer": 3, "sachgebiet": "C – Absichern der Einsatzstelle", "question": "Wie werden Einsatzfahrzeuge bei einem Verkehrsunfall aufgestellt?", "answer": "Fahrzeuge sind außerhalb des Gefahrenbereiches, vor der Einsatzstelle als Puffer zur Sicherung der Einsatzkräfte aufzustellen.\nZufahrtswege dürfen nicht verstellt werden." },
+  { "nummer": 4, "sachgebiet": "C – Absichern der Einsatzstelle", "question": "Auf welcher Seite wird auf stark befahrenen Straßen abgesessen?", "answer": "Auf der dem Verkehr abgewandten Seite." }
+]

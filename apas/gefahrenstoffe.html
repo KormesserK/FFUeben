@@ -25,6 +25,14 @@
             <button onclick="resetGame()">Reset</button>
         </div>
     </div>
-    <script src="gefahrenstoffe.js"></script>
+    <script src="../shared/ff-core.js"></script>
+    <script src="../shared/ff-flashcards.js"></script>
+    <script>
+        FF.flashcards.start({
+            source: 'gefahrenstoffe.json',
+            renderer: FF.renderers.imageQuestion(),
+            subject: 'Die Gefahrenstoff-Karten'
+        });
+    </script>
 </body>
 </html>

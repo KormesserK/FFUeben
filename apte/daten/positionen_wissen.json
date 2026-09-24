@@ -1,0 +1,57 @@
+[
+  {
+    "position": "Alle Teilnehmer",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde (alle Stufen, alle Mitglieder):\n• Bei geschlossenen Geräteräumen die Lage von zwei Geräten durch ein Handzeichen zeigen\n• Funktion und/oder Verwendungszweck erklären\n• Ein zweiter Versuch ist nicht zulässig\n\nFragenkatalog (Stufe Gold: alle Mitglieder):\n• 20 Fragen aus dem Fragenkatalog einem Prüfer beantworten\n• 10 Minuten pro Teilnehmer\n• Bewertung: 1 Punkt je Frage\n\nPersonenrettung (alle Stufen, alle Mitglieder):\n• Stufe Gold: aus 7 Stationen wird gezogen\n• Die Maßnahmen werden truppweise durchgeführt und vom jeweiligen Truppführer erklärt"
+  },
+  {
+    "position": "Gruppenkommandant",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Organisatorisch:\n• Übergibt dem Hauptprüfer vor der Abnahme die Anmeldeliste und die Feuerwehrpässe\n• Klärt mit Prüfer 2 die Karten für die Gerätekunde und entfernt gemeinsam mit ihm jene Gerätekundekarten, deren Geräte im Fahrzeug nicht enthalten sind\n• Meldung an den Hauptprüfer vor der Gruppe\n\nGerätekunde:\n• Wie alle Teilnehmer: zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Zieht als Truppführer eine Station und führt sie durch\n• Wird dabei vom Melder als „zweitem Mann“ unterstützt\n• Erklärt die gesetzten Maßnahmen"
+  },
+  {
+    "position": "Melder",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Ist der „zweite Mann“ des Gruppenkommandanten und unterstützt ihn bei der gezogenen Station\n• Rüstet sich als Truppmann mit der Erste-Hilfe-Ausrüstung aus\n\nFunk:\n• Erhält vom Prüfer 2 die festgelegte Funk-Sprechgruppe des Bezirkes (1 Handfunkgerät Prüfer 2, 1 Handfunkgerät Melder)"
+  },
+  {
+    "position": "Maschinist 1",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Persönliche Voraussetzungen:\n• Erforderliche Lenkberechtigung für beide Fahrzeuge\n• Einsatzmaschinistenausbildung für alle im Fahrzeug vorhandenen motorisch-, pneumatisch- oder hydraulisch betriebenen Geräte\n• Wird vor der Prüfung aus zwei dafür nominierten Gruppenmitgliedern gelost\n\nWissensüberprüfung Einsatzmaschinist:\n• Zieht ein Aggregat / Gerät aus den vorhandenen Fahrzeug- und Gerätekarten\n• Zeigt die Lage im Fahrzeug, erklärt das Gerät, nimmt es in und außer Betrieb\n• Bewertung: max. 6 Punkte je Maschinist\n\nGerätekunde und Fragenkatalog:\n• Zwei Geräte zeigen und erklären, 20 Fragen in 10 Minuten\n\nPersonenrettung:\n• Zieht als Truppführer eine Station, unterstützt vom Maschinist 2"
+  },
+  {
+    "position": "Maschinist 2",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Persönliche Voraussetzungen:\n• Erforderliche Lenkberechtigung für beide Fahrzeuge\n• Einsatzmaschinistenausbildung für alle im Fahrzeug vorhandenen motorisch-, pneumatisch- oder hydraulisch betriebenen Geräte\n• Wird vor der Prüfung aus zwei dafür nominierten Gruppenmitgliedern gelost\n\nWissensüberprüfung Einsatzmaschinist:\n• Zieht ein Aggregat / Gerät aus den vorhandenen Fahrzeug- und Gerätekarten\n• Zeigt die Lage im Fahrzeug, erklärt das Gerät, nimmt es in und außer Betrieb\n\nGerätekunde und Fragenkatalog:\n• Zwei Geräte zeigen und erklären, 20 Fragen in 10 Minuten\n\nPersonenrettung:\n• Ist der „zweite Mann“ des Maschinisten 1 und rüstet sich mit der Erste-Hilfe-Ausrüstung aus"
+  },
+  {
+    "position": "Rettungstruppführer",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Zieht eine Station und führt sie als Truppführer durch\n• Wird vom Rettungstruppmann unterstützt\n• Erklärt dem Prüfer die gesetzten Maßnahmen\n\nZusätzliche Ausrüstung des Rettungstrupps:\n• Feuerwehrhelm mit Visier (alternativ Schutzbrille)"
+  },
+  {
+    "position": "Rettungstruppmann",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Unterstützt den Rettungstruppführer bei der gezogenen Station\n• Rüstet sich mit der Erste-Hilfe-Ausrüstung aus\n\nZusätzliche Ausrüstung des Rettungstrupps:\n• Feuerwehrhelm mit Visier (alternativ Schutzbrille)"
+  },
+  {
+    "position": "Sicherungstruppführer",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Zieht eine Station und führt sie als Truppführer durch\n• Wird vom Sicherungstruppmann unterstützt\n• Erklärt dem Prüfer die gesetzten Maßnahmen\n\nZusätzliche Ausrüstung des Sicherungstrupps:\n• „Hochsichtbare“ Warnkleidung (wird vom Prüfer 2 übergeben)"
+  },
+  {
+    "position": "Sicherungstruppmann",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Unterstützt den Sicherungstruppführer bei der gezogenen Station\n• Rüstet sich mit der Erste-Hilfe-Ausrüstung aus\n\nZusätzliche Ausrüstung des Sicherungstrupps:\n• „Hochsichtbare“ Warnkleidung (wird vom Prüfer 2 übergeben)"
+  },
+  {
+    "position": "Gerätetruppführer",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Zieht eine Station und führt sie als Truppführer durch\n• Wird vom Gerätetruppmann unterstützt\n• Erklärt dem Prüfer die gesetzten Maßnahmen"
+  },
+  {
+    "position": "Gerätetruppmann",
+    "kontext": "Wissensüberprüfungen – Stufe Gold",
+    "aufgabe": "Gerätekunde:\n• Zwei Geräte zeigen und erklären\n\nFragenkatalog:\n• 20 Fragen, 10 Minuten\n\nPersonenrettung:\n• Unterstützt den Gerätetruppführer bei der gezogenen Station\n• Rüstet sich mit der Erste-Hilfe-Ausrüstung aus"
+  }
+]

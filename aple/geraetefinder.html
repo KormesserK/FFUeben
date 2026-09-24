@@ -10,9 +10,51 @@
     <div class="app-container">
         <h1>Gerätefinder</h1>
         <p>Klicke auf die Schaltfläche, um 5 zufällige Geräte für die Prüfung zu ziehen:</p>
-        <button onclick="getRandomDevices()">Geräte ziehen</button>
+        <button id="drawButton" onclick="getRandomDevices()" disabled>Geräte ziehen</button>
         <div id="devices"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="../shared/ff-core.js"></script>
+    <script>
+        (function () {
+            var devices = [];
+            var drawCount = 5;
+
+            window.getRandomDevices = function () {
+                if (devices.length === 0) {
+                    FF.showStatus('Die Geräteliste ist noch nicht geladen.', 'error');
+                    return;
+                }
+                /* Aus einer gemischten Kopie ziehen - so kann die Auswahl
+                   nie in einer Endlosschleife haengen bleiben. */
+                var count = Math.min(drawCount, devices.length);
+                var drawn = FF.shuffle(devices).slice(0, count);
+                var container = document.getElementById('devices');
+                container.innerHTML = '';
+                drawn.forEach(function (device) {
+                    var row = document.createElement('div');
+                    row.textContent = device.number + ': ' + device.name;
+                    container.appendChild(row);
+                });
+                if (count < drawCount) {
+                    FF.showStatus('Es sind nur ' + count + ' Geräte hinterlegt.', 'info', 4000);
+                }
+            };
+
+            FF.showStatus('Die Geräteliste wird geladen …', 'info');
+
+            FF.loadJson('geraeteData.json')
+                .then(function (data) {
+                    if (!Array.isArray(data) || data.length === 0) {
+                        throw new Error('Keine Geräte in geraeteData.json');
+                    }
+                    devices = data;
+                    document.getElementById('drawButton').disabled = false;
+                    FF.showStatus(devices.length + ' Geräte geladen.', 'success', 2500);
+                })
+                .catch(function (error) {
+                    FF.reportError(error, 'Die Geräteliste konnte nicht geladen werden.');
+                });
+        }());
+    </script>
 </body>
 </html>

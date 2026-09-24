@@ -9,13 +9,13 @@
 <body>
     <div class="app-container">
         <h1>ASM10 - Alle Stationen</h1>
-        <div style="margin-bottom: 10px;">
+        <div class="group-mode-toggle">
             <label>
                 <input type="checkbox" id="groupModeCheckbox" checked>
                 5er-Gruppen-Lernmodus aktivieren
             </label>
         </div>
-        <div id="groupProgress" class="progress-text">Gruppe: 5 Karten übrig</div>
+        <div id="groupProgress" class="progress-text"></div>
         <div class="flashcard" onclick="flipCard()">
             <div class="card-content front" id="cardQuestion">
                 <p id="questionText">Frage wird hier angezeigt.</p>
@@ -31,6 +31,21 @@
             <button id="resetBtn" type="button">Neues Spiel</button>
         </div>
     </div>
-    <script src="alle.js"></script>
+    <script src="../../shared/ff-core.js"></script>
+    <script src="../../shared/ff-flashcards.js"></script>
+    <script>
+        /* Relative Pfade - damit die Seite auf GitHub Pages und lokal laeuft. */
+        FF.flashcards.start({
+            source: [
+                '../data/fue10_flashcards_detailed.json',
+                '../data/re20_flashcards_detailed.json',
+                '../data/sd10_flashcards_detailed.json',
+                '../data/au11_flashcards_detailed.json',
+                '../data/au12_flashcards_detailed.json'
+            ],
+            renderer: FF.renderers.questionAnswer(),
+            subject: 'Die Fragen aller Stationen'
+        });
+    </script>
 </body>
 </html> 

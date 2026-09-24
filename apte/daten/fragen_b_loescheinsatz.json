@@ -1,0 +1,7 @@
+[
+  { "nummer": 1, "sachgebiet": "B – Löscheinsatz", "question": "Wie lang ist die mindeste Einsatzdauer eines tragbaren Feuerlöschers Typ G12?", "answer": "ca. 20 Sekunden (0,6 kg/Sekunde)" },
+  { "nummer": 2, "sachgebiet": "B – Löscheinsatz", "question": "Was bedeutet die Bezeichnung G12 am tragbaren Feuerlöscher?", "answer": "Tragbarer Feuerlöscher mit 12 kg Glutbrandpulver (Brandklassen ABC)" },
+  { "nummer": 3, "sachgebiet": "B – Löscheinsatz", "question": "Wie heißen die Brandklassen (ÖNORM EN 2)?", "answer": "Brandklasse A – Brände fester Stoffe\nBrandklasse B – Brände von flüssigen oder flüssig werdenden Stoffen\nBrandklasse C – Brände von Gasen\nBrandklasse D – Brände von Metallen\nBrandklasse F – Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten" },
+  { "nummer": 4, "sachgebiet": "B – Löscheinsatz", "question": "Was ist die Zündtemperatur?", "answer": "Die niedrigste, unter festgelegten Bedingungen ermittelte Temperatur, bei der sich ein brennbarer Stoff in Luft selbst (ohne Zündquelle) entzündet." },
+  { "nummer": 5, "sachgebiet": "B – Löscheinsatz", "question": "Welche Löschmittel werden beim 3-fachen Brandschutz eingesetzt?", "answer": "Der 3-fache Brandschutz besteht aus Wasser, Löschschaum und Löschpulver." }
+]

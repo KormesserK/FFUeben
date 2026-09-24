@@ -267,3 +267,93 @@ button:active {
     border-radius: 5px;
     text-align: center;
 }
+
+/* Statusmeldungen: Laden, Erfolg und Fehler sichtbar in der Seite */
+.status-message {
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+    background-color: #37474f;
+    border-left: 5px solid var(--fire-red);
+}
+
+.status-message.status-error {
+    background-color: #7f1d1d;
+    border-left-color: #ff8a80;
+}
+
+.status-message.status-success {
+    background-color: #1b5e20;
+    border-left-color: #81c784;
+}
+
+/* Umschalter fuer den Gruppen-Lernmodus */
+.group-mode-toggle {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.group-mode-toggle label {
+    color: var(--light-gray);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.group-mode-toggle input {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* Deaktivierte Buttons, z. B. solange Daten noch laden */
+button:disabled {
+    background-color: #8d8d8d;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #8d8d8d;
+}
+
+/* Breiter Container fuer Stationen mit viel Text (z. B. Ablaeufe, Positionen) */
+.app-container.app-container-breit {
+    max-width: 760px;
+}
+
+/* Karte, die mit ihrem Inhalt waechst statt auf 280 px zu scrollen */
+.flashcard.flashcard-lang {
+    height: auto;
+    min-height: 260px;
+    max-height: 68vh;
+}
+
+.flashcard.flashcard-lang .card-content {
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Zwischenueberschriften auf der Kartenrueckseite */
+.card-content h3 {
+    margin: 14px 0 4px;
+    font-size: 1rem;
+    color: #7f1d1d;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.card-content h3:first-child {
+    margin-top: 0;
+}
+
+/* Kleine Kopfzeile auf der Kartenvorderseite, z. B. Sachgebiet */
+.card-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #5f5f5f;
+    margin: 0 0 10px;
+}

@@ -74,6 +74,40 @@
             <button onclick="resetGame()">Neues Spiel</button>
         </div>
     </div>
-    <script src="befehlsgebung.js"></script>
+    <script src="../../shared/ff-core.js"></script>
+    <script src="../../shared/ff-flashcards.js"></script>
+    <script>
+        /* Die Karten dieser Station tragen einen ganzen Befehl statt eines
+           Antworttexts - deshalb ein eigener Feld-Renderer. */
+        function trupp(card) { return card.befehl_trupp || {}; }
+        function truppDurch(card) { return trupp(card).durchfuehrung || {}; }
+        function fuehrung(card) { return card.befehl_fuehrungskraft || {}; }
+        function fuehrungDurch(card) { return fuehrung(card).durchfuehrung || {}; }
+
+        FF.flashcards.start({
+            source: '../data/befehlsgebung_flashcards.json',
+            subject: 'Die Einsatzsituationen',
+            renderer: FF.renderers.fields({
+                front: {
+                    situationImage: function (card) { return '../befehlsgebung/' + card.bild; },
+                    situationText: function (card) { return card.situation; }
+                },
+                back: {
+                    truppLage: function (card) { return trupp(card).lage; },
+                    truppEntschluss: function (card) { return trupp(card).entschluss; },
+                    truppZiel: function (card) { return truppDurch(card).ziel; },
+                    truppWeg: function (card) { return truppDurch(card).weg; },
+                    truppMittel: function (card) { return truppDurch(card).mittel; },
+                    fuehrungLage: function (card) { return fuehrung(card).lage; },
+                    fuehrungEntschluss: function (card) { return fuehrung(card).entschluss; },
+                    fuehrungZiel: function (card) { return fuehrungDurch(card).ziel; },
+                    fuehrungWeg: function (card) { return fuehrungDurch(card).weg; },
+                    fuehrungMittel: function (card) { return fuehrungDurch(card).mittel; },
+                    fuehrungVerbindung: function (card) { return fuehrung(card).verbindung; },
+                    fuehrungVersorgung: function (card) { return fuehrung(card).versorgung; }
+                }
+            })
+        });
+    </script>
 </body>
 </html> 

@@ -16,6 +16,39 @@
         </div>
         <button onclick="getNextImage()">Nächstes Bild</button>
     </div>
-    <script src="melder.js"></script>
+    <script src="../shared/ff-core.js"></script>
+    <script>
+        (function () {
+            var images = [];
+            var index = 0;
+
+            window.getNextImage = function () {
+                if (images.length === 0) {
+                    FF.showStatus('Es sind keine Bilder verfügbar.', 'error');
+                    return;
+                }
+                document.getElementById('imageContent').src = images[index];
+                index = (index + 1) % images.length;
+            };
+
+            FF.watchImages('Ein Melder-Bild konnte nicht geladen werden');
+            FF.showStatus('Die Bilder werden geladen …', 'info');
+
+            FF.loadJson('melder.json')
+                .then(function (data) {
+                    images = (Array.isArray(data) ? data : [])
+                        .map(function (item) { return item.imageUrl; })
+                        .filter(Boolean);
+                    if (images.length === 0) {
+                        throw new Error('Keine Bilder in melder.json');
+                    }
+                    FF.clearStatus();
+                    window.getNextImage();
+                })
+                .catch(function (error) {
+                    FF.reportError(error, 'Die Melder-Bilder konnten nicht geladen werden.');
+                });
+        }());
+    </script>
 </body>
 </html>

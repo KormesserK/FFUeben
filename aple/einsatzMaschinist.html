@@ -14,8 +14,21 @@
                 <p id="cardText">Klicke auf die Karte, um die Frage zu sehen.</p>
             </div>
         </div>
-        <button onclick="getNextQuestion()">Nächste Frage</button>
+        <div class="button-container">
+            <button onclick="markCorrect()">Richtig</button>
+            <button onclick="markIncorrect()">Falsch</button>
+            <button onclick="getNextQuestion()">Nächste Frage</button>
+            <button onclick="resetGame()">Neues Spiel</button>
+        </div>
     </div>
-    <script src="einsatzMaschinist.js"></script>
+    <script src="../shared/ff-core.js"></script>
+    <script src="../shared/ff-flashcards.js"></script>
+    <script>
+        FF.flashcards.start({
+            source: 'einsatzmaschinistData.json',
+            renderer: FF.renderers.singleText('cardText'),
+            subject: 'Die Fragen zum Einsatzmaschinisten'
+        });
+    </script>
 </body>
 </html>

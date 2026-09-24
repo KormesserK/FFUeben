@@ -1,0 +1,51 @@
+[
+  {
+    "geraet": "Hydraulikaggregat",
+    "hinweis": "Stufe Silber: Maschinist 1 bei Fahrzeugkombination 2, Maschinist 2 bei Fahrzeugkombination 1.\nBei akkubetriebenen Rettungsgeräten wird statt dem Hydraulikaggregat der tragbare Stromerzeuger oder der Einbaugenerator erklärt.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• Aufbau: Hydraulikaggregat, Hydraulikschläuche, hydraulische Rettungsgeräte\n• Höhe des Arbeitsdruckes\n• Hydraulikkupplungen vom Druck entlasten",
+    "inbetriebnahme": "• Möglichst waagrechter Aufstellungsort\n• Motor nur bei drucklosem Hydrauliksystem in Betrieb nehmen\n• Schaltventil für wechselweisen Betrieb der Geräte\n• Umschalten nur nach Kontaktaufnahme mit dem Bedienungspersonal\n• Hydraulikschläuche gegen Beschädigungen schützen",
+    "ausserbetriebnahme": "• Abschalten des Antriebsmotors\n• Sichtkontrolle aller hydraulischen Komponenten\n• Aufrollen und Reinigen der Hydraulikschlauchleitungen\n• Versorgen des Gerätes"
+  },
+  {
+    "geraet": "Feuerlöschpumpe",
+    "hinweis": "Stufe Silber: Maschinist 1 bei Fahrzeugkombination 1, Maschinist 2 bei Fahrzeugkombination 2.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• Leistung: z. B. HMP 24 – 2400 l/min bei 10 bar und 3 m Saughöhe\n• Aufbau – Antrieb über Nebenabtrieb\n• Kreiselpumpe – ND, HD\n• Tanksaugleitung\n• Ansaugvorrichtung\n• Druckausgänge\n• Bedienfeld",
+    "inbetriebnahme": "Bei Tanksaugbetrieb:\n• Fahrzeug zum Stillstand bringen, Feststellbremse, Getriebe in Neutralstellung\n• Pumpe dicht setzen\n• Tanksaugleitung öffnen\n• Pumpe einschalten\n• Ansaugen\n• Bei „Pumpe/Tank …, erstes Rohr Wasser marsch“ – Druckausgang öffnen\n• Pumpendruck einstellen",
+    "ausserbetriebnahme": "Bei „Wasser halt, zum Abmarsch fertig!“:\n• auf Standgas zurückstellen\n• Druckausgang schließen\n• Nebenabtrieb aus\n• Tanksaugleitung schließen\n• Schläuche abkuppeln\n• Pumpe und Leitungen entleeren\n• Trockensaugen\n• Wassertank füllen"
+  },
+  {
+    "geraet": "Tragkraftspritze",
+    "hinweis": "Stufe Gold: wird aus den vorhandenen Fahrzeug- und Gerätekarten gezogen.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• TS 75: 750 l/min bei 10 bar und 1,5 m Saughöhe, oder\n• TS 12: 1200 l/min bei 10 bar und 3 m Saughöhe\n• Aufbau: genormtes Traggestell, Motor, Treibstofftank, Kupplung, Ansaugvorrichtung, Kreiselpumpe, Bedienfeld\n• Aufstellen (möglichst eben, nah an der Wasserentnahmestelle, auf die Umgebung achten)\n• Abgasschlauch verwenden\n• Befestigungsmöglichkeit für die Saugschlauchleine",
+    "inbetriebnahme": "• Pumpe auskuppeln\n• Motor starten\n• Pumpe dicht setzen\n• Pumpe einkuppeln\n• Ansaugen (laut Ausbilderleitfaden)\n• Bei „Pumpe …, erstes Rohr Wasser marsch“ – Druckausgang öffnen\n• Pumpendruck einstellen",
+    "ausserbetriebnahme": "• auf Standgas zurückstellen\n• Druckausgang schließen\n• Pumpe auskuppeln\n• Entleerungshahn öffnen\n• Trockensaugen"
+  },
+  {
+    "geraet": "Tragbarer Stromerzeuger",
+    "hinweis": "Stufe Gold: wird aus den vorhandenen Fahrzeug- und Gerätekarten gezogen.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• Leistung: z. B. 8 kVA ist die Scheinleistung, entspricht einer Wirkleistung von 6,4 kW bei einem cos φ von 0,8\n• Aufbau: Traggestell, Motor, Generator, Bedienteile, Kraftstoffart",
+    "inbetriebnahme": "• Gerät aus dem Fahrzeug ausdrehen oder ausschieben\n• Abgasschlauch anschließen\n• Beim Starten dürfen keine Verbraucher eingeschaltet bzw. angeschlossen sein (ausgenommen verkabelter Lichtmast bzw. Hydraulikaggregat)\n• Benzinhahnstellung laut Betriebsanleitung\n• Choke schließen\n• Schalter auf Betrieb\n• Starten\n• Choke öffnen\n• Verbraucher einschalten bzw. anschließen\n• Kanistersauggarnitur verwenden\n• Kontrollen während des Betriebes durchführen",
+    "ausserbetriebnahme": "• alle Verbraucher abstecken oder ausschalten\n• Motor laufen lassen (Abkühlung)\n• Motor abstellen\n• Kraftstoff auffüllen (nur bei abgekühltem Motor)\n• Öl kontrollieren, Sichtkontrolle"
+  },
+  {
+    "geraet": "Einbaugenerator",
+    "hinweis": "Stufe Gold: wird aus den vorhandenen Fahrzeug- und Gerätekarten gezogen.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• Antrieb über Nebenabtrieb\n• Generator im KFZ\n• Schaltkasten",
+    "inbetriebnahme": "• Fahrzeug zum Stillstand bringen, Feststellbremse, Getriebe in Neutralstellung\n• Nebenabtrieb einschalten\n• Drehzahlanhebung\n• Instrumente kontrollieren (Frequenz beachten)\n• Verbraucher anstecken\n• Verbraucher einschalten\n• Kontrolle während des Betriebes",
+    "ausserbetriebnahme": "• Verbraucher abschalten\n• Verbraucher abstecken\n• Drehzahlreduzierung\n• Nebenabtrieb ausschalten"
+  },
+  {
+    "geraet": "Lichtmast",
+    "hinweis": "Stufe Gold: wird aus den vorhandenen Fahrzeug- und Gerätekarten gezogen.",
+    "erklaerung": "Zuerst die Lage des Gerätes im Fahrzeug zeigen.\n\n• Funktion – pneumatischer Bedienteil, aus- und einfahren\n• Elektrische Bedienteile",
+    "inbetriebnahme": "• Richtigen Aufstellungsort auswählen (Fahrzeug möglichst waagrecht aufstellen, Achtung auf Stromleitungen über dem Lichtmast)\n• Lichtmast ausfahren (Hindernisse beachten)\n• Halogenscheinwerfer stufenweise einschalten",
+    "ausserbetriebnahme": "• Halogenscheinwerfer abschalten\n• Warten, bis das Leuchtmittel abgekühlt ist\n• Lichtmast einfahren\n• Kontrolle, ob vollständig eingefahren\n• Sichtkontrolle"
+  },
+  {
+    "geraet": "Kraftfahrzeug 1 oder 2",
+    "hinweis": "Stufe Gold: wird aus den vorhandenen Fahrzeug- und Gerätekarten gezogen.",
+    "erklaerung": "• Allgemeine Fahrzeugdaten (Gewicht, Breite und Höhe)\n• typisierte Sitzplätze",
+    "inbetriebnahme": "• Fremdeinspeisungen abschließen\n• Sitzeinstellung\n• Spiegeleinstellung\n• Bremssystem\n• Schaltung\n• Startvorgang",
+    "ausserbetriebnahme": "• Auftanken\n• Kontrollen\n• Fahrtenbucheintragung\n• Fremdeinspeisung anschließen"
+  }
+]

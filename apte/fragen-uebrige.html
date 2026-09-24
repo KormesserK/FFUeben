@@ -1,20 +1,23 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atemschutz-Fragen Karteikarten</title>
+    <title>Fragenkatalog B, C & E - Ausbildungsprüfung Technischer Einsatz</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Atemschutz-Fragen Karteikarten</h1>
-        <div class="flashcard" onclick="flipCard()">
+    <div class="app-container app-container-breit">
+        <h1>Löscheinsatz, Absichern &amp; Allgemeines</h1>
+        <div class="flashcard flashcard-lang" onclick="flipCard()">
             <div class="card-content front" id="cardQuestion">
+                <p class="card-label" id="sachgebietText"></p>
+                <img id="questionImage" src="" alt="Symbol zur Frage" style="max-width:100%; height:auto; display:none;">
                 <p id="questionText">Frage wird hier angezeigt.</p>
             </div>
             <div class="card-content back" id="cardAnswer">
                 <p id="answerText">Antwort wird hier angezeigt.</p>
+                <img id="answerImage" src="" alt="Symbol zur Antwort" style="max-width:100%; height:auto; display:none;">
             </div>
         </div>
         <div class="button-container">
@@ -26,12 +29,13 @@
     </div>
     <script src="../shared/ff-core.js"></script>
     <script src="../shared/ff-flashcards.js"></script>
+    <script src="fragen-station.js"></script>
     <script>
-        FF.flashcards.start({
-            source: 'fragen.json',
-            renderer: FF.renderers.questionAnswer(),
-            subject: 'Die Atemschutz-Fragen'
-        });
+        starteFragenkatalog([
+                'daten/fragen_b_loescheinsatz.json',
+                'daten/fragen_c_absichern.json',
+                'daten/fragen_e_allgemeines.json'
+            ], "Die Fragen zu Löscheinsatz, Absichern und Allgemeines");
     </script>
 </body>
 </html>
