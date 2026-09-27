@@ -22,6 +22,62 @@
             <button onclick="location.href='asm10/ASM10.html'">ASM 10</button>
         </div>
     </div>
+
+    <button type="button" class="info-button" id="infoButton"
+            title="Zahlen &amp; Hintergrund" aria-label="Zahlen und Hintergrund zur Lernapp">?</button>
+
+    <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoTitel">
+        <div class="info-rahmen">
+            <div class="info-kopf">
+                <h2 id="infoTitel">Zahlen &amp; Hintergrund</h2>
+                <button type="button" class="info-schliessen" id="infoSchliessen"
+                        aria-label="Schließen">&times;</button>
+            </div>
+
+            <section class="info-block">
+                <h3>Aufrufe insgesamt</h3>
+                <p class="info-grosszahl" id="infoGesamt">…</p>
+                <p class="info-notiz" id="infoHinweis">Die Zahlen werden geladen …</p>
+            </section>
+
+            <section class="info-block" id="infoBereicheBlock" hidden>
+                <h3>Aufrufe nach Bereich</h3>
+                <div id="infoBereiche"></div>
+            </section>
+
+            <section class="info-block" id="infoSeitenBlock" hidden>
+                <h3>Aufrufe nach Seite</h3>
+                <div id="infoSeiten"></div>
+            </section>
+
+            <section class="info-block">
+                <h3>Wie und warum das entstanden ist</h3>
+                <p>Die Lernapp ist entstanden, weil die Vorbereitung auf die
+                Ausbildungsprüfungen vorher aus Papierunterlagen, Kopien und
+                Nachfragen bestand. Die Inhalte stammen aus den offiziellen
+                Bestimmungen des NÖ Landesfeuerwehrverbandes und sind als
+                Karteikarten aufbereitet – damit man sie am Handy, in kurzen
+                Einheiten und dort wiederholen kann, wo gerade Zeit dafür ist.</p>
+                <p>Sie ist bewusst einfach gehalten: keine Anmeldung, keine Konten,
+                keine Installation. Die App besteht nur aus Dateien, die der Browser
+                direkt anzeigt.</p>
+            </section>
+
+            <section class="info-block">
+                <h3>Wie gezählt wird</h3>
+                <p>Gezählt werden Seitenaufrufe über GoatCounter, einen quelloffenen
+                Dienst mit Servern in der EU. Dabei werden keine Cookies gesetzt,
+                nichts im Browser gespeichert und keine IP-Adressen abgelegt. Es lässt
+                sich also nicht nachvollziehen, wer wann welche Seite geöffnet hat –
+                es gibt nur Summen je Seite.</p>
+                <p>Zwei Dinge sind dabei zu beachten: Die Zahlen werden bis zu vier
+                Stunden zwischengespeichert, sind also nicht minutenaktuell. Und
+                Werbeblocker unterbinden die Zählung – die tatsächlichen Aufrufe
+                liegen daher eher höher als das, was hier steht.</p>
+            </section>
+        </div>
+    </dialog>
+
     <script src="shared/ff-core.js"></script>
     <script>
         (function () {
@@ -68,6 +124,183 @@
                        im HTML hinterlegte stehen - ohne Fehlermeldung fuer den Nutzer. */
                     console.error('Sprüche konnten nicht geladen werden:', error);
                 });
+        }());
+    </script>
+    <script>
+        /* Dashboard hinter dem „?"-Button: holt die Aufrufzahlen erst beim
+           Öffnen, damit ein normaler Seitenaufruf nichts Zusätzliches lädt. */
+        (function () {
+            var knopf = document.getElementById('infoButton');
+            var dialog = document.getElementById('infoDialog');
+            var schliessenKnopf = document.getElementById('infoSchliessen');
+            var geladen = false;
+
+            if (!knopf || !dialog) {
+                return;
+            }
+
+            function oeffne() {
+                if (typeof dialog.showModal === 'function') {
+                    dialog.showModal();
+                } else {
+                    dialog.setAttribute('open', '');
+                }
+                /* Der Knopf wuerde sonst durch den abgedunkelten Hintergrund scheinen */
+                knopf.hidden = true;
+                if (!geladen) {
+                    geladen = true;
+                    ladeZahlen();
+                }
+            }
+
+            function schliesse() {
+                if (typeof dialog.close === 'function') {
+                    dialog.close();
+                } else {
+                    dialog.removeAttribute('open');
+                }
+                knopf.hidden = false;
+            }
+
+            /* Auch das Schliessen per Escape-Taste muss den Knopf zurueckbringen */
+            dialog.addEventListener('close', function () { knopf.hidden = false; });
+
+            knopf.addEventListener('click', oeffne);
+            schliessenKnopf.addEventListener('click', schliesse);
+            /* Klick auf den Hintergrund schliesst - der Inhalt liegt in .info-rahmen,
+               ein Treffer auf das dialog-Element selbst ist also der Hintergrund. */
+            dialog.addEventListener('click', function (e) {
+                if (e.target === dialog) {
+                    schliesse();
+                }
+            });
+
+            function zahlText(wert) {
+                return wert.toLocaleString('de-AT');
+            }
+
+            /*
+             * Liefert die Zahl, oder null wenn der Abruf gar nicht durchkam -
+             * damit ein einzelner blockierter Abruf nicht das ganze Dashboard
+             * kippt.
+             *
+             * GoatCounter antwortet mit 404, solange eine Seite noch nie
+             * aufgerufen wurde. Der Rumpf enthaelt dann trotzdem eine gueltige
+             * Null. Dieser Fall ist also ein echtes Ergebnis und kein Fehler -
+             * sonst wuerde eine frische Seite wie "blockiert" aussehen.
+             */
+            function holeZahl(pfad) {
+                return fetch(FF.zaehlerUrl(pfad))
+                    .then(function (antwort) {
+                        if (antwort.ok || antwort.status === 404) {
+                            return antwort.json().catch(function () { return null; });
+                        }
+                        return null;
+                    })
+                    .then(function (daten) {
+                        return daten ? FF.zaehlerZahl(daten.count) : null;
+                    })
+                    .catch(function () { return null; });
+            }
+
+            function zeile(titel, wert, hoechstwert) {
+                var row = document.createElement('div');
+                row.className = 'info-zeile';
+
+                var balken = document.createElement('span');
+                balken.className = 'info-balken';
+                balken.style.width = (hoechstwert > 0 ? (wert / hoechstwert) * 100 : 0) + '%';
+
+                var name = document.createElement('span');
+                name.className = 'info-name';
+                name.textContent = titel;
+
+                var zahl = document.createElement('span');
+                zahl.className = 'info-zahl';
+                zahl.textContent = zahlText(wert);
+
+                row.appendChild(balken);
+                row.appendChild(name);
+                row.appendChild(zahl);
+                return row;
+            }
+
+            function zeigeFehler() {
+                document.getElementById('infoGesamt').textContent = '–';
+                document.getElementById('infoHinweis').textContent =
+                    'Die Zahlen konnten nicht geladen werden. Vermutlich blockiert ' +
+                    'ein Werbeblocker den Zugriff auf den Zähldienst.';
+            }
+
+            function zeichne(seiten, gesamt, zahlen) {
+                var alleLeer = gesamt === null && zahlen.every(function (z) { return z === null; });
+                if (alleLeer) {
+                    zeigeFehler();
+                    return;
+                }
+
+                var summe = zahlen.reduce(function (s, z) { return s + (z || 0); }, 0);
+                document.getElementById('infoGesamt').textContent =
+                    zahlText(gesamt === null ? summe : gesamt);
+                document.getElementById('infoHinweis').textContent =
+                    'Stand: bis zu vier Stunden verzögert.';
+
+                /* Summen je Bereich, Reihenfolge wie in seiten.json */
+                var bereiche = [];
+                var index = {};
+                seiten.forEach(function (s, i) {
+                    if (!(s.bereich in index)) {
+                        index[s.bereich] = bereiche.length;
+                        bereiche.push({ name: s.bereich, summe: 0, seiten: [] });
+                    }
+                    var b = bereiche[index[s.bereich]];
+                    b.summe += zahlen[i] || 0;
+                    b.seiten.push({ titel: s.titel, wert: zahlen[i] || 0 });
+                });
+
+                var maxBereich = bereiche.reduce(function (m, b) { return Math.max(m, b.summe); }, 0);
+                var zielBereiche = document.getElementById('infoBereiche');
+                bereiche.forEach(function (b) {
+                    zielBereiche.appendChild(zeile(b.name, b.summe, maxBereich));
+                });
+                document.getElementById('infoBereicheBlock').hidden = false;
+
+                /* Seiten je Bereich aufklappbar, innerhalb absteigend sortiert */
+                var zielSeiten = document.getElementById('infoSeiten');
+                bereiche.forEach(function (b) {
+                    var details = document.createElement('details');
+                    details.className = 'info-details';
+
+                    var summary = document.createElement('summary');
+                    summary.textContent = b.name + ' (' + zahlText(b.summe) + ')';
+                    details.appendChild(summary);
+
+                    var maxSeite = b.seiten.reduce(function (m, s) { return Math.max(m, s.wert); }, 0);
+                    b.seiten.slice().sort(function (a, c) { return c.wert - a.wert; })
+                        .forEach(function (s) {
+                            details.appendChild(zeile(s.titel, s.wert, maxSeite));
+                        });
+
+                    zielSeiten.appendChild(details);
+                });
+                document.getElementById('infoSeitenBlock').hidden = false;
+            }
+
+            function ladeZahlen() {
+                FF.loadJson('seiten.json')
+                    .then(function (seiten) {
+                        var abrufe = [holeZahl('TOTAL')].concat(seiten.map(function (s) {
+                            return holeZahl(s.pfad);
+                        }));
+                        return Promise.all(abrufe).then(function (werte) {
+                            zeichne(seiten, werte[0], werte.slice(1));
+                        });
+                    })
+                    .catch(function (fehler) {
+                        console.error('Aufrufzahlen konnten nicht geladen werden:', fehler);
+                        zeigeFehler();
+                    });
+            }
         }());
     </script>
 </body>

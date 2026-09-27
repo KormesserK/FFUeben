@@ -1,0 +1,167 @@
+[
+  {
+    "bereich": "Start",
+    "pfad": "/index.html",
+    "titel": "Startseite"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/APLE.html",
+    "titel": "Stationsauswahl"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/einsatzMaschinist.html",
+    "titel": "Einsatzmaschinist - Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/ersteHilfe.html",
+    "titel": "Erste Hilfe - Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/gefahrenstoffe.html",
+    "titel": "Gefahrenstoffe"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/geraetefinder.html",
+    "titel": "Gerätefinder"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/gereaeteDatenMitBeschreibung.html",
+    "titel": "Geräte-Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Löscheinsatz",
+    "pfad": "/aple/melder.html",
+    "titel": "Melder-Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Atemschutz",
+    "pfad": "/apas/APAS.html",
+    "titel": "Stationsauswahl"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Atemschutz",
+    "pfad": "/apas/atemschutzFragen.html",
+    "titel": "Atemschutz-Fragen Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Atemschutz",
+    "pfad": "/apas/befehlsgebung.html",
+    "titel": "Befehlsgebung Gruppenkommandant Karteikarten"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Atemschutz",
+    "pfad": "/apas/gefahrenstoffe.html",
+    "titel": "Gefahrenstoffe"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/APTE.html",
+    "titel": "Stationsauswahl"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/befehle.html",
+    "titel": "Befehle & Kommandos"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/bestimmungen.html",
+    "titel": "Prüfungsbestimmungen"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/einsatzmaschinist.html",
+    "titel": "Einsatzmaschinist"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/fragen-schadstoff.html",
+    "titel": "Sachgebiet D – Schadstoff"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/fragen-technischer-einsatz.html",
+    "titel": "Sachgebiet A – Technischer Einsatz"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/fragen-uebrige.html",
+    "titel": "Löscheinsatz, Absichern & Allgemeines"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/fragenkatalog.html",
+    "titel": "Fragenkatalog"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/geraetekunde.html",
+    "titel": "Gerätekunde"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/personenrettung-ablauf.html",
+    "titel": "Personenrettung – Ablauf"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/personenrettung-details.html",
+    "titel": "Personenrettung – Details"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/positionen-durchfuehrung.html",
+    "titel": "Positionen bei der Durchführung"
+  },
+  {
+    "bereich": "Ausbildungsprüfung Technischer Einsatz",
+    "pfad": "/apte/positionen-wissen.html",
+    "titel": "Positionen bei den Wissensüberprüfungen"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/ASM10.html",
+    "titel": "Stationsauswahl"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/alle.html",
+    "titel": "ASM10 - Alle Stationen"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/au11.html",
+    "titel": "AU11 - Ausbildungsgrundsätze"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/au12.html",
+    "titel": "AU12 - Gestaltung von Einsatzübungen"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/befehlsgebung.html",
+    "titel": "Befehlsgebung"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/fue10.html",
+    "titel": "FÜ10 - Führungsstufe 1"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/re20.html",
+    "titel": "RE20 - Rechtliche und organisatorische Grundlagen"
+  },
+  {
+    "bereich": "ASM 10",
+    "pfad": "/asm10/theorie/sd10.html",
+    "titel": "SD10 - Schadstoffe und Dekontamination"
+  }
+]

@@ -156,6 +156,62 @@ var FF = (function () {
         }
     }
 
+    /* ----------------------------------------------------------------
+     * Aufrufzaehlung (GoatCounter)
+     *
+     * Gezaehlt wird serverseitig bei GoatCounter - ohne Cookies, ohne
+     * localStorage und ohne dass IP-Adressen gespeichert werden. Die
+     * Zahlen liest das Dashboard der Startseite ueber den oeffentlichen
+     * Zaehler-Endpunkt wieder aus, dafuer ist kein Schluessel noetig.
+     * ---------------------------------------------------------------- */
+
+    /* Die einzige Stelle, an der die GoatCounter-Kennung steht. */
+    var ZAEHLER_CODE = 'konstiffl';
+
+    /*
+     * Sorgt dafuer, dass dieselbe Seite immer unter demselben Namen gezaehlt
+     * wird - egal ob sie lokal, unter /FFUeben/ oder als Verzeichnis ohne
+     * Dateinamen aufgerufen wird.
+     */
+    function zaehlPfad(pfad) {
+        var p = String(pfad || '/').replace(/^\/FFUeben(?=\/|$)/, '');
+        if (p === '' || p === '/') {
+            p = '/index.html';
+        }
+        return p;
+    }
+
+    /*
+     * Haengt das Zaehl-Script ein. GoatCounter zaehlt von sich aus weder auf
+     * localhost noch bei file://, lokale Tests verfaelschen die Zahlen also
+     * nicht. Wird das Script blockiert, passiert einfach nichts.
+     */
+    function zaehleAufruf() {
+        window.goatcounter = window.goatcounter || {};
+        window.goatcounter.path = function (p) { return zaehlPfad(p); };
+
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '//gc.zgo.at/count.js';
+        script.setAttribute('data-goatcounter',
+            'https://' + ZAEHLER_CODE + '.goatcounter.com/count');
+        document.head.appendChild(script);
+    }
+
+    /* Oeffentlicher Zaehler-Endpunkt. Der Pfad beginnt selbst mit "/", daher
+       stehen in der fertigen Adresse zwei Schraegstriche hintereinander. */
+    function zaehlerUrl(pfad) {
+        return 'https://' + ZAEHLER_CODE + '.goatcounter.com/counter/' + pfad + '.json';
+    }
+
+    /* GoatCounter liefert die Zahl als formatierten String ("1,234"). */
+    function zaehlerZahl(wert) {
+        var roh = (wert === undefined || wert === null) ? '' : String(wert);
+        return parseInt(roh.replace(/\D/g, ''), 10) || 0;
+    }
+
+    zaehleAufruf();
+
     return {
         insertAboveCard: insertAboveCard,
         showStatus: showStatus,
@@ -165,6 +221,9 @@ var FF = (function () {
         loadDeck: loadDeck,
         shuffle: shuffle,
         watchImages: watchImages,
-        ready: ready
+        ready: ready,
+        zaehlPfad: zaehlPfad,
+        zaehlerUrl: zaehlerUrl,
+        zaehlerZahl: zaehlerZahl
     };
 }());

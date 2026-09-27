@@ -33,11 +33,14 @@
         FF.flashcards.start({
             source: 'daten/geraete.json',
             subject: 'Die Geräte',
-            /* Nur Geräte mit gepflegter Raumangabe abfragen. Damit erledigt das
-               Ausfüllen der JSON-Datei zugleich das Aussortieren jener Geräte,
-               die im eigenen Fahrzeug gar nicht vorhanden sind. */
+            /* Zwei Fälle werden nicht abgefragt:
+               - leere Raumangabe: das Gerät ist noch nicht erfasst
+               - "nicht vorhanden": das Gerät ist nicht im Fahrzeug. Die
+                 Bestimmungen verlangen, dass dessen Gerätekundekarte vor
+                 der Prüfung entfernt wird (Punkt 9.2.2.1). */
             filter: function (geraet) {
-                return typeof geraet.raum === 'string' && geraet.raum.trim() !== '';
+                var raum = typeof geraet.raum === 'string' ? geraet.raum.trim() : '';
+                return raum !== '' && raum.toLowerCase() !== 'nicht vorhanden';
             },
             emptyMessage: 'In daten/geraete.json ist noch kein Raum eingetragen. ' +
                 'Trage bei den Geräten eures Fahrzeuges den Raum ein – Geräte ohne ' +

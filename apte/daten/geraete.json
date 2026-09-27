@@ -5,7 +5,7 @@
   { "nummer": 4, "name": "Arbeitsmesser", "verwendungszweck": "Dient zum Durchtrennen von Gegenständen.\nDas Arbeitsmesser ist kein Gurtschneider!", "raum": "Mannschaftsraum" },
   { "nummer": 5, "name": "Bindemittel oder Mehrzweckbinder", "verwendungszweck": "Dient zum Binden von Treibstoffen und Ölen", "raum": "2" },
   { "nummer": 6, "name": "Bolzenschneider", "verwendungszweck": "Zum Durchtrennen von Drähten bzw. Bügeln von Vorhangschlössern", "raum": "1" },
-  { "nummer": 7, "name": "Brandfluchthaube", "verwendungszweck": "Schutzhaube mit integriertem Sichtfenster und Mehrbereichsfilter, die zur Rettung von Personen aus verrauchten Bereichen verwendet wird", "raum": "Mannschaftkabine" },
+  { "nummer": 7, "name": "Brandfluchthaube", "verwendungszweck": "Schutzhaube mit integriertem Sichtfenster und Mehrbereichsfilter, die zur Rettung von Personen aus verrauchten Bereichen verwendet wird", "raum": "Mannschaftskabine" },
   { "nummer": 8, "name": "Brechstange", "verwendungszweck": "Hebelwerkzeug", "raum": "1" },
   { "nummer": 9, "name": "C-Hydroschild", "verwendungszweck": "Wasserführende Armatur zum Schutz gefährdeter Objekte durch Erzeugung einer Wasserwand.\nAbschirmung von Hitze, Flammen, Rauch und Dämpfen", "raum": "nicht vorhanden" },
   { "nummer": 10, "name": "C-Mehrzweckstrahlrohr", "verwendungszweck": "Wasserführende Armatur (absperrbar) zur Abgabe des Löschmittels in Form von Vollstrahl oder Sprühstrahl.\nMit „Mannschutzbrause“.\nBedienung durch 2 Mann", "raum": "5" },
