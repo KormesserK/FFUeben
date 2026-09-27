@@ -115,6 +115,11 @@ img {
     height: auto;
 }
 
+/* Greift auch dort, wo eine Regel weiter unten display setzt */
+[hidden] {
+    display: none !important;
+}
+
 /* ------------------------------------------------------------------
  * 3. Container und Typografie
  * ------------------------------------------------------------------ */
@@ -550,8 +555,54 @@ button:disabled:hover {
 }
 
 .group-mode-toggle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     margin: 0 0 12px;
 }
+
+/* Kleines Fragezeichen neben dem Umschalter */
+.hilfe-knopf {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text-dim);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+}
+
+.hilfe-knopf:hover,
+.hilfe-knopf[aria-expanded="true"] {
+    color: #fff;
+    background: var(--ff-red);
+    border-color: transparent;
+}
+
+/* Erklaerung, die das Fragezeichen auf- und zuklappt */
+.hilfe-text {
+    margin: 0 0 12px;
+    padding: 14px 16px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ff-amber);
+    border-radius: var(--radius-sm);
+}
+
+.hilfe-text p {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+}
+
+.hilfe-text p:last-child { margin-bottom: 0; }
 
 .group-mode-toggle label {
     display: inline-flex;

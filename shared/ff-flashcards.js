@@ -118,30 +118,69 @@
      * Engine
      * ---------------------------------------------------------------- */
 
-    /* Nutzt vorhandene Bedienelemente oder legt sie an, damit jede Station
-       den Gruppenmodus bekommt, ohne ihr HTML aufzublaehen. */
-    function ensureControls() {
-        var checkbox = document.getElementById('groupModeCheckbox');
-        if (!checkbox) {
-            var wrapper = document.createElement('div');
-            wrapper.className = 'group-mode-toggle';
-            var label = document.createElement('label');
-            checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.id = 'groupModeCheckbox';
-            label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(' 5er-Gruppen-Lernmodus aktivieren'));
-            wrapper.appendChild(label);
-            FF.insertAboveCard(wrapper);
-        }
+    /* Text hinter dem Fragezeichen neben dem Gruppenmodus. */
+    var HILFE_GRUPPENMODUS = [
+        'Ist der Gruppenmodus aus, wird jede Karte zuf\u00e4llig aus dem ganzen ' +
+            'Stapel gezogen. Bei mehreren hundert Karten dauert es dann lange, ' +
+            'bis dieselbe Karte ein zweites Mal kommt.',
+        'Ist er ein, lernst du in Bl\u00f6cken zu f\u00fcnf Karten. Eine Karte ' +
+            'verl\u00e4sst den Block, sobald du sie auf \u201eRichtig\u201c setzt. ' +
+            'Ist der Block leer, kommen die n\u00e4chsten f\u00fcnf.',
+        'Dadurch siehst du dieselben f\u00fcnf Karten kurz hintereinander mehrmals ' +
+            '\u2013 und genau das pr\u00e4gt sich leichter ein, als sich einmal quer ' +
+            'durch den ganzen Stapel zu arbeiten. Zum ersten Lernen eines Bereichs ist ' +
+            'der Gruppenmodus deshalb meist die bessere Wahl. Zum Wiederholen kurz vor ' +
+            'der Pr\u00fcfung eignet sich der volle Stapel besser, weil die Fragen dort ' +
+            'genauso unvorhersehbar kommen.'
+    ];
 
-        var progress = document.getElementById('groupProgress');
-        if (!progress) {
-            progress = document.createElement('div');
-            progress.id = 'groupProgress';
-            progress.className = 'progress-text';
-            FF.insertAboveCard(progress);
-        }
+    /* Legt Umschalter, Hilfe und Fortschrittszeile an. Die Engine baut sie
+       immer selbst, damit jede Station dieselben Bedienelemente hat. */
+    function ensureControls() {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'group-mode-toggle';
+
+        var label = document.createElement('label');
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = 'groupModeCheckbox';
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(' 5er-Gruppen-Lernmodus'));
+        wrapper.appendChild(label);
+
+        var hilfeKnopf = document.createElement('button');
+        hilfeKnopf.type = 'button';
+        hilfeKnopf.className = 'hilfe-knopf';
+        hilfeKnopf.id = 'groupModeHilfe';
+        hilfeKnopf.textContent = '?';
+        hilfeKnopf.setAttribute('aria-label', 'Was ist der 5er-Gruppen-Lernmodus?');
+        hilfeKnopf.setAttribute('aria-expanded', 'false');
+        hilfeKnopf.setAttribute('aria-controls', 'groupModeHilfeText');
+        wrapper.appendChild(hilfeKnopf);
+
+        FF.insertAboveCard(wrapper);
+
+        var hilfeText = document.createElement('div');
+        hilfeText.id = 'groupModeHilfeText';
+        hilfeText.className = 'hilfe-text';
+        hilfeText.hidden = true;
+        HILFE_GRUPPENMODUS.forEach(function (absatz) {
+            var p = document.createElement('p');
+            p.textContent = absatz;
+            hilfeText.appendChild(p);
+        });
+        FF.insertAboveCard(hilfeText);
+
+        hilfeKnopf.addEventListener('click', function () {
+            var oeffnen = hilfeText.hidden;
+            hilfeText.hidden = !oeffnen;
+            hilfeKnopf.setAttribute('aria-expanded', oeffnen ? 'true' : 'false');
+        });
+
+        var progress = document.createElement('div');
+        progress.id = 'groupProgress';
+        progress.className = 'progress-text';
+        FF.insertAboveCard(progress);
 
         return { checkbox: checkbox, progress: progress };
     }
@@ -159,7 +198,7 @@
      * config.source       - JSON-Pfad relativ zur Seite, oder ein Array davon
      * config.renderer     - Renderer, siehe FF.renderers
      * config.subject      - Bezeichnung fuer Meldungen, z. B. "Die Fragen zu AU11"
-     * config.groupMode    - Gruppenmodus vorbelegen (Standard: true)
+     * config.groupMode    - Gruppenmodus vorbelegen (Standard: false)
      * config.groupSize    - Kartenanzahl je Gruppe (Standard: 5)
      * config.filter       - waehlt aus, welche Karten mitspielen
      * config.emptyMessage - Hinweis, wenn der Filter nichts uebrig laesst
@@ -168,7 +207,9 @@
         FF.ready(function () {
             var renderer = config.renderer || questionAnswer();
             var groupSize = config.groupSize || 5;
-            var groupMode = config.groupMode !== false;
+            /* Standardmaessig aus - der Modus ist erklaerungsbeduerftig und
+               soll bewusst eingeschaltet werden. */
+            var groupMode = config.groupMode === true;
             var subject = config.subject || 'Die Karten';
 
             var allCards = [];
